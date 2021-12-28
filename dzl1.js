@@ -1175,6 +1175,7 @@ function achievement() {
 }
 
 function initHeader(_0x2ca660) {
+    console.log(_0x2ca660)
     headers = {
         'Host': _0xd0c2('0x1c8', 'mF7U'),
         'versionName': _0xd0c2('0x25a', 'n14J'),
@@ -1194,7 +1195,7 @@ function initHeader(_0x2ca660) {
         'ApiAuthKey': uncompileStr(_0x2ca660['base_api']),
         'uuid': uuid()
     };
-    console.log(headers)
+    
 }
 
 function getStep() {
