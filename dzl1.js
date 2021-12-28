@@ -228,6 +228,7 @@ async function getck() {
         }
         $[_0xd0c2('0x2ca', 'FQ^r')](JSON['stringify'](dzlapp, null, 0x2), _0xd0c2('0xa5', '#C9R'));
         $[_0xd0c2('0xcf', 'g&)K')]($['name'], '多走路账号' + (_0x2e4440 + 0x1) + _0xd0c2('0x277', 'sdNI'));
+        console.log('多走路账号' + (_0x2e4440 + 0x1) + _0xd0c2('0x277', 'sdNI'))
     }
     if ($request[_0xd0c2('0xbf', '!C4G')]['match'](/\/withdraw\/apply/)) {
         const _0x2fccd1 = $request['body'];
