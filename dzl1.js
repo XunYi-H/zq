@@ -84,7 +84,7 @@ const _0xd0c2 = function (_0x2f90cb, _0xc9c46b) {
 const $ = new Env(_0xd0c2('0x1d6', 'jW66'));
 const version = _0xd0c2('0x54', 'U4!J');
 let dzlapp = $[_0xd0c2('0x23f', 'ZfFE')](_0xd0c2('0x50', 'H#u8'), []);
-
+console.log(dzlapp)
 const notify = $['isNode']() ? require('./sendNotify') : '';
 let dzluserck = $[_0xd0c2('0x32b', '$nai')]('dzluserck') || 0x1;
 let userId = $[_0xd0c2('0x278', '!Rvd')](_0xd0c2('0x1dd', 'leuF')) || 0x1;
