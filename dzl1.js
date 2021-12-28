@@ -1175,7 +1175,7 @@ function achievement() {
 }
 
 function initHeader(_0x2ca660) {
-    console.log(_0x2ca660)
+    console.log(_0xd0c2('0x1c8', 'mF7U'))
     headers = {
         'Host': _0xd0c2('0x1c8', 'mF7U'),
         'versionName': _0xd0c2('0x25a', 'n14J'),
