@@ -149,11 +149,11 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
         await getScriptAuth(_0xd0c2('0x140', 'EI5U'), userId, activeCode);
         $[_0xd0c2('0x3', '$5!$')](_0xd0c2('0x101', 'mF7U') + systemNotify);
         $[_0xd0c2('0x279', '$Q[(')](_0xd0c2('0x20f', 'leuF') + version + _0xd0c2('0x1e0', 'Ekea') + newest_version);
-        if (false) {
+        if (version < newest_version) {
             $['log'](_0xd0c2('0x2db', '^N(y'));
             return;
         }
-        if (false) {
+        if (scriptAuth != !![]) {
             $['log'](_0xd0c2('0x57', '^0zB'));
             return;
         }
