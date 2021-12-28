@@ -166,6 +166,7 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
             return;
         }
         $[_0xd0c2('0x225', 'P[Mf')](_0xd0c2('0x2d5', '^N(y') + dzlapp[_0xd0c2('0xc7', 'N1q*')] + _0xd0c2('0x1ad', ']bfH'));
+        console.log(dzlapp[_0xd0c2('0x2f3', '(pH2')])
         for (let _0x201dcc = 0x0; _0x201dcc < dzlapp[_0xd0c2('0x2f3', '(pH2')]; _0x201dcc++) {
             let _0x5c08c1 = dzlapp[_0x201dcc];
             $['log'](_0xd0c2('0x2c4', 'n14J') + (_0x201dcc + 0x1) + '个账号=====================');
