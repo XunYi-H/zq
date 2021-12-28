@@ -172,7 +172,7 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
             // 输出有几个账号
             $['log'](_0xd0c2('0x2c4', 'n14J') + (_0x201dcc + 0x1) + '个账号=====================');
             $[_0xd0c2('0x1a3', 'DWr@')](_0xd0c2('0x31c', 'Om55'));
-            console.log(dz_0x5c08c1)
+            console.log(_0x5c08c1)
             // 构造header
             initHeader(_0x5c08c1);
             await getUser(_0x5c08c1);
