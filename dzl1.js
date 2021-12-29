@@ -172,6 +172,9 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
         
         for (let _0x201dcc = 0x0; _0x201dcc < dzlapp[_0xd0c2('0x2f3', '(pH2')]; _0x201dcc++) {
             let _0x5c08c1 = dzlapp[_0x201dcc];
+            if(_0x5c08c1==null){
+                continue;
+            }
             // 开始执行第几个账号
             $['log'](_0xd0c2('0x2c4', 'n14J') + (_0x201dcc + 0x1) + '个账号=====================');
             // 初始化用户信息
