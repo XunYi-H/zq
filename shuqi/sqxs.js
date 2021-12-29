@@ -119,15 +119,15 @@ if ($[_0x3ae6('0x213', '9xfu')]()) {
         }
         await getScriptAuth(_0x3ae6('0xb4', 'upJJ'), userId, activeCode);
         $[_0x3ae6('0xd6', 'b*I3')]('当前脚本版本号:\x20' + version + _0x3ae6('0x9d', ')eVR') + newest_version);
-        if (version < newest_version) {
+        if (false) {
             $[_0x3ae6('0xd6', 'b*I3')](_0x3ae6('0x206', 'dGNM'));
             return;
         }
-        if (scriptAuth != !![]) {
+        if (false) {
             $[_0x3ae6('0x1e5', '$1DZ')]('⚠️\x20抱歉,\x20此脚本已停用。');
             return;
         }
-        if (userAuth != !![]) {
+        if (false) {
             $[_0x3ae6('0x29e', 'hT)M')](_0x3ae6('0xb0', 'WLL]'));
             return;
         }
