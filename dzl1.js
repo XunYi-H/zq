@@ -171,7 +171,7 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
         $[_0xd0c2('0x225', 'P[Mf')](_0xd0c2('0x2d5', '^N(y') + dzlapp[_0xd0c2('0xc7', 'N1q*')] + _0xd0c2('0x1ad', ']bfH'));
         
         for (let _0x201dcc = 0x0; _0x201dcc < dzlapp[_0xd0c2('0x2f3', '(pH2')]; _0x201dcc++) {
-            let _0x5c08c1 = dzlapp[_0x201dcc+1];
+            let _0x5c08c1 = dzlapp[_0x201dcc];
             // 开始执行第几个账号
             $['log'](_0xd0c2('0x2c4', 'n14J') + (_0x201dcc + 0x1) + '个账号=====================');
             // 初始化用户信息
@@ -206,11 +206,11 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
                 $[_0xd0c2('0x199', 'hRT$')](_0xd0c2('0xc4', 'm(nA'));
                 content += _0xd0c2('0x24b', '!C4G');
             }
-            if (!dzlapp[_0x201dcc+1][_0xd0c2('0x14d', 'N1q*')]) {
-                dzlapp[_0x201dcc+1][_0xd0c2('0x112', '#C9R')] = 0x1;
+            if (!dzlapp[_0x201dcc][_0xd0c2('0x14d', 'N1q*')]) {
+                dzlapp[_0x201dcc][_0xd0c2('0x112', '#C9R')] = 0x1;
                 $[_0xd0c2('0x22d', '$dl2')](JSON[_0xd0c2('0x262', ']bfH')](dzlapp, null, 0x2), 'dzlapp');
             } else {
-                if (dzlapp[_0x201dcc+1][_0xd0c2('0x15e', 'Ekea')] == 0x1) await sendMsg(content);
+                if (dzlapp[_0x201dcc][_0xd0c2('0x15e', 'Ekea')] == 0x1) await sendMsg(content);
             }
         }
     }
