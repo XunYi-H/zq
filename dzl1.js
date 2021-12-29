@@ -175,7 +175,7 @@ if ($[_0xd0c2('0x32e', 'DWr@')]()) {
             $[_0xd0c2('0x1a3', 'DWr@')](_0xd0c2('0x31c', 'Om55'));
             console.log(_0x5c08c1)
             // 构造header
-            // initHeader(_0x5c08c1);
+            initHeader(_0x5c08c1);
             await getUser(_0x5c08c1);
             await sign();
             await bubbleTask(_0x5c08c1);
@@ -226,7 +226,7 @@ async function getck() {
                 'base_cpi': compileStr(_0x5c71c2)
             };
         }
-        conlo
+        // conlo
         $[_0xd0c2('0x2ca', 'FQ^r')](JSON['stringify'](dzlapp, null, 0x2), _0xd0c2('0xa5', '#C9R'));
         $[_0xd0c2('0xcf', 'g&)K')]($['name'], '多走路账号' + (_0x2e4440 + 0x1) + _0xd0c2('0x277', 'sdNI'));
         console.log('输出ck')
