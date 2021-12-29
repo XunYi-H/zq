@@ -420,13 +420,14 @@ async function sqxsck() {
     if ($request && $request[_0x3ae6('0x2b5', 'NSy4')] != _0x3ae6('0xe8', 'D#cd') && $request['url'][_0x3ae6('0x32e', 'HVgY')](/\/api\/getAdInfo/)) {
         const _0x1fa5eb = $request['url'];
         let _0x25fcbe = sqxsuserck - 0x1;
+        
         if (_0x1fa5eb['indexOf'](_0x3ae6('0x2f1', 'ymH!')) > -0x1) {
             sqxsapp[_0x25fcbe][_0x3ae6('0xb7', 'c*Nv')] = _0x1fa5eb;
             $[_0x3ae6('0x2c8', 'NSy4')](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
             $[_0x3ae6('0xb3', 'PFCJ')](_0x3ae6('0xe4', '$1DZ') + _0x1fa5eb);
             $['msg']($['name'], _0x3ae6('0x8c', 'NSy4') + (_0x25fcbe + 0x1) + _0x3ae6('0x6c', 'l!4e'));
         } else if (_0x1fa5eb[_0x3ae6('0x1d5', 't5uV')]('4.2.6') > -0x1) {
-            console.log(_0x1fa5eb)
+            sqxsapp[_0x25fcbe] = {}
             sqxsapp[_0x25fcbe][_0x3ae6('0x16c', '*H2$')] = _0x1fa5eb;
             $[_0x3ae6('0x146', '82bd')](JSON['stringify'](sqxsapp, null, 0x2), _0x3ae6('0x20', 'rVdX'));
             $[_0x3ae6('0x83', 'Qii@')]('旧版激励视频信息url:\x20' + _0x1fa5eb);
