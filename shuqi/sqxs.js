@@ -427,7 +427,7 @@ async function sqxsck() {
             $[_0x3ae6('0xb3', 'PFCJ')](_0x3ae6('0xe4', '$1DZ') + _0x1fa5eb);
             $['msg']($['name'], _0x3ae6('0x8c', 'NSy4') + (_0x25fcbe + 0x1) + _0x3ae6('0x6c', 'l!4e'));
         } else if (_0x1fa5eb[_0x3ae6('0x1d5', 't5uV')]('4.2.6') > -0x1) {
-            sqxsapp[_0x25fcbe] = {}
+            // sqxsapp[_0x25fcbe] = {}
             sqxsapp[_0x25fcbe][_0x3ae6('0x16c', '*H2$')] = _0x1fa5eb;
             $[_0x3ae6('0x146', '82bd')](JSON['stringify'](sqxsapp, null, 0x2), _0x3ae6('0x20', 'rVdX'));
             $[_0x3ae6('0x83', 'Qii@')]('旧版激励视频信息url:\x20' + _0x1fa5eb);
