@@ -173,6 +173,7 @@ async function getCk() {
                 'fqxs_host': _0x507f31,
                 'fqxs_headers': _0x504d98
             };
+            console.log(fqxsapp[_0x1e4c42]);
         }
         $[_0x3b1b('0x1e9', 'J7x9')](JSON[_0x3b1b('0x1f9', '(H2G')](fqxsapp, null, 0x2), _0x3b1b('0x7f', 'asV%'));
         $[_0x3b1b('0xe2', 'b3!v')]($[_0x3b1b('0x173', 'Rr31')], _0x3b1b('0x22c', ')Sd$') + (_0x1e4c42 + 0x1) + '签到数据获取成功！🎉');
