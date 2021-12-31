@@ -1,7 +1,5 @@
 /*
-TG电报群: 群已私有，入群私聊机器人 @DavidLoveBot
-boxjs: https://cdn.jsdelivr.net/gh/bluesmallpig/scripts/David.boxjs.json
-功能：只需设置一个看看赚body，自动为你生成全部body，你将不用为过一段时间就要重新抓取body而烦恼。
+偷东西
 */
 
 //看看赚body,一个账号填一个body即可
@@ -160,38 +158,38 @@ if ($[_0x3e3d('0x7a', 'BaR@')]()) {
             $[_0x3e3d('0x26a', 'BaR@')](_0x3e3d('0x1e6', 'g7^c'));
             return;
         }
-        await getScriptAuth(_0x3e3d('0x81', 'DWOv'), userId, activeCode);
+        // await getScriptAuth(_0x3e3d('0x81', 'DWOv'), userId, activeCode);
         $['log']('📢\x20' + systemNotify);
         $[_0x3e3d('0x229', 'DWOv')]('当前脚本版本号:\x20' + version + '，最新版本号:\x20' + newest_version);
-        if (version < newest_version) {
-            $['log'](_0x3e3d('0xd3', 'EJjx'));
-            return;
-        }
-        if (scriptAuth != !![]) {
-            $[_0x3e3d('0x17e', '23Ti')]('⚠️\x20抱歉,\x20此脚本已停用。');
-            return;
-        }
-        if (userAuth != !![]) {
-            $['log'](_0x3e3d('0x159', 'ymZ('));
-            return;
-        }
+        // if (version < newest_version) {
+        //     $['log'](_0x3e3d('0xd3', 'EJjx'));
+        //     return;
+        // }
+        // if (scriptAuth != !![]) {
+        //     $[_0x3e3d('0x17e', '23Ti')]('⚠️\x20抱歉,\x20此脚本已停用。');
+        //     return;
+        // }
+        // if (userAuth != !![]) {
+        //     $['log'](_0x3e3d('0x159', 'ymZ('));
+        //     return;
+        // }
         if (isCharge == !![]) {
             $[_0x3e3d('0x18a', '(HvF')](_0x3e3d('0x102', 'WDO8'));
         } else {
             $[_0x3e3d('0x1a2', 'fLPf')](_0x3e3d('0x118', 'F!uU'));
         }
-        if (vipAuth != !![]) {
-            $[_0x3e3d('0x257', 'WGX9')](_0x3e3d('0x63', '(y9D'));
-            return;
-        } else {
-            if (isCharge == !![]) {
-                $[_0x3e3d('0x53', 'Y6eG')](_0x3e3d('0x249', 'ltU3'));
-            }
-        }
-        if (runAuth != !![]) {
-            $[_0x3e3d('0xb3', 'NTnw')](_0x3e3d('0x170', 'WGX9'));
-            return;
-        }
+        // if (vipAuth != !![]) {
+        //     $[_0x3e3d('0x257', 'WGX9')](_0x3e3d('0x63', '(y9D'));
+        //     return;
+        // } else {
+        //     if (isCharge == !![]) {
+        //         $[_0x3e3d('0x53', 'Y6eG')](_0x3e3d('0x249', 'ltU3'));
+        //     }
+        // }
+        // if (runAuth != !![]) {
+        //     $[_0x3e3d('0xb3', 'NTnw')](_0x3e3d('0x170', 'WGX9'));
+        //     return;
+        // }
         $['log'](_0x3e3d('0xd', '(y9D') + zqkdkkz_body[_0x3e3d('0x1db', 'TG%E')] + _0x3e3d('0x105', 'IlL0'));
         if (zqkdkkz_body['length'] > 0x5) {
             $[_0x3e3d('0xba', '*wqV')](_0x3e3d('0x156', 'z[[x'));

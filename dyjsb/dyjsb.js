@@ -92,15 +92,8 @@ const logs = 0x0;
 let tz = $[_0x1e9d('0x185', '#H[5')]('tz') || '1';
 var hour = '';
 var minute = '';
-let isRun = '';
-let content = '';
-let userAuth = '';
-let scriptAuth = '';
 let newest_version = '';
-let runAuth = '';
 let systemNotify = '';
-let vipAuth = '';
-let isCharge = '';
 if ($[_0x1e9d('0x79', 'UoP4')]()) {
     dyjsbapp = JSON['parse'](process[_0x1e9d('0xbd', 'zuZq')]['DYJSBAPP']);
     userId = process[_0x1e9d('0x19f', 'nNnQ')][_0x1e9d('0x3e', 'j!q^')];
@@ -119,38 +112,8 @@ if ($[_0x1e9d('0x79', 'UoP4')]()) {
         $[_0x1e9d('0xe8', 'o*GZ')](_0x1e9d('0x213', 'CbxK'));
         return;
     }
-    await getScriptAuth('dyjsbapp', userId, activeCode);
     $[_0x1e9d('0x65', 'jieH')](_0x1e9d('0x55', 'J*YT') + systemNotify);
     $['log'](_0x1e9d('0x10a', 'nNnQ') + version + _0x1e9d('0xe6', 'cm^m') + newest_version);
-    if (version < newest_version) {
-        $[_0x1e9d('0x1a4', '3wPx')](_0x1e9d('0xc6', '^P1F'));
-        return;
-    }
-    if (scriptAuth != !![]) {
-        $[_0x1e9d('0x52', 'cm^m')](_0x1e9d('0x11b', ')FAE'));
-        return;
-    }
-    if (userAuth != !![]) {
-        $[_0x1e9d('0xd7', '5)wK')]('⚠️\x20抱歉，你没有权限运行此脚本,\x20请关注电报群:\x20https://t.me/china20211029');
-        return;
-    }
-    if (isCharge == !![]) {
-        $[_0x1e9d('0xd7', '5)wK')](_0x1e9d('0xc5', 'nNnQ'));
-    } else {
-        $['log'](_0x1e9d('0x1fc', 'UoP4'));
-    }
-    if (vipAuth != !![]) {
-        $[_0x1e9d('0x18e', 'o4Fy')](_0x1e9d('0x1a2', 'NdFv'));
-        return;
-    } else {
-        if (isCharge == !![]) {
-            $['log'](_0x1e9d('0x1ec', 'oKBX'));
-        }
-    }
-    if (runAuth != !![]) {
-        $[_0x1e9d('0x153', '528b')]('⚠️\x20抱歉,\x20\x20该用户今天可能已经达到最大运行次数，明天再试吧！');
-        return;
-    }
     $[_0x1e9d('0x57', 'eMnj')](_0x1e9d('0xb7', 'J*YT') + dyjsbapp[_0x1e9d('0x1c9', 'e@eS')] + _0x1e9d('0x201', ')FAE'));
     message = '';
     for (let _0x8043da = 0x0; _0x8043da < dyjsbapp['length']; _0x8043da++) {
@@ -418,44 +381,6 @@ async function showmsg() {
         $[_0x1e9d('0x1bd', 'e[E0')](message);
     }
 }
-
-function getScriptAuth(_0x589f6a, _0xbc52f, _0x45f4e4) {
-    return new Promise((_0x560edb, _0x2c6dd1) => {
-        const _0x187520 = _0x1e9d('0x158', 'Cetv');
-        const _0x28238e = {
-            'appName': _0x589f6a,
-            'userId': _0xbc52f,
-            'activityCode': _0x45f4e4,
-            'version': version
-        };
-        const _0x5f49a2 = {
-            'url': _0x187520,
-            'headers': {
-                'Content-Type': 'application/json',
-                'accept': _0x1e9d('0x1b1', 'o*GZ')
-            },
-            'body': JSON[_0x1e9d('0xa4', 'e[E0')](_0x28238e)
-        };
-        $[_0x1e9d('0x11d', '#H[5')](_0x5f49a2, async (_0x2ff2d9, _0x1d9853, _0x19086b) => {
-            const _0x4adfc8 = _0x19086b[_0x1e9d('0x115', '*282')](/\"/g, '')[_0x1e9d('0x136', 'jieH')](0x22);
-            const _0x286718 = new Base64();
-            result = JSON[_0x1e9d('0x1ce', 'jieH')](_0x286718[_0x1e9d('0x62', '&Rlw')](_0x4adfc8));
-            try {
-                newest_version = result[_0x1e9d('0x132', 'cm^m')];
-                userAuth = result[_0x1e9d('0x13b', 'HDuA')];
-                scriptAuth = result[_0x1e9d('0x197', 'MN[D')];
-                runAuth = result[_0x1e9d('0xda', 'J*YT')];
-                systemNotify = result['notify'];
-                vipAuth = result[_0x1e9d('0x10d', 'I3D!')];
-                isCharge = result[_0x1e9d('0x22a', '#D)r')];
-            } catch (_0x55e217) {
-                $[_0x1e9d('0x13e', 'Yt&W')](_0x55e217);
-            }
-            _0x560edb();
-        });
-    });
-}
-
 function MD5_Encrypt(_0x5ddc5c) {
     function _0x438027(_0x429bd1, _0x4c94b4) {
         return _0x429bd1 << _0x4c94b4 | _0x429bd1 >>> 0x20 - _0x4c94b4;
