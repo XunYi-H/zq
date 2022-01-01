@@ -5,16 +5,16 @@
     "icon": "",
     "apps": [
 	        {
-            "id":"fqctapp",
+            "id":"myspace",
             "name":"cookie上传",
             "keys":[
-                "fqctapp"
+                "upserver"
             ],
             "settings": [{
                 "id": "updatetoken",
                 "name": "上传token",
-                "val": "1",
-                "type": "number",
+                "val": "",
+                "type": "text",
                 "desc": "我的上传密钥"
             }
             ],
