@@ -108,10 +108,10 @@ if ($[_0x1e9d('0x79', 'UoP4')]()) {
         GetCookie();
         $[_0x1e9d('0x1cc', '3wPx')]();
     }
-    if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x1e9d('0xa2', '528b')] != 0x20) {
-        $[_0x1e9d('0xe8', 'o*GZ')](_0x1e9d('0x213', 'CbxK'));
-        return;
-    }
+    // if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x1e9d('0xa2', '528b')] != 0x20) {
+    //     $[_0x1e9d('0xe8', 'o*GZ')](_0x1e9d('0x213', 'CbxK'));
+    //     return;
+    // }
     $[_0x1e9d('0x65', 'jieH')](_0x1e9d('0x55', 'J*YT') + systemNotify);
     $['log'](_0x1e9d('0x10a', 'nNnQ') + version + _0x1e9d('0xe6', 'cm^m') + newest_version);
     $[_0x1e9d('0x57', 'eMnj')](_0x1e9d('0xb7', 'J*YT') + dyjsbapp[_0x1e9d('0x1c9', 'e@eS')] + _0x1e9d('0x201', ')FAE'));
