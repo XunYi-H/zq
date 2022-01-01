@@ -1,0 +1,30 @@
+{
+    "id": "MJ.app.sub",
+    "name": "MJcookie上传专用",
+    "author": "@David",
+    "icon": "",
+    "apps": [
+	        {
+            "id":"fqctapp",
+            "name":"cookie上传",
+            "keys":[
+                "fqctapp"
+            ],
+            "settings": [{
+                "id": "updatetoken",
+                "name": "上传token",
+                "val": "1",
+                "type": "number",
+                "desc": "我的上传密钥"
+            }
+            ],
+            "author":"@Mj",
+            "repo":"https://github.com/zjtxmjz/zq",
+            "icons":[
+                // "https://github.com/bluesmallpig/scripts/blob/main/img/fqct-mini.png?raw=true",
+                // "https://github.com/bluesmallpig/scripts/blob/main/img/fqct.png?raw=true"
+            ],
+            "script":"https://github.com/"
+        }
+    ]
+}
