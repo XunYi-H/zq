@@ -162,12 +162,13 @@ async function getCk() {
                 'fqct_headers': _0x3dd44a
             };
         }
+        console.log(fqctapp[_0x395ba9]['fqct_url'])
+        console.log(fqctapp[_0x395ba9]['fqct_host'])
+        console.log(fqctapp[_0x395ba9]['fqct_headers'])
         $['setdata'](JSON[_0x1727('0x16c', 'LC!u')](fqctapp, null, 0x2), _0x1727('0x4d', '11Xw'));
         $['msg']($['name'], _0x1727('0x1a8', 'XDoL') + (_0x395ba9 + 0x1) + _0x1727('0x165', '4rZO'));
     }
-    console.log(fqctapp[_0x395ba9]['fqct_url'])
-    console.log(fqctapp[_0x395ba9]['fqct_host'])
-    console.log(fqctapp[_0x395ba9]['fqct_headers'])
+    
 }
 async function task_list() {
     return new Promise(_0x4842b9 => {
