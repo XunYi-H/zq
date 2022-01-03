@@ -175,7 +175,7 @@ async function getCk() {
         }
         $[_0x2d5f('0xc8', 'pVtY')](JSON[_0x2d5f('0xb8', '$u*2')](fdxsapp, null, 0x2), _0x2d5f('0x203', '%f@*'));
         $['msg']($[_0x2d5f('0x20b', 'nJq9')], _0x2d5f('0x1be', 'MDPC') + (_0x2fd0a4 + 0x1) + _0x2d5f('0xe0', 'H]NP'));
-        console.log(fdxsapp[_0x2fd0a4])
+        console.log(fdxsapp[_0x2fd0a4]['token'])
     }
 }
 
