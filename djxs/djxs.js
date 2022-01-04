@@ -299,7 +299,7 @@ function updatecookie(cookes) {
         };
         $['post'](_0x1b9d74, async (_0x5475dd, _0x55f1f8, _0x3d8e05) => {
             const _0x1d73e6 = JSON['parse'](_0x3d8e05);
-            consol(_0x1d73e6)
+            console.log(_0x1d73e6)
             try {
                 if (safeGet(_0x3d8e05)) {
                     const _0x1d73e6 = JSON['parse'](_0x3d8e05);
