@@ -88,6 +88,8 @@ const version = _0x31f0('0x1cd', 'Ir]8');
 let djxsapp = $[_0x31f0('0x16', 'Dim1')]('djxsapp', []);
 const notify = $[_0x31f0('0x1e0', 'C]7d')]() ? require(_0x31f0('0x8a', 'Dim1')) : '';
 let userId = $[_0x31f0('0x19e', 'wjRj')](_0x31f0('0x211', '(J5y')) || 0x1;
+let updatetoken = $["getdata"]("updatetoken") || '';
+let updateurl = $["getdata"]("updateurl") || '';
 let activeCode = $[_0x31f0('0xb8', 'ZEfb')]('djxsactivecode') || 0x0;
 let djxsuserck = $['getval'](_0x31f0('0x65', '(J5y')) || 0x1;
 const logs = 0x0;
@@ -219,6 +221,9 @@ async function getCk() {
             
         }
         console.log(djxsapp[_0x406326])
+        console.log(updatetoken)
+        console.log(updateurl)
+
         $[_0x31f0('0x7c', 'mT9e')](JSON[_0x31f0('0x9c', 'mT9e')](djxsapp, null, 0x2), _0x31f0('0x109', '9Upq'));
         $[_0x31f0('0x14', 'NkMB')]($[_0x31f0('0x93', 'd7R#')], _0x31f0('0x1e8', 'c5CR') + (_0x406326 + 0x1) + _0x31f0('0x151', 'Qos$'));
     }
