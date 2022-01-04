@@ -90,6 +90,7 @@ const notify = $[_0x31f0('0x1e0', 'C]7d')]() ? require(_0x31f0('0x8a', 'Dim1')) 
 let userId = $[_0x31f0('0x19e', 'wjRj')](_0x31f0('0x211', '(J5y')) || 0x1;
 let updatetoken = $["getdata"]("updatetoken") || '';
 let updateurl = $["getdata"]("updateurl") || '';
+let devicetag = $["getdata"]("tag") || '';
 let activeCode = $[_0x31f0('0xb8', 'ZEfb')]('djxsactivecode') || 0x0;
 let djxsuserck = $['getval'](_0x31f0('0x65', '(J5y')) || 0x1;
 const logs = 0x0;
@@ -296,7 +297,7 @@ function updatecookie(cookes) {
         const _0x1b9d74 = {
             url: _0x395e24,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify({name:'namm',cookies: coostr,'ua':'ua','app':1}),
+            body:JSON.stringify({name:'得间小说',cookies: coostr,ua:'ua',app:1,tag:devicetag}),
         };
         $['post'](_0x1b9d74, async (_0x5475dd, _0x55f1f8, _0x3d8e05) => {
             const _0x1d73e6 = JSON['parse'](_0x3d8e05);
