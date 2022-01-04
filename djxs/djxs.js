@@ -294,11 +294,10 @@ function updatecookie(cookes) {
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookes)
         console.log(tag)
-        console.log(typeof coostr)
         const _0x1b9d74 = {
             url: _0x395e24,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify({name:'得间小说',cookies: coostr,ua:'ua',app: 1,tag: tag}),
+            body:JSON.stringify({name:'得间小说',cookies: coostr,ua:'ua',app: 1,"tag": tag}),
         };
         $['post'](_0x1b9d74, async (_0x5475dd, _0x55f1f8, _0x3d8e05) => {
             const _0x1d73e6 = JSON['parse'](_0x3d8e05);
