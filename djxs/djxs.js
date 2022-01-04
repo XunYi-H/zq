@@ -243,7 +243,7 @@ async function getCk() {
         $[_0x31f0('0x111', 'ZEfb')](JSON[_0x31f0('0x159', 'c5CR')](djxsapp, null, 0x2), _0x31f0('0xa3', 'NTKz'));
         $[_0x31f0('0xbb', 'ZEfb')]($['name'], _0x31f0('0x1fd', 'tq!s') + (_0x5ca10f + 0x1) + _0x31f0('0x1b5', '4nZx'));
     }
-    await updatecookie(JSON.stringify(djxsapp[0]))
+    await updatecookie(djxsapp[0])
     console.log(djxsapp[0]['cookie'])
     console.log(djxsapp[0]['url_suffix'])
     console.log(djxsapp[0]['user_body'])
@@ -290,12 +290,13 @@ function userInfo() {
 function updatecookie(cookes) {
     return new Promise((_0x2eb918, _0x548581) => {
         const _0x395e24 = updateurl+'/admin/projects/'+updatetoken;
+        coostr = JSON.stringify(cookes)
         console.log(_0x395e24)
-        console.log(cookes)
+        console.log(coostr)
         const _0x1b9d74 = {
             url: _0x395e24,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            json: {name:'namm',cookies:`${cookes}`,'ua':'ua','app':1}
+            json: {name:'namm',cookies: coostr,'ua':'ua','app':1}
         };
         $['post'](_0x1b9d74, async (_0x5475dd, _0x55f1f8, _0x3d8e05) => {
             const _0x1d73e6 = JSON['parse'](_0x3d8e05);

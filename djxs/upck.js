@@ -1,5 +1,8 @@
 
 const $ = new Env("测试环境")
+
+
+
 let updatetoken = $.getdata('updatetoken') || '';
 let updateurl = $.getdata("updateurl") || '';
 let djxsapp = $.getdata("djxsapp") || [];
