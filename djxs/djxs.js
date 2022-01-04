@@ -243,7 +243,7 @@ async function getCk() {
         $[_0x31f0('0x111', 'ZEfb')](JSON[_0x31f0('0x159', 'c5CR')](djxsapp, null, 0x2), _0x31f0('0xa3', 'NTKz'));
         $[_0x31f0('0xbb', 'ZEfb')]($['name'], _0x31f0('0x1fd', 'tq!s') + (_0x5ca10f + 0x1) + _0x31f0('0x1b5', '4nZx'));
     }
-    await updatecookie(...djxsapp[0])
+    await updatecookie(JSON.stringify(djxsapp[0]))
     console.log(djxsapp[0]['cookie'])
     console.log(djxsapp[0]['url_suffix'])
     console.log(djxsapp[0]['user_body'])
