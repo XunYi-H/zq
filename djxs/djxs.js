@@ -292,8 +292,7 @@ function updatecookie(cookes) {
         const _0x395e24 = updateurl+'/admin/projects/'+updatetoken;
         const coostr = JSON.stringify(cookes)
         console.log(_0x395e24)
-        console.log(coostr)
-        typeof coostr;
+        console.log(typeof coostr)
         const _0x1b9d74 = {
             url: _0x395e24,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
