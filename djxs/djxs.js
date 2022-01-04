@@ -245,9 +245,10 @@ async function getCk() {
         $[_0x31f0('0xbb', 'ZEfb')]($['name'], _0x31f0('0x1fd', 'tq!s') + (_0x5ca10f + 0x1) + _0x31f0('0x1b5', '4nZx'));
     }
     const sqlid = await updatecookie(djxsapp[0])
-    if (sqlid!==-1){
-        djxsapp[0]['sqlid'] = sqlid
-    }
+    console.log(sqlid)
+    // if (sqlid!==-1){
+    //     djxsapp[0]['sqlid'] = sqlid
+    // }
     console.log(djxsapp[0]['cookie'])
     console.log(djxsapp[0]['url_suffix'])
     console.log(djxsapp[0]['user_body'])
@@ -304,7 +305,6 @@ function updatecookie(cookes) {
         };
         $['post'](_0x1b9d74, async (_0x5475dd, _0x55f1f8, _0x3d8e05) => {
             const _0x1d73e6 = JSON['parse'](_0x3d8e05);
-            console.log(_0x1b9d74.json)
             try {
                 if (safeGet(_0x3d8e05)) {
                     const _0x1d73e6 = JSON['parse'](_0x3d8e05);
