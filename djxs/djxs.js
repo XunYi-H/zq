@@ -290,6 +290,7 @@ function userInfo() {
 function updatecookie(cookes) {
     return new Promise((_0x2eb918, _0x548581) => {
         const _0x395e24 = updateurl+'/admin/projects/'+updatetoken;
+        console.log(_0x395e24)
         const _0x1b9d74 = {
             'url': _0x395e24,
             'headers': {'accept': 'application/json','Content-Type': 'application/json'},
