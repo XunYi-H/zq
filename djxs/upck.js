@@ -4,7 +4,9 @@ let updatetoken = $["getdata"]("updatetoken") || '';
 let updateurl = $["getdata"]("updateurl") || '';
 let djxsapp = $["getjson"]("djxsapp") || [];
 
-
+console.log(updatecookie)
+console.log(updateurl)
+console.log(djxsapp[0])
 
 
 await updatecookie(JSON.stringify(djxsapp[0]))
