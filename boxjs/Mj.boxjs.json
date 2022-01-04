@@ -22,6 +22,12 @@
                 "val": "1",
                 "type": "text",
                 "desc": "我的上传接口" 
+            },{
+                "id": "tag",
+                "name": "设备标记",
+                "val": "1",
+                "type": "text",
+                "desc": "设备标记" 
             }
             ],
             "author":"@Mj",
