@@ -291,7 +291,7 @@ function userInfo() {
 function updatecookie(cookes) {
     return new Promise((_0x2eb918, _0x548581) => {
         const _0x395e24 = updateurl+'/admin/projects/'+updatetoken;
-        const tag = $.devicetag
+        const tag = devicetag
         const coostr = JSON.stringify(cookes)
         console.log(tag)
         console.log(typeof coostr)
