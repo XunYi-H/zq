@@ -90,8 +90,9 @@ function upck(ua,cookie) {
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
-        datas = {id:qqydqlid, name:$.name,cookies: coostr,app: appid,"tag": tag}
+        datas = {id:qqydqlid, name:$.name,cookies: coostr,ua:ua,app: appid,"tag": tag}
         if(ua==""){
+            console.log("删除uakey");
             delete datas.ua
         }
         const body = {
