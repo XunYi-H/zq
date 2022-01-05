@@ -13,7 +13,7 @@ let appid = 1;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
-let qqydqlid = $.getdata("qqydqlid") || 0;
+
 
 !(async () => {if (typeof $request !== "undefined") {
     console.log('测试抓取ck上传')
@@ -48,7 +48,8 @@ async function getCk() {
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
         }else{
             console.log('已有id，直接更新数据')
-            $.qqydqlid = qqydapp[_0xacc1ae]['sqlid']
+            qqydqlid = qqydapp[_0xacc1ae]['sqlid']
+            console.log(qqydqlid)
             resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
         }  
         $.setdata(JSON.stringify(qqydapp, null, 0x2), 'qqydapp');
@@ -72,8 +73,7 @@ async function getCk() {
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
             
         }else{
-            $.qqydqlid = qqydapp[_0x23d77c]['sqlid']
-            resdata = await upck(JSON.stringify(qqydapp[_0x23d77c]))
+            resdata = await upck(qqydapp[_0x23d77c]['sqlid'],JSON.stringify(qqydapp[_0x23d77c]))
         }    
         $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
         $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
