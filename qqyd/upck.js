@@ -27,9 +27,10 @@ async function getCk() {
         console.log(cookie)
         let _0xacc1ae = qqyduserck - 0x1;
         if (qqydapp[_0xacc1ae]['cookie']) {
-            console.log('进入设置cookie')
+            console.log('进入更新cookie')
             qqydapp[_0xacc1ae]['cookie'] = cookie;
         } else {
+            console.log('进入设置cookie')
             qqydapp[_0xacc1ae] = {
                 'cookie': cookie
             };
