@@ -23,6 +23,7 @@ let qqydqlid = $.getdata("qqydqlid") || 0;
 async function getCk() {
     if ($request['url']['match'](/\/pkg11955\/promoteReadTimeInit/)) {
         const cookie = $request['headers']['Cookie'];
+        console.log(cookie)
         let _0xacc1ae = qqyduserck - 0x1;
         if (qqydapp[_0xacc1ae]) {
             qqydapp[_0xacc1ae]['cookie'] = cookie;
