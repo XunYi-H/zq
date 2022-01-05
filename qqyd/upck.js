@@ -80,7 +80,7 @@ async function getCk() {
     }
 }
 
-function upck(id,ua,cookie) {
+function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
         const tag = devicetag.toString()
