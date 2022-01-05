@@ -47,7 +47,7 @@ async function getCk() {
                 'rbkey': _0x55964b
             };
         }
-        console.log(JSON['stringify'](qqydapp, null, 0x2))
+        console.log(JSON.stringify(qqydapp))
         $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
         $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
     }
