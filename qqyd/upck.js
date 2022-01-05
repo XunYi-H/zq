@@ -80,12 +80,13 @@ async function getCk() {
     }
 }
 
-function upck(ua,cookie) {
+function upck(id,ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
-        console.log(tag)
+        console.log(qqydqlid)
+
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
