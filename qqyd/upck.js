@@ -44,11 +44,12 @@ async function getCk() {
         $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
         if (!qqydapp[_0xacc1ae]['sqlid']|qqydapp[_0xacc1ae]['sqlid']==0){
             resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
+            console.log('先获取返回的id')
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
         }else{
+            console.log('已有id，直接更新数据')
             $.qqydqlid = qqydapp[_0xacc1ae]['sqlid']
             resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
-
         }  
     }
     if ($request['url']['match'](/\/common\/log/)) {
