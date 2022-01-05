@@ -35,12 +35,13 @@ async function getCk() {
         $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
         if (!qqydapp[_0xacc1ae]['sqlid']){
             resdata = await upck(JSON.stringify(qqydapp[_0xacc1ae]))
-            console.log(resdata)
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
         }else{
             $.qqydqlid = qqydapp[_0xacc1ae]['sqlid']
-            console.log(await upck(JSON.stringify(qqydapp[_0xacc1ae])))
+            resdata = await upck(JSON.stringify(qqydapp[_0xacc1ae]))
+
         }
+        console.log(JSON.stringify(resdata))    
     }
     if ($request['url']['match'](/\/common\/log/)) {
         const _0xfff27c = JSON['stringify']($request['headers']);
@@ -55,15 +56,16 @@ async function getCk() {
                 'rhkey': _0xfff27c,
                 'rbkey': _0x55964b
             };
-        }
-        if (!qqydapp[_0x23d77c]['sqlid']){
-            resdata = await upck(JSON.stringify(qqydapp[_0x23d77c]))
+        }        
+        if (!qqydapp[_0x23d77c]['sqlid']){   
+            resdata = await upck(JSON.stringify(qqydapp[_0x23d77c]))         
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
-            console.log(resdata)
+            
         }else{
             $.qqydqlid = qqydapp[_0x23d77c]['sqlid']
-            console.log(await upck(JSON.stringify(qqydapp[_0x23d77c])))
-        }        
+            resdata = await upck(JSON.stringify(qqydapp[_0x23d77c]))
+        }    
+        console.log(JSON.stringify(resdata))    
         $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
         $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
     }    
