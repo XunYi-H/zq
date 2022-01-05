@@ -6,7 +6,7 @@
 
 
 
-const $ = new Env('UPCK');
+const $ = new Env('QQ阅读');
 let qqyduserck = 1;
 let qqydapp = ($.isNode() ? process.env.qqydapp : $.getdata('qqydapp')) || [];
 let updatetoken = $.getdata("updatetoken") || '';
@@ -64,7 +64,7 @@ function upck(cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify({id:qqydqlid, name:'QQ阅读',cookies: coostr,ua:'ua',app: 1,"tag": tag}),
+            body:JSON.stringify({id:qqydqlid, name:$.name,cookies: coostr,ua:'ua',app: 1,"tag": tag}),
         };
         $.post(body, (err, resp, data) => {
             try {
