@@ -314,10 +314,26 @@ function updatecookie(cookes) {
                 }
             } catch (_0x12089a) {
                 $[_0x31f0('0x1a', 'lQfP')](_0x12089a);
+            }finally{
+                resolve(_0x3d8e05)
             }
-            _0x2eb918();
         });
     });
+}
+function taskHomeCoin(cookie) {
+    return new Promise((resolve) => {
+
+        const body = {"type":type,"id":id,"apiMapping":"/active/taskHomeCoin"}
+        $.post(taskurl(body), (err, resp, data) => {
+            try {
+                data = JSON.parse(data);
+            } catch (e) {
+                $.logErr(e, resp);
+            } finally {
+                resolve(data);
+            }
+        })
+    })
 }
 function sign() {
     return new Promise((_0x32ed31, _0x5bd248) => {
