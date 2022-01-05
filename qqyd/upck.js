@@ -12,6 +12,7 @@ let qqydapp = ($.isNode() ? process.env.qqydapp : $.getdata('qqydapp')) || [];
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
+let qqydqlid = $.getdata("qqydqlid") || 0;
 
 !(async () => {if (typeof $request !== "undefined") {
     console.log('测试抓取ck上传')
@@ -51,7 +52,7 @@ async function getCk() {
         $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
         $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
     }
-    console.log(JSON.stringify(qqydapp))
+    console.log(JSON.stringify(await upck(JSON.stringify(qqydapp[0]))))
 }
 
 function upck(cookie) {
@@ -63,7 +64,7 @@ function upck(cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify({name:'QQ阅读',cookies: coostr,ua:'ua',app: 1,"tag": tag}),
+            body:JSON.stringify({id:qqydqlid, name:'QQ阅读',cookies: coostr,ua:'ua',app: 1,"tag": tag}),
         };
         $.post(body, (err, resp, data) => {
             try {
