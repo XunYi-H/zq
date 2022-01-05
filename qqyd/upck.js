@@ -27,7 +27,7 @@ async function getCk() {
                 'cookie': cookie
             };
         }
-        $['setdata'](JSON[_0xb7df('0x5f', '%@U2')](qqydapp, null, 0x2), _0xb7df('0x70', 'G@^c'));
+        $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
         $['msg']($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
     }
     if ($request['url']['match'](/\/common\/log/)) {
