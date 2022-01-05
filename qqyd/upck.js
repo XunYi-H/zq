@@ -9,7 +9,7 @@
 const $ = new Env('QQ阅读');
 let qqyduserck = 1;
 let qqydapp = [];
-
+let appid = 1;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
@@ -22,9 +22,10 @@ let qqydqlid = $.getdata("qqydqlid") || 0;
 .catch((e) => $.logErr(e))
 .finally(() => $.done())
 async function getCk() {
+
     if ($request['url']['match'](/\/pkg11955\/promoteReadTimeInit/)) {
         const cookie = $request['headers']['Cookie'];
-        const ua = $request['headers']
+        const ua = $request['headers']['User-Agent'];
         console.log(JSON.stringify(ua))
         console.log('抓取到cookie')
         console.log(cookie)
@@ -42,11 +43,11 @@ async function getCk() {
         $.setdata(JSON.stringify(qqydapp, null, 0x2), 'qqydapp');
         $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
         if (!qqydapp[_0xacc1ae]['sqlid']|qqydapp[_0xacc1ae]['sqlid']==0){
-            resdata = await upck(JSON.stringify(qqydapp[_0xacc1ae]))
+            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
         }else{
             $.qqydqlid = qqydapp[_0xacc1ae]['sqlid']
-            resdata = await upck(JSON.stringify(qqydapp[_0xacc1ae]))
+            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
 
         }  
     }
@@ -77,7 +78,7 @@ async function getCk() {
     }
 }
 
-function upck(cookie) {
+function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
         const tag = devicetag.toString()
@@ -86,7 +87,7 @@ function upck(cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify({id:qqydqlid, name:$.name,cookies: coostr,ua:'ua',app: 1,"tag": tag}),
+            body:JSON.stringify({id:qqydqlid, name:$.name,cookies: coostr,ua:ua,app: appid,"tag": tag}),
         };
         $.post(body, (err, resp, data) => {
             try {
