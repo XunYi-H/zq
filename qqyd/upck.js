@@ -8,7 +8,7 @@
 
 const $ = new Env('QQ阅读');
 let qqyduserck = 1;
-let qqydapp = [];
+let qqydapp = $['getjson']('qqydapp', []);
 let appid = 1;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
