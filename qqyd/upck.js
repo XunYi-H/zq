@@ -1,3 +1,4 @@
+const $ = new Env('UPCK');
 let qqyduserck = $[_0xb7df('0x224', 'o6me')](_0xb7df('0x64', 'oSHO')) || 0x1;
 let qqydapp = $[_0xb7df('0x84', 'G@^c')]('qqydapp', []);
 
