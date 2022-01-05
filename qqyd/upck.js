@@ -40,7 +40,7 @@ async function getCk() {
             };
         }
         console.log(qqydapp[_0xacc1ae]['cookie'])
-        $.setdata(JSON.stringify(qqydapp, null, 0x2), 'qqydapp');
+        
         $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
         if (!qqydapp[_0xacc1ae]['sqlid']|qqydapp[_0xacc1ae]['sqlid']==0){
             resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
@@ -51,6 +51,7 @@ async function getCk() {
             $.qqydqlid = qqydapp[_0xacc1ae]['sqlid']
             resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
         }  
+        $.setdata(JSON.stringify(qqydapp, null, 0x2), 'qqydapp');
     }
     if ($request['url']['match'](/\/common\/log/)) {
         const _0xfff27c = JSON['stringify']($request['headers']);
