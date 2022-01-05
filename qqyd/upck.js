@@ -1,8 +1,6 @@
 const $ = new Env('UPCK');
 let qqyduserck = 1;
-
-let qqydapp = [];
-
+let qqydapp = ($.isNode() ? process.env.qqydapp : $.getdata('qqydapp')) || [];
 !(async () => {if (typeof $request !== "undefined") {
     console.log('测试抓取ck上传')
     await getCk();
