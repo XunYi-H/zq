@@ -57,6 +57,7 @@ async function getCk() {
     if ($request['url']['match'](/\/common\/log/)) {
         const _0xfff27c = JSON['stringify']($request['headers']);
         const _0x55964b = $request['body'];
+        const ua = '';
         $['log'](_0x55964b);
         let _0x23d77c = qqyduserck - 0x1;
         if (qqydapp[_0x23d77c]) {
@@ -68,12 +69,15 @@ async function getCk() {
                 'rbkey': _0x55964b
             };
         }        
-        if (!qqydapp[_0x23d77c]['sqlid']|qqydapp[_0x23d77c]['sqlid']==0){   
-            resdata = await upck(JSON.stringify(qqydapp[_0x23d77c]))         
-            qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
-            
+        if (!qqydapp[_0x23d77c]['sqlid']|qqydapp[_0x23d77c]['sqlid']==0){
+            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0x23d77c]))
+            console.log('先获取返回的id')
+            qqydapp[_0x23d77c]['sqlid'] = resdata.data.id
         }else{
-            resdata = await upck(qqydapp[_0x23d77c]['sqlid'],JSON.stringify(qqydapp[_0x23d77c]))
+            console.log('已有id，直接更新数据')
+            qqydqlid = qqydapp[_0x23d77c]['sqlid']
+            console.log(qqydqlid)
+            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0x23d77c]))
         }    
         $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
         $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
@@ -86,11 +90,14 @@ function upck(ua,cookie) {
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
-
+        datas = {id:qqydqlid, name:$.name,cookies: coostr,app: appid,"tag": tag}
+        if(ua==""){
+            delete datas.ua
+        }
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify({id:qqydqlid, name:$.name,cookies: coostr,ua:ua,app: appid,"tag": tag}),
+            body:JSON.stringify(datas),
         };
         $.post(body, (err, resp, data) => {
             try {
