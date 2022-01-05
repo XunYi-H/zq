@@ -1,3 +1,10 @@
+
+
+/*
+又偷了个脚本
+*/
+
+
 const $ = new Env('UPCK');
 let qqyduserck = 1;
 let qqydapp = ($.isNode() ? process.env.qqydapp : $.getdata('qqydapp')) || [];
