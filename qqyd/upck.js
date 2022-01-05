@@ -9,6 +9,7 @@
 const $ = new Env('QQ阅读');
 let qqyduserck = 1;
 let qqydapp = ($.isNode() ? process.env.qqydapp : $.getdata('qqydapp')) || [];
+$.setdata([],'qqydapp')
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
