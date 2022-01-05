@@ -24,6 +24,8 @@ let qqydqlid = $.getdata("qqydqlid") || 0;
 async function getCk() {
     if ($request['url']['match'](/\/pkg11955\/promoteReadTimeInit/)) {
         const cookie = $request['headers']['Cookie'];
+        const ua = $.request.headers
+        console.log(JSON.stringify(ua))
         console.log('抓取到cookie')
         console.log(cookie)
         let _0xacc1ae = qqyduserck - 0x1;
