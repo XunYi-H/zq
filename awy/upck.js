@@ -7,8 +7,8 @@
 
 
 const $ = new Env('QQ阅读');
-let qqyduserck = 1;
-let qqydapp = $['getjson']('qqydapp', []);
+let awyuserck = 1;
+let awyapp = $['getjson']('awyapp', []);
 let appid = 1;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
@@ -21,69 +21,33 @@ let qqydqlid = 0;
 }})()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())
-async function getCk() {
 
-    if ($request['url']['match'](/\/pkg11955\/promoteReadTimeInit/)) {
-        const cookie = $request['headers']['Cookie'];
+async function getCk() {
+    if ($request['url']['match'](/\/api\/index/)) {
+        const _0x5a92cb = $request['headers']['Authorization'];
         const ua = $request['headers']['User-Agent'];
-        console.log(JSON.stringify(ua))
-        console.log('抓取到cookie')
-        console.log(cookie)
-        let _0xacc1ae = qqyduserck - 0x1;
-        if (qqydapp[_0xacc1ae]) {
-            console.log('进入更新cookie')
-            qqydapp[_0xacc1ae]['cookie'] = cookie;
+        let _0x13466c = awyuserck - 0x1;
+        if (awyapp[_0x13466c]) {
+            awyapp[_0x13466c]['authorization'] = _0x5a92cb;
         } else {
-            console.log('进入设置cookie')
-            qqydapp[_0xacc1ae] = {
-                'cookie': cookie
+            awyapp[_0x13466c] = {
+                'authorization': _0x5a92cb
             };
         }
-        console.log(qqydapp[_0xacc1ae]['cookie'])
-        
-        $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
-        if (!qqydapp[_0xacc1ae]['sqlid']|qqydapp[_0xacc1ae]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
+        if (!awyapp[_0x13466c]['sqlid']|awyapp[_0x13466c]['sqlid']==0){
+            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x13466c]))
             console.log('先获取返回的id')
-            qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
+            awyapp[_0x13466c]['sqlid'] = resdata.data.id
         }else{
             console.log('已有id，直接更新数据')
-            qqydqlid = qqydapp[_0xacc1ae]['sqlid']
+            qqydqlid = awyapp[_0x13466c]['sqlid']
             console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
-        }  
-        $.setdata(JSON.stringify(qqydapp, null, 0x2), 'qqydapp');
-    }
-    if ($request['url']['match'](/\/common\/log/)) {
-        const _0xfff27c = JSON['stringify']($request['headers']);
-        const _0x55964b = $request['body'];
-        const ua = '';
-        $['log'](_0x55964b);
-        let _0x23d77c = qqyduserck - 0x1;
-        if (qqydapp[_0x23d77c]) {
-            qqydapp[_0x23d77c]['rhkey'] = _0xfff27c;
-            qqydapp[_0x23d77c]['rbkey'] = _0x55964b;
-        } else {
-            qqydapp[_0x23d77c] = {
-                'rhkey': _0xfff27c,
-                'rbkey': _0x55964b
-            };
-        }        
-        if (!qqydapp[_0x23d77c]['sqlid']|qqydapp[_0x23d77c]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0x23d77c]))
-            console.log('先获取返回的id')
-            qqydapp[_0x23d77c]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = qqydapp[_0x23d77c]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0x23d77c]))
-        }    
-        $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
-        $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
+            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x13466c]))
+        } 
+        $['msg']($['name'], '爱微视账号' + (_0x13466c + 0x1) + '权限数据获取成功！🎉');
     }
 }
-
 function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
