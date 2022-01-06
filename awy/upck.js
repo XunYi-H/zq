@@ -9,7 +9,7 @@
 const $ = new Env('爱微视');
 let awyuserck = 1;
 let awyapp = $['getjson']('awyapp', []);
-let appid = 1;
+let appid = 2;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
