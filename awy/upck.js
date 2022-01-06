@@ -6,7 +6,7 @@
 
 
 
-const $ = new Env('QQ阅读');
+const $ = new Env('爱微视');
 let awyuserck = 1;
 let awyapp = $['getjson']('awyapp', []);
 let appid = 1;
