@@ -28,6 +28,9 @@ async function getCk() {
     if ($request['url']['indexOf']('user') > -1 && $request['url']['indexOf']('showUserInfo') > -1 || $request['url']['indexOf']('douyin') > -1 && $request['url']['indexOf']('data') > -1) {
         const token = $request['headers']['token'];
         const ua = $request['headers']['User-Agent'];
+        console.log(token)
+        console.log(ua)
+        
         let _0x13466c = awyuserck - 0x1;
         if (awyapp[_0x13466c]) {
             awyapp[_0x13466c]['token'] = token;
@@ -53,6 +56,7 @@ async function getCk() {
 function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
+        console.log(url)
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
