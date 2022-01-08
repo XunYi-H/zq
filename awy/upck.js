@@ -37,7 +37,7 @@ async function getCk() {
         $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
         if (!awyapp[_0x13466c]['sqlid']|awyapp[_0x13466c]['sqlid']==0){
             resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-            console.log(resdata)
+            console.log(JSON.stringify(resdata))
             console.log('先获取返回的id')
             awyapp[_0x13466c]['sqlid'] = resdata.data.id
         }else{
