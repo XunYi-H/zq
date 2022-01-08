@@ -53,7 +53,7 @@ function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
         const tag = devicetag.toString()
-        const coostr = cookie
+        const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
         datas = {id:qqydqlid, name:$.name,cookies: coostr,ua:ua,app: appid,"tag": tag}
         if(ua==""){
