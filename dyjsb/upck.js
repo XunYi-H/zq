@@ -26,6 +26,7 @@ async function getCk() {
     if ($request && $request['url']['indexOf']('aweme' && 'sign_in') >= 0) {
         const cookie = $request['headers']['Cookie'];
         const url = $request['url']['split']('?')[0];
+        const ua = $request['headers']['User-Agent'];
         let _0x4156cd = awyuserck - 0x1;
         if (awyapp[_0x4156cd]) {
             awyapp[_0x4156cd]['dyjsb_sign_url'] = url;
@@ -54,6 +55,7 @@ async function getCk() {
     if ($request && $request['url']['indexOf']('aweme' && 'done/read') >= 0x0) {
         const _0x1ed2d7 = JSON['stringify']($request['headers']);
         const _0x1251c8 = $request['url']['split']('?')[0x1];
+        const ua = $request['headers']['User-Agent'];
         let _0x439cdc = awyuserck - 0x1;
         awyapp[_0x439cdc]['dyjsb_host'] = $request['headers']['Host'];
         awyapp[_0x439cdc]['dyjsb_read_url'] = _0x1251c8;
@@ -76,6 +78,7 @@ async function getCk() {
     if ($request && $request['url']['indexOf']('aweme' && 'done/treasure_task') >= 0x0) {
         const _0x1e4966 = JSON['stringify']($request['headers']);
         const _0x3efaf4 = $request['url']['split']('?')[0x1];
+        const ua = $request['headers']['User-Agent'];
         let _0x4fda0e = awyuserck - 0x1;
         awyapp[_0x4fda0e]['dyjsb_box_url'] = _0x3efaf4;
         awyapp[_0x4fda0e]['dyjsb_box_header'] = _0x1e4966;
@@ -97,6 +100,8 @@ async function getCk() {
     if ($request && $request['url']['indexOf']('aweme' && 'done/excitation_ad_treasure_box') >= 0x0) {
         const _0x70899b = JSON['stringify']($request['headers']);
         const _0x5a884d = $request['url']['split']('?')[0x1];
+        const ua = $request['headers']['User-Agent'];
+
         let _0xe9d046 = awyuserck - 0x1;
         awyapp[_0xe9d046]['dyjsb_box_ad_url'] = _0x5a884d;
         awyapp[_0xe9d046]['dyjsb_box_ad_header'] = _0x70899b;
@@ -118,6 +123,8 @@ async function getCk() {
     if ($request && $request['url']['indexOf']('aweme' && 'done/excitation_ad') >= 0x0 && $request['url']['indexOf']('treasure_box') < 0x0) {
         const _0x1458d9 = JSON['stringify']($request['headers']);
         const _0xb1b271 = $request['url']['split']('?')[0x1];
+        const ua = $request['headers']['User-Agent'];
+
         let _0x5a29cf = awyuserck - 0x1;
         awyapp[_0x5a29cf]['dyjsb_limit_task_url'] = _0xb1b271;
         awyapp[_0x5a29cf]['dyjsb_limit_task_header'] = _0x1458d9;
