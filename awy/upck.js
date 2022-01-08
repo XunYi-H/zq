@@ -63,7 +63,7 @@ function upck(ua,cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify(datas),
+            body:datas,
         };
         $.post(body, (err, resp, data) => {
             try {
