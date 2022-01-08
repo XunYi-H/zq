@@ -82,7 +82,7 @@ async function getCk() {
         let _0x4fda0e = awyuserck - 0x1;
         awyapp[_0x4fda0e]['dyjsb_box_url'] = _0x3efaf4;
         awyapp[_0x4fda0e]['dyjsb_box_header'] = _0x1e4966;
-        $['setdata'](JSON[_0x1e9d('0x222', 'NdFv')](awyapp, null, 0x2), 'dyjsbapp');
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
         if (!awyapp[_0x4fda0e]['sqlid']|awyapp[_0x4fda0e]['sqlid']==0){
             resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x4fda0e]))
             console.log('先获取返回的id')
