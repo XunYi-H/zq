@@ -16,7 +16,6 @@ let devicetag = $.getdata("tag") || '';
 let qqydqlid = 0;
 
 !(async () => {if (typeof $request !== "undefined") {
-    console.log('测试抓取ck上传')
     await getCk();
 }})()
 .catch((e) => $.logErr(e))
