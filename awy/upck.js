@@ -34,18 +34,16 @@ async function getCk() {
                 'authorization': _0x5a92cb
             };
         }
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
-        if (!awyapp[_0x13466c]['sqlid']|awyapp[_0x13466c]['sqlid']==0){
+        
+        try{
             resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-            console.log(JSON.stringify(resdata))
-            console.log('先获取返回的id')
             awyapp[_0x13466c]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0x13466c]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-        } 
+
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
+        }
         $['msg']($['name'], '爱微视账号' + (_0x13466c + 0x1) + '权限数据获取成功！🎉');
     }
 }
