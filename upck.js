@@ -6,10 +6,10 @@
 
 
 
-const $ = new Env('抖音极速版');
+const $ = new Env('爱微视');
 let awyuserck = 1;
-let awyapp = $['getjson']('dyjsbapp', []);
-let appid = 1;
+let awyapp = $['getjson']('awyapp', []);
+let appid = 2;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
@@ -23,136 +23,35 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request && $request['url']['indexOf']('aweme' && 'sign_in') >= 0) {
-        const cookie = $request['headers']['Cookie'];
-        const url = $request['url']['split']('?')[0];
+    if ($request['url']['match'](/\/api\/index/)) {
+        const _0x5a92cb = $request['headers']['Authorization'];
         const ua = $request['headers']['User-Agent'];
-        let _0x4156cd = awyuserck - 0x1;
-        if (awyapp[_0x4156cd]) {
-            awyapp[_0x4156cd]['dyjsb_sign_url'] = url;
-            awyapp[_0x4156cd]['dyjsb_sign_cookie'] = cookie;
+        let _0x13466c = awyuserck - 0x1;
+        if (awyapp[_0x13466c]) {
+            awyapp[_0x13466c]['authorization'] = _0x5a92cb;
         } else {
-            awyapp[_0x4156cd] = {
-                'dyjsb_sign_url': url,
-                'dyjsb_sign_cookie': cookie
+            awyapp[_0x13466c] = {
+                'authorization': _0x5a92cb
             };
         }
-        if (!awyapp[_0x4156cd]['sqlid']|awyapp[_0x4156cd]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x4156cd]))
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
+        if (!awyapp[_0x13466c]['sqlid']|awyapp[_0x13466c]['sqlid']==0){
+            resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+            console.log(JSON.stringify(resdata))
             console.log('先获取返回的id')
-            awyapp[_0x4156cd]['sqlid'] = resdata.data.id
+            awyapp[_0x13466c]['sqlid'] = resdata.data.id
         }else{
             console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0x4156cd]['sqlid']
+            qqydqlid = awyapp[_0x13466c]['sqlid']
             console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x4156cd]))
-        }
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
-        $['log']('抖音极速版签到url: ' + url);
-        $['log']('抖音极速版签到Cookie: ' + cookie);
-        $['msg']($['name'], '成功获取到签到数据🎉');
-    }
-    if ($request && $request['url']['indexOf']('aweme' && 'done/read') >= 0x0) {
-        const _0x1ed2d7 = JSON['stringify']($request['headers']);
-        const _0x1251c8 = $request['url']['split']('?')[0x1];
-        const ua = $request['headers']['User-Agent'];
-        let _0x439cdc = awyuserck - 0x1;
-        awyapp[_0x439cdc]['dyjsb_host'] = $request['headers']['Host'];
-        awyapp[_0x439cdc]['dyjsb_read_url'] = _0x1251c8;
-        awyapp[_0x439cdc]['dyjsb_read_header'] = _0x1ed2d7;
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
-        if (!awyapp[_0x439cdc]['sqlid']|awyapp[_0x439cdc]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x439cdc]))
-            console.log('先获取返回的id')
-            awyapp[_0x439cdc]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0x439cdc]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x439cdc]))
-        }
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
-
-        $['log']('抖音极速版视频url: ' + _0x1251c8);
-        $['log']('抖音极速版视频headers:\x20' + _0x1ed2d7);
-        $['msg']($['name'], '成功获取到视频数据🎉');
-    }
-    if ($request && $request['url']['indexOf']('aweme' && 'done/treasure_task') >= 0x0) {
-        const _0x1e4966 = JSON['stringify']($request['headers']);
-        const _0x3efaf4 = $request['url']['split']('?')[0x1];
-        const ua = $request['headers']['User-Agent'];
-        let _0x4fda0e = awyuserck - 0x1;
-        awyapp[_0x4fda0e]['dyjsb_box_url'] = _0x3efaf4;
-        awyapp[_0x4fda0e]['dyjsb_box_header'] = _0x1e4966;
-        if (!awyapp[_0x4fda0e]['sqlid']|awyapp[_0x4fda0e]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x4fda0e]))
-            console.log('先获取返回的id')
-            awyapp[_0x4fda0e]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0x4fda0e]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x4fda0e]))
+            resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
         } 
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
-
-        $['log']('抖音极速版开宝箱任务url: ' + _0x3efaf4);
-        $['log']('抖音极速版开宝箱任务headers: ' + _0x1e4966);
-        $['msg']($['name'], '成功获取到开宝箱任务数据🎉');
-    }
-    if ($request && $request['url']['indexOf']('aweme' && 'done/excitation_ad_treasure_box') >= 0x0) {
-        const _0x70899b = JSON['stringify']($request['headers']);
-        const _0x5a884d = $request['url']['split']('?')[0x1];
-        const ua = $request['headers']['User-Agent'];
-
-        let _0xe9d046 = awyuserck - 0x1;
-        awyapp[_0xe9d046]['dyjsb_box_ad_url'] = _0x5a884d;
-        awyapp[_0xe9d046]['dyjsb_box_ad_header'] = _0x70899b;
-        if (!awyapp[_0xe9d046]['sqlid']|awyapp[_0xe9d046]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0xe9d046]))
-            console.log('先获取返回的id')
-            awyapp[_0xe9d046]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0xe9d046]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0xe9d046]))
-        } 
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
-
-        $['log']('抖音极速版开宝箱看广告任务url:\x20' + _0x5a884d);
-        $['log']('抖音极速版开宝箱看广告任务headers:\x20' + _0x70899b);
-        $['msg']($['name'], '成功获取到开宝箱看广告任务数据🎉');
-    }
-    if ($request && $request['url']['indexOf']('aweme' && 'done/excitation_ad') >= 0x0 && $request['url']['indexOf']('treasure_box') < 0x0) {
-        const _0x1458d9 = JSON['stringify']($request['headers']);
-        const _0xb1b271 = $request['url']['split']('?')[0x1];
-        const ua = $request['headers']['User-Agent'];
-
-        let _0x5a29cf = awyuserck - 0x1;
-        awyapp[_0x5a29cf]['dyjsb_limit_task_url'] = _0xb1b271;
-        awyapp[_0x5a29cf]['dyjsb_limit_task_header'] = _0x1458d9;
-        if (!awyapp[_0x5a29cf]['sqlid']|awyapp[_0x5a29cf]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x5a29cf]))
-            console.log('先获取返回的id')
-            awyapp[_0x5a29cf]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0x5a29cf]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x5a29cf]))
-        } 
-        $['log']('抖音极速版限时广告任务url: ' + _0xb1b271);
-        $['log']('抖音极速版限时广告任务headers: ' + _0x1458d9);
-        $['msg']($['name'], _0x1e9d('0x4e', 'HDuA'));
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
-
+        $['msg']($['name'], '爱微视账号' + (_0x13466c + 0x1) + '权限数据获取成功！🎉');
     }
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
-        console.log(url)
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
@@ -164,7 +63,7 @@ function upck(ua,cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify(datas),
+            body:JSON.stringify(datas),//这段到底提交啥
         };
         $.post(body, (err, resp, data) => {
             try {
