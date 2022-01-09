@@ -26,6 +26,7 @@ async function getCk() {
         const _0x286f35 = $request['url']['split']('?')[0x1];
         const _0x5f4ef3 = $request['headers']['Host'];
         const _0x45b5b4 = JSON['stringify']($request['headers']);
+        const ua = $request['headers']['User-Agent'];
         let _0x4d111d = awyuserck - 0x1;
         if (awyapp[_0x4d111d]) {
             if (_0x286f35['indexOf']('android') != -0x1) {
