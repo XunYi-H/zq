@@ -7,7 +7,7 @@
 
 
 const $ = new Env('得间小说');
-let awyuserck = 1;
+let djxsuserck = 1;
 let djxsapp = $['getjson']('djxsapp', []);
 let appid = 2;
 let updatetoken = $.getdata("updatetoken") || '';
