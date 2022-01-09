@@ -9,7 +9,7 @@
 const $ = new Env('得间小说');
 let djxsuserck = 1;
 let djxsapp = $['getjson']('djxsapp', []);
-let appid = 2;
+let appid = 1;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
