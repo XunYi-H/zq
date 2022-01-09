@@ -9,7 +9,7 @@
 const $ = new Env('抖音极速版');
 let awyuserck = 1;
 let awyapp = $['getjson']('dyjsbapp', []);
-let appid = 1;
+let appid = 4;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
