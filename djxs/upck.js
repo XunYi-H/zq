@@ -48,10 +48,10 @@ async function getCk() {
             };
             
         }
-        resdata = await upck(JSON.stringify(ua),djxsapp[_0x13466c])
+        resdata = await upck(JSON.stringify(ua),djxsapp[_0x406326])
         try{
             
-            djxsapp[_0x13466c]['sqlid'] = resdata.data.id
+            djxsapp[_0x406326]['sqlid'] = resdata.data.id
 
         }catch{
             print(resdata)
@@ -74,10 +74,10 @@ async function getCk() {
             };
             
         }
-        resdata = await upck(JSON.stringify(ua),djxsapp[_0x13466c])
+        resdata = await upck(JSON.stringify(ua),djxsapp[_0x5ca10f])
         try{
             
-            djxsapp[_0x13466c]['sqlid'] = resdata.data.id
+            djxsapp[_0x5ca10f]['sqlid'] = resdata.data.id
 
         }catch{
             print(resdata)
