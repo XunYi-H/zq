@@ -83,7 +83,7 @@ const _0x1e9d = function (_0x1880f0, _0x32f0eb) {
 const jsname = _0x1e9d('0x192', 'nNnQ');
 const version = _0x1e9d('0xfd', 'I^%Y');
 const $ = Env(jsname);
-let dyjsbapp = $[_0x1e9d('0xff', 'I3D!')](_0x1e9d('0xaa', 'FlXk'), []);
+let dyjsbapp = $[_0x1e9d('0xff', 'I3D!')]('dyjsbapp', []);
 let dyjsbkey = $[_0x1e9d('0x1f', 'FlXk')](_0x1e9d('0x82', '2qy9')) || 0x1;
 let userId = $[_0x1e9d('0x119', 'HP*3')](_0x1e9d('0x182', 'e[E0')) || 0x1;
 let activeCode = $[_0x1e9d('0x75', 'oKBX')](_0x1e9d('0xb6', '3wPx')) || 0x0;
@@ -95,7 +95,8 @@ var minute = '';
 let newest_version = '';
 let systemNotify = '';
 if ($[_0x1e9d('0x79', 'UoP4')]()) {
-    dyjsbapp = JSON['parse'](process[_0x1e9d('0xbd', 'zuZq')]['DYJSBAPP']);
+    dyjsbapp = JSON['parse'](process['env']['dyjsbapp']);
+    print(dyjsbapp)
     userId = process[_0x1e9d('0x19f', 'nNnQ')][_0x1e9d('0x3e', 'j!q^')];
     activeCode = process[_0x1e9d('0x53', 'CbxK')][_0x1e9d('0x9a', 'o*GZ')];
     hour = new Date(new Date()[_0x1e9d('0x15f', 'HP*3')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x1e9d('0x223', 'e[E0')]();
