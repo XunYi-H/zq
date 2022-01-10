@@ -37,24 +37,21 @@ async function getCk() {
                 'token': token
             };
         }
-        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jxcfzwx');
-        if (!awyapp[_0x13466c]['sqlid']|awyapp[_0x13466c]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x13466c]))
-            console.log('先获取返回的id')
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+        try{            
             awyapp[_0x13466c]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = awyapp[_0x13466c]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(awyapp[_0x13466c]))
-        } 
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
+        }
         $['msg']($['name'], '嘉实宠粉站' + (_0x13466c + 0x1) + '权限数据获取成功！🎉');
     }
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
-        console.log(url)
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
@@ -66,7 +63,7 @@ function upck(ua,cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify(datas),
+            body:JSON.stringify(datas),//这段到底提交啥
         };
         $.post(body, (err, resp, data) => {
             try {
