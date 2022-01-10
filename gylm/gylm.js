@@ -113,79 +113,69 @@ const TASK_TURN_TABLE = 0x12;
 const TASK_SHARE = 0xe;
 const TASK_VIEW = 0xf;
 const MD5_SALT = _0x306b('0xe4', 'SK15');
-if ($[_0x306b('0x25e', 'z4Bg')]()) {
-    gylmapp = JSON[_0x306b('0x1f2', 'w9RJ')](process[_0x306b('0x1c9', 'l0o*')][_0x306b('0x163', '&&FQ')]);
-    userId = process[_0x306b('0x145', 'SK15')]['TGUSERID'];
-    activeCode = process[_0x306b('0x263', 'ZTN*')][_0x306b('0x46', 's94C')];
-    hour = new Date(new Date()[_0x306b('0x169', 'pIrX')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x306b('0x1b8', '2K@D')]();
-    minute = new Date(new Date()[_0x306b('0xad', '5LtQ')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x306b('0x216', 'A]V]')]();
-} else {
-    hour = new Date()[_0x306b('0x1b8', '2K@D')]();
-    minute = new Date()[_0x306b('0x12d', 'w9RJ')]();
-}!(async () => {
-    if (typeof $request !== _0x306b('0x9d', '%Q9[')) {
-        await getCk();
+let getck = require("./getck")
+getck.getCKS("9").then(function(data){
+    run(data);
+})
+
+async function run(app){
+    if ($[_0x306b('0x25e', 'z4Bg')]()) {
+        gylmapp = app;
+        userId = process[_0x306b('0x145', 'SK15')]['TGUSERID'];
+        activeCode = process[_0x306b('0x263', 'ZTN*')][_0x306b('0x46', 's94C')];
+        hour = new Date(new Date()[_0x306b('0x169', 'pIrX')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x306b('0x1b8', '2K@D')]();
+        minute = new Date(new Date()[_0x306b('0xad', '5LtQ')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x306b('0x216', 'A]V]')]();
     } else {
-        if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x306b('0x1b6', '3QuL')] != 0x20) {
-            $[_0x306b('0xcc', 'lu@Z')](_0x306b('0x27d', 'UHWs'));
-            return;
-        }
-        await getScriptAuth('gylmapp', userId, activeCode);
-        $['log']('📢\x20' + systemNotify);
-        $[_0x306b('0xd0', 'Kp6q')](_0x306b('0x190', 'loRr') + version + _0x306b('0x280', 'X34b') + newest_version);
-        if (version < newest_version) {
-            $['log'](_0x306b('0x1a1', 'pIrX'));
-            return;
-        }
-        if (scriptAuth != !![]) {
-            $[_0x306b('0x120', 'O[(I')](_0x306b('0x262', '5LtQ'));
-            return;
-        }
-        if (userAuth != !![]) {
-            $[_0x306b('0xac', 'nTvd')](_0x306b('0x1ee', 'loRr'));
-            return;
-        }
-        if (isCharge == !![]) {
-            $[_0x306b('0xe1', 'LwWK')](_0x306b('0x205', 'UHWs'));
+        hour = new Date()[_0x306b('0x1b8', '2K@D')]();
+        minute = new Date()[_0x306b('0x12d', 'w9RJ')]();
+    }!(async () => {
+        if (typeof $request !== _0x306b('0x9d', '%Q9[')) {
+            await getCk();
         } else {
-            $[_0x306b('0x25c', '[cSU')](_0x306b('0xd9', 's94C'));
-        }
-        if (vipAuth != !![]) {
-            $[_0x306b('0x238', '%0o&')]('⚠️\x20抱歉，你没有权限运行此脚本,\x20你不是付费用户，请关注电报群:\x20https://t.me/china20211029');
-            return;
-        } else {
+    
+            $['log']('📢\x20' + systemNotify);
+            $[_0x306b('0xd0', 'Kp6q')](_0x306b('0x190', 'loRr') + version + _0x306b('0x280', 'X34b') + newest_version);
+    
             if (isCharge == !![]) {
-                $[_0x306b('0x7', 'utXl')](_0x306b('0x42', '8!Uz'));
+                $[_0x306b('0xe1', 'LwWK')](_0x306b('0x205', 'UHWs'));
+            } else {
+                $[_0x306b('0x25c', '[cSU')](_0x306b('0xd9', 's94C'));
             }
+            if (vipAuth != !![]) {
+                // $[_0x306b('0x238', '%0o&')]('⚠️\x20抱歉，你没有权限运行此脚本,\x20你不是付费用户，请关注电报群:\x20https://t.me/china20211029');
+                // return;
+            } else {
+                if (isCharge == !![]) {
+                    $[_0x306b('0x7', 'utXl')](_0x306b('0x42', '8!Uz'));
+                }
+            }
+    
+            $[_0x306b('0x1bc', '6Qb(')](_0x306b('0x10a', 'utXl') + gylmapp[_0x306b('0x197', '(Jum')] + _0x306b('0x7a', '#@bi'));
+            for (let _0x407b02 = 0x0; _0x407b02 < gylmapp[_0x306b('0x50', 'Ml)6')]; _0x407b02++) {
+                $[_0x306b('0x10c', '(Jum')](_0x306b('0x1e3', 'z4Bg') + (_0x407b02 + 0x1) + _0x306b('0x1ce', 'lu@Z'));
+                gylm = gylmapp[_0x407b02];
+                if (!gylm[_0x306b('0x278', '18]@')]) {
+                    gylmapp[_0x407b02][_0x306b('0x90', 'sMN7')] = 0x0;
+                    $[_0x306b('0x1b4', 'unl6')](JSON[_0x306b('0xc', 'VJl&')](gylmapp, null, 0x2), _0x306b('0x273', 'g76*'));
+                }
+                if (!gylm[_0x306b('0x116', 'VJl&')]) {
+                    gylmapp[_0x407b02][_0x306b('0x22d', 'aow7')] = 0x1;
+                    $[_0x306b('0x275', '(Jum')](JSON[_0x306b('0xc', 'VJl&')](gylmapp, null, 0x2), _0x306b('0x28d', 'pIrX'));
+                }
+                initHeaders();
+                await userInfo();
+                await sign();
+                await doTask();
+                if (gylm[_0x306b('0x160', 'M]Mg')] == 0x1) {
+                    await exchangeRed();
+                }
+            }
+            content += _0x306b('0x5c', 'utXl');
+            await sendMsg(content);
         }
-        if (runAuth != !![]) {
-            $[_0x306b('0xf2', 'n$Ea')](_0x306b('0x14d', '@($M'));
-            return;
-        }
-        $[_0x306b('0x1bc', '6Qb(')](_0x306b('0x10a', 'utXl') + gylmapp[_0x306b('0x197', '(Jum')] + _0x306b('0x7a', '#@bi'));
-        for (let _0x407b02 = 0x0; _0x407b02 < gylmapp[_0x306b('0x50', 'Ml)6')]; _0x407b02++) {
-            $[_0x306b('0x10c', '(Jum')](_0x306b('0x1e3', 'z4Bg') + (_0x407b02 + 0x1) + _0x306b('0x1ce', 'lu@Z'));
-            gylm = gylmapp[_0x407b02];
-            if (!gylm[_0x306b('0x278', '18]@')]) {
-                gylmapp[_0x407b02][_0x306b('0x90', 'sMN7')] = 0x0;
-                $[_0x306b('0x1b4', 'unl6')](JSON[_0x306b('0xc', 'VJl&')](gylmapp, null, 0x2), _0x306b('0x273', 'g76*'));
-            }
-            if (!gylm[_0x306b('0x116', 'VJl&')]) {
-                gylmapp[_0x407b02][_0x306b('0x22d', 'aow7')] = 0x1;
-                $[_0x306b('0x275', '(Jum')](JSON[_0x306b('0xc', 'VJl&')](gylmapp, null, 0x2), _0x306b('0x28d', 'pIrX'));
-            }
-            initHeaders();
-            await userInfo();
-            await sign();
-            await doTask();
-            if (gylm[_0x306b('0x160', 'M]Mg')] == 0x1) {
-                await exchangeRed();
-            }
-        }
-        content += _0x306b('0x5c', 'utXl');
-        await sendMsg(content);
-    }
-})()[_0x306b('0x19b', 'w9RJ')](_0x7242eb => $['logErr'](_0x7242eb))['finally'](() => $[_0x306b('0x201', 'zMsA')]());
+    })()[_0x306b('0x19b', 'w9RJ')](_0x7242eb => $['logErr'](_0x7242eb))['finally'](() => $[_0x306b('0x201', 'zMsA')]());
+}
+
 async function getCk() {
     if ($request[_0x306b('0x40', '#@bi')][_0x306b('0x134', '%59x')](/\/v1\/everydaySignIn/)) {
         const _0x3509ed = $request['headers'][_0x306b('0x131', '%GET')];
