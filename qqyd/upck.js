@@ -39,8 +39,7 @@ async function getCk() {
                 'cookie': cookie
             };
         }
-        console.log(qqydapp[_0xacc1ae]['cookie'])
-        
+        console.log(qqydapp[_0xacc1ae]['cookie'])        
         $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
         const ua = $request['headers']['User-Agent'];
         resdata = await upck(JSON.stringify(ua),qqydapp[_0xacc1ae])
