@@ -25,10 +25,7 @@ let qqydqlid = 0;
 async function getCk() {
     if ($request['url']['indexOf']('user') > -1 && $request['url']['indexOf']('showUserInfo') > -1 || $request['url']['indexOf']('douyin') > -1 && $request['url']['indexOf']('data') > -1) {
         const token = $request['headers']['token'];
-        const ua = $request['headers']['User-Agent'];
         console.log(token)
-        console.log(ua)
-
         let _0x13466c = awyuserck - 0x1;
         if (awyapp[_0x13466c]) {
             awyapp[_0x13466c]['token'] = token;
