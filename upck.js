@@ -24,7 +24,6 @@ let qqydqlid = 0;
 async function getCk() {
     if ($request['url']['match'](/\/api\/index/)) {
         const _0x5a92cb = $request['headers']['Authorization'];
-        const ua = $request['headers']['User-Agent'];
         let _0x13466c = awyuserck - 0x1;
         if (awyapp[_0x13466c]) {
             awyapp[_0x13466c]['authorization'] = _0x5a92cb;
@@ -33,6 +32,7 @@ async function getCk() {
                 'authorization': _0x5a92cb
             };
         }
+        const ua = $request['headers']['User-Agent'];
         resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
         try{            
             awyapp[_0x13466c]['sqlid'] = resdata.data.id

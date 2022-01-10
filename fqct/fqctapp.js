@@ -85,7 +85,6 @@ const version = _0x44a9('0x275', 'hfGo');
 let fqctapp = $[_0x44a9('0x68', 'f&B7')]('fqctapp', []);
 const notify = $['isNode']() ? require('./sendNotify') : '';
 let userId = $[_0x44a9('0x34d', 'hQn*')]('tguserid') || 0x1;
-let activeCode = $[_0x44a9('0x196', 'T7T^')]('fqctactivecode') || 0x0;
 let fqctuserck = $['getval'](_0x44a9('0x162', '8p7l')) || 0x1;
 const logs = 0x0;
 let tz = $[_0x44a9('0x320', 'pT0a')]('tz') || '1';
@@ -93,14 +92,12 @@ var hour = '';
 var minute = '';
 let fqct = '';
 let content = '';
-let userAuth = '';
-let scriptAuth = '';
 let newest_version = '';
 let systemNotify = '';
 let vipAuth = '';
 let isCharge = '';
 if ($['isNode']()) {
-    fqctapp = JSON[_0x44a9('0x87', 'hfGo')](process['env'][_0x44a9('0x180', 'T7T^')]);
+    fqctapp = JSON[_0x44a9('0x87', 'hfGo')](process['env']['fqctapp']);
     userId = process[_0x44a9('0x24b', 'Xb[2')][_0x44a9('0x233', 'oOXW')];
     activeCode = process[_0x44a9('0x1c9', '[1Ym')][_0x44a9('0x1e4', 'PqtQ')];
     hour = new Date(new Date()[_0x44a9('0x51', 'D6v]')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x44a9('0x23d', 'cwmG')]();
@@ -112,25 +109,25 @@ if ($['isNode']()) {
     if (typeof $request !== _0x44a9('0x2d3', 'p0uj')) {
         await getCk();
     } else {
-        if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x44a9('0xb6', '69gQ')] != 0x20) {
-            $[_0x44a9('0x69', 'p2Mx')](_0x44a9('0x145', 'ORm0'));
-            return;
-        }
-        await getScriptAuth(_0x44a9('0x291', 'u(jQ'), userId, activeCode);
+        // if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x44a9('0xb6', '69gQ')] != 0x20) {
+        //     $[_0x44a9('0x69', 'p2Mx')](_0x44a9('0x145', 'ORm0'));
+        //     return;
+        // }
+        // await getScriptAuth(_0x44a9('0x291', 'u(jQ'), userId, activeCode);
         $[_0x44a9('0x157', '8Gk@')]('📢\x20' + systemNotify);
         $[_0x44a9('0x38', 'ug#L')]('🔔\x20当前脚本版本号:\x20' + version + _0x44a9('0x283', 'oOXW') + newest_version);
-        if (version < newest_version) {
-            $[_0x44a9('0x2f6', 'c25z')](_0x44a9('0x12d', '6LMQ'));
-            return;
-        }
-        if (scriptAuth != !![]) {
-            $[_0x44a9('0x18e', 'BC73')](_0x44a9('0xcd', 'p2Mx'));
-            return;
-        }
-        if (userAuth != !![]) {
-            $[_0x44a9('0x5e', 'UdK%')](_0x44a9('0x117', '8Gk@'));
-            return;
-        }
+        // if (version < newest_version) {
+        //     $[_0x44a9('0x2f6', 'c25z')](_0x44a9('0x12d', '6LMQ'));
+        //     return;
+        // }
+        // if (scriptAuth != !![]) {
+        //     $[_0x44a9('0x18e', 'BC73')](_0x44a9('0xcd', 'p2Mx'));
+        //     return;
+        // }
+        // if (userAuth != !![]) {
+        //     $[_0x44a9('0x5e', 'UdK%')](_0x44a9('0x117', '8Gk@'));
+        //     return;
+        // }
         if (isCharge == !![]) {
             $[_0x44a9('0x69', 'p2Mx')](_0x44a9('0x104', 'x!e6'));
         }
@@ -141,15 +138,15 @@ if ($['isNode']()) {
                 $[_0x44a9('0x39', 'D6v]')](_0x44a9('0x11', '8Gk@'));
             }
         }
-        if (runAuth != !![]) {
-            $[_0x44a9('0x38', 'ug#L')]('⚠️\x20抱歉,\x20\x20该用户今天可能已经达到最大运行次数，明天再试吧！');
-            return;
-        }
+        // if (runAuth != !![]) {
+        //     $[_0x44a9('0x38', 'ug#L')]('⚠️\x20抱歉,\x20\x20该用户今天可能已经达到最大运行次数，明天再试吧！');
+        //     return;
+        // }
         $[_0x44a9('0x360', 'Xb[2')]('一共有' + fqctapp[_0x44a9('0x7c', 'NeyG')] + _0x44a9('0x17c', 'T7T^'));
         for (let _0x2e6e2a = 0x0; _0x2e6e2a < fqctapp[_0x44a9('0x56', 'hfGo')]; _0x2e6e2a++) {
             $['log']('开始执行第' + (_0x2e6e2a + 0x1) + _0x44a9('0x203', 'ug#L'));
             fqct = fqctapp[_0x2e6e2a];
-            if (vipAuth) {
+            if (true) {
                 if (fqct[_0x44a9('0x330', 'D6v]')]) {
                     $[_0x44a9('0x69', 'p2Mx')](_0x44a9('0x81', 'dCw9'));
                     await invitation_android();
@@ -891,13 +888,14 @@ function invitation_ios() {
     return new Promise((_0x5ba7f3, _0x589fc6) => {
         let _0x4cf675 = {
             'url': _0x44a9('0x4b', 'zMO5') + fqct[_0x44a9('0x365', 'f&B7')] + _0x44a9('0x150', 'pT0a') + fqct[_0x44a9('0x27e', 'D6v]')],
-            'headers': JSON['parse'](fqct['fqct_headers']),
+            'headers': fqct['fqct_headers'],
             'body': JSON[_0x44a9('0xe5', 'vyop')]({
                 'invite_code': _0x44a9('0x225', 'vyop')
             })
         };
         $[_0x44a9('0x15c', 'ORm0')](_0x4cf675, (_0xf7058c, _0xf53866, _0x5cd2b1) => {
             const _0x35d9a0 = JSON['parse'](_0x5cd2b1);
+            console.log(_0x35d9a0)
             if (_0x35d9a0[_0x44a9('0x274', 'peGT')] == 0x0) {
                 $[_0x44a9('0x2e7', 'RQf$')]('感谢你的支持！');
             }

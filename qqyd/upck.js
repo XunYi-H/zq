@@ -9,7 +9,7 @@
 const $ = new Env('QQ阅读');
 let qqyduserck = 1;
 let qqydapp = $['getjson']('qqydapp', []);
-let appid = 1;
+let appid = 7;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
@@ -42,22 +42,19 @@ async function getCk() {
         console.log(qqydapp[_0xacc1ae]['cookie'])
         
         $.msg($['name'], 'QQ阅读账号' + (_0xacc1ae + 0x1) + 'Cookie获取成功！🎉');
-        if (!qqydapp[_0xacc1ae]['sqlid']|qqydapp[_0xacc1ae]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
-            console.log('先获取返回的id')
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),qqydapp[_0xacc1ae])
+        try{            
             qqydapp[_0xacc1ae]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = qqydapp[_0xacc1ae]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0xacc1ae]))
-        }  
-        $.setdata(JSON.stringify(qqydapp, null, 0x2), 'qqydapp');
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
+        }
     }
     if ($request['url']['match'](/\/common\/log/)) {
         const _0xfff27c = JSON['stringify']($request['headers']);
         const _0x55964b = $request['body'];
-        const ua = '';
         $['log'](_0x55964b);
         let _0x23d77c = qqyduserck - 0x1;
         if (qqydapp[_0x23d77c]) {
@@ -69,17 +66,15 @@ async function getCk() {
                 'rbkey': _0x55964b
             };
         }        
-        if (!qqydapp[_0x23d77c]['sqlid']|qqydapp[_0x23d77c]['sqlid']==0){
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0x23d77c]))
-            console.log('先获取返回的id')
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),qqydapp[_0x23d77c])
+        try{            
             qqydapp[_0x23d77c]['sqlid'] = resdata.data.id
-        }else{
-            console.log('已有id，直接更新数据')
-            qqydqlid = qqydapp[_0x23d77c]['sqlid']
-            console.log(qqydqlid)
-            resdata = await upck(JSON.stringify(ua),JSON.stringify(qqydapp[_0x23d77c]))
-        }    
-        $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](qqydapp, null, 0x2), 'qqydapp');
+        }
         $['msg']($['name'], 'QQ阅读账号' + (_0x23d77c + 0x1) + '阅读基础获取成功！🎉');
     }
 }
