@@ -105,69 +105,73 @@ let vipAuth = '';
 let isCharge = '';
 let uid = '';
 let uticket = '';
-if ($[_0xb34a('0xc0', 'Ju(K')]()) {
-    slapp = JSON[_0xb34a('0x279', '#9CK')](process[_0xb34a('0x22d', 'g[)!')]['SLAPP']);
-    userId = process[_0xb34a('0x89', 'xk*4')][_0xb34a('0x1d8', 'tAzk')];
-    activeCode = process[_0xb34a('0x261', 'jGh*')][_0xb34a('0x1ca', 'cPQH')];
-    hour = new Date(new Date()[_0xb34a('0x24e', 'EnZ(')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0xb34a('0x8a', 'Uta^')]();
-    minute = new Date(new Date()[_0xb34a('0x17b', 'L*!z')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0xb34a('0x6c', '1sLi')]();
-} else {
-    hour = new Date()[_0xb34a('0x17e', '1sLi')]();
-    minute = new Date()[_0xb34a('0x1a2', 'Qgwd')]();
-}!(async () => {
-    if (typeof $request !== _0xb34a('0x1d5', 'QY@]')) {
-        await getCk();
+
+getck.getCKS("11").then(function(data){
+    run(data);
+})
+
+function run(app){
+    if ($[_0xb34a('0xc0', 'Ju(K')]()) {
+        slapp = app;
+        userId = process[_0xb34a('0x89', 'xk*4')][_0xb34a('0x1d8', 'tAzk')];
+        activeCode = process[_0xb34a('0x261', 'jGh*')][_0xb34a('0x1ca', 'cPQH')];
+        hour = new Date(new Date()[_0xb34a('0x24e', 'EnZ(')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0xb34a('0x8a', 'Uta^')]();
+        minute = new Date(new Date()[_0xb34a('0x17b', 'L*!z')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0xb34a('0x6c', '1sLi')]();
     } else {
-        if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0xb34a('0x13f', 'L*!z')] != 0x20) {
-            $[_0xb34a('0x1b8', 's5)p')](_0xb34a('0x1ce', 'X&@o'));
-            return;
-        }
-        await getScriptAuth(_0xb34a('0x3b', 'dAkF'), userId, activeCode);
-        $[_0xb34a('0x177', 'cPQH')](_0xb34a('0x22', 'l%kR') + systemNotify);
-        $[_0xb34a('0x26e', 'xk*4')](_0xb34a('0x67', 'kr5b') + version + _0xb34a('0x4f', 'R%n9') + newest_version);
-        if (version < newest_version) {
-            $[_0xb34a('0x3e', 'Ju(K')](_0xb34a('0x158', 'm2%K'));
-            return;
-        }
-        if (scriptAuth != !![]) {
-            $[_0xb34a('0x154', 'EnZ(')](_0xb34a('0x204', 'X&@o'));
-            return;
-        }
-        if (userAuth != !![]) {
-            $[_0xb34a('0x242', 'kr5b')](_0xb34a('0x1e6', '7tbu'));
-            return;
-        }
-        if (isCharge == !![]) {
-            $[_0xb34a('0xe5', 'K*v#')](_0xb34a('0x29f', 'Qgwd'));
+        hour = new Date()[_0xb34a('0x17e', '1sLi')]();
+        minute = new Date()[_0xb34a('0x1a2', 'Qgwd')]();
+    }!(async () => {
+        if (typeof $request !== _0xb34a('0x1d5', 'QY@]')) {
+            await getCk();
         } else {
-            $[_0xb34a('0x154', 'EnZ(')](_0xb34a('0x19e', '1sLi'));
-        }
-        if (vipAuth != !![]) {
-            $[_0xb34a('0x242', 'kr5b')](_0xb34a('0x1de', 'SZBr'));
-            return;
-        } else {
+            // await getScriptAuth(_0xb34a('0x3b', 'dAkF'), userId, activeCode);
+            $[_0xb34a('0x177', 'cPQH')](_0xb34a('0x22', 'l%kR') + systemNotify);
+            $[_0xb34a('0x26e', 'xk*4')](_0xb34a('0x67', 'kr5b') + version + _0xb34a('0x4f', 'R%n9') + newest_version);
+            // if (version < newest_version) {
+            //     $[_0xb34a('0x3e', 'Ju(K')](_0xb34a('0x158', 'm2%K'));
+            //     return;
+            // }
+            // if (scriptAuth != !![]) {
+            //     $[_0xb34a('0x154', 'EnZ(')](_0xb34a('0x204', 'X&@o'));
+            //     return;
+            // }
+            // if (userAuth != !![]) {
+            //     $[_0xb34a('0x242', 'kr5b')](_0xb34a('0x1e6', '7tbu'));
+            //     return;
+            // }
             if (isCharge == !![]) {
-                $[_0xb34a('0x209', 'EZx2')](_0xb34a('0x18', 'ryFm'));
+                $[_0xb34a('0xe5', 'K*v#')](_0xb34a('0x29f', 'Qgwd'));
+            } else {
+                $[_0xb34a('0x154', 'EnZ(')](_0xb34a('0x19e', '1sLi'));
+            }
+            if (vipAuth != !![]) {
+                // $[_0xb34a('0x242', 'kr5b')](_0xb34a('0x1de', 'SZBr'));
+                // return;
+            } else {
+                if (isCharge == !![]) {
+                    $[_0xb34a('0x209', 'EZx2')](_0xb34a('0x18', 'ryFm'));
+                }
+            }
+            // if (runAuth != !![]) {
+            //     $['log'](_0xb34a('0x2a', 'n1FV'));
+            //     return;
+            // }
+            $[_0xb34a('0x19c', 'b5Hw')](_0xb34a('0x2e', '4#CX') + slapp[_0xb34a('0x15a', '1sLi')] + _0xb34a('0x44', '1FfV'));
+            for (let _0x4c44f1 = 0x0; _0x4c44f1 < slapp[_0xb34a('0x57', 'BbN1')]; _0x4c44f1++) {
+                $[_0xb34a('0x9', 'Byhk')](_0xb34a('0x151', 'Mo$[') + (_0x4c44f1 + 0x1) + _0xb34a('0xbf', 'QY@]'));
+                sl = slapp[_0x4c44f1];
+                initParams(sl[_0xb34a('0x143', '2ukw')]);
+                await dailySign();
+                await redbag();
+                await doTask();
+                await exchange_code();
+                await withdraw();
+                if (sl[_0xb34a('0x248', 'ye4y')] == 0x1) await sendMsg(content);
             }
         }
-        if (runAuth != !![]) {
-            $['log'](_0xb34a('0x2a', 'n1FV'));
-            return;
-        }
-        $[_0xb34a('0x19c', 'b5Hw')](_0xb34a('0x2e', '4#CX') + slapp[_0xb34a('0x15a', '1sLi')] + _0xb34a('0x44', '1FfV'));
-        for (let _0x4c44f1 = 0x0; _0x4c44f1 < slapp[_0xb34a('0x57', 'BbN1')]; _0x4c44f1++) {
-            $[_0xb34a('0x9', 'Byhk')](_0xb34a('0x151', 'Mo$[') + (_0x4c44f1 + 0x1) + _0xb34a('0xbf', 'QY@]'));
-            sl = slapp[_0x4c44f1];
-            initParams(sl[_0xb34a('0x143', '2ukw')]);
-            await dailySign();
-            await redbag();
-            await doTask();
-            await exchange_code();
-            await withdraw();
-            if (sl[_0xb34a('0x248', 'ye4y')] == 0x1) await sendMsg(content);
-        }
-    }
-})()[_0xb34a('0x196', '4#CX')](_0xdccb1f => $[_0xb34a('0x96', 'ISJ7')](_0xdccb1f))[_0xb34a('0x197', 'BbN1')](() => $[_0xb34a('0x1c7', '^!Gt')]());
+    })()[_0xb34a('0x196', '4#CX')](_0xdccb1f => $[_0xb34a('0x96', 'ISJ7')](_0xdccb1f))[_0xb34a('0x197', 'BbN1')](() => $[_0xb34a('0x1c7', '^!Gt')]());
+}
+
 async function getCk() {
     if ($request['url']['match'](/\/homepage\/detail/)) {
         const _0x3f6a59 = $request['url']['split']('?')[0x1];
