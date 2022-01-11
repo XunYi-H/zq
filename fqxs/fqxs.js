@@ -104,81 +104,69 @@ let runAuth = '';
 let systemNotify = '';
 let vipAuth = '';
 let isCharge = '';
-if ($[_0x2e31('0x15f', 'wjOg')]()) {
-    fqxsapp = JSON['parse'](process['env'][_0x2e31('0x297', '!z&U')]);
-    userId = process[_0x2e31('0x275', 'gA#d')][_0x2e31('0x25b', 'V1Wl')];
-    activeCode = process[_0x2e31('0x1c', 'log5')][_0x2e31('0x21f', '#JwX')];
-    hour = new Date(new Date()[_0x2e31('0xa1', 'ovYO')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x2e31('0x1f', 'RTah')]();
-    minute = new Date(new Date()[_0x2e31('0xc4', 'Xok(')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x2e31('0x28e', '@%U5')]();
-} else {
-    hour = new Date()['getHours']();
-    minute = new Date()[_0x2e31('0xa3', 'RTah')]();
-}!(async () => {
-    if (typeof $request !== _0x2e31('0xf5', '@%U5')) {
-        await getCk();
+let getck = require("./getck")
+getck.getCKS("12").then(function(data){
+    run(data);
+})
+function run(app){
+    if ($[_0x2e31('0x15f', 'wjOg')]()) {
+        fqxsapp = app;
+        userId = process[_0x2e31('0x275', 'gA#d')][_0x2e31('0x25b', 'V1Wl')];
+        activeCode = process[_0x2e31('0x1c', 'log5')][_0x2e31('0x21f', '#JwX')];
+        hour = new Date(new Date()[_0x2e31('0xa1', 'ovYO')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x2e31('0x1f', 'RTah')]();
+        minute = new Date(new Date()[_0x2e31('0xc4', 'Xok(')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x2e31('0x28e', '@%U5')]();
     } else {
-        if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x2e31('0x135', 'ovYO')] != 0x20) {
-            $[_0x2e31('0xfe', 'RS2I')](_0x2e31('0x172', 'UTmo'));
-            return;
-        }
-        await getScriptAuth(_0x2e31('0xec', 'k7GN'), userId, activeCode);
-        $[_0x2e31('0x13f', 'k7GN')]('📢\x20' + systemNotify);
-        $['log'](_0x2e31('0xba', '^lcL') + version + _0x2e31('0x1b7', 'pq8U') + newest_version);
-        if (version < newest_version) {
-            $['log']('⚠️\x20当前脚本版本号低于服务器版本，请更新脚本吧！');
-            return;
-        }
-        if (scriptAuth != !![]) {
-            $[_0x2e31('0x36', ']*k^')]('⚠️\x20抱歉,\x20此脚本已停用。');
-            return;
-        }
-        if (userAuth != !![]) {
-            $[_0x2e31('0x1bd', '^lcL')](_0x2e31('0x27e', 'RS2I'));
-            return;
-        }
-        if (isCharge == !![]) {
-            $[_0x2e31('0x62', '#JwX')](_0x2e31('0x151', 'MBXZ'));
+        hour = new Date()['getHours']();
+        minute = new Date()[_0x2e31('0xa3', 'RTah')]();
+    }!(async () => {
+        if (typeof $request !== _0x2e31('0xf5', '@%U5')) {
+            await getCk();
         } else {
-            $[_0x2e31('0x1e6', 'ovYO')](_0x2e31('0x2e', 'ue1V'));
-        }
-        if (vipAuth != !![]) {
-            $['log'](_0x2e31('0x299', 'Rs7g'));
-            return;
-        } else {
+    
+            $[_0x2e31('0x13f', 'k7GN')]('📢\x20' + systemNotify);
+            $['log'](_0x2e31('0xba', '^lcL') + version + _0x2e31('0x1b7', 'pq8U') + newest_version);
+    
+    
             if (isCharge == !![]) {
-                $[_0x2e31('0x197', 'd84)')]('尊敬的会员：您好，你是付费用户！🔐');
+                $[_0x2e31('0x62', '#JwX')](_0x2e31('0x151', 'MBXZ'));
+            } else {
+                $[_0x2e31('0x1e6', 'ovYO')](_0x2e31('0x2e', 'ue1V'));
             }
+            if (vipAuth != !![]) {
+    
+            } else {
+                if (isCharge == !![]) {
+                    $[_0x2e31('0x197', 'd84)')]('尊敬的会员：您好，你是付费用户！🔐');
+                }
+            }
+            $['log'](_0x2e31('0x42', '#nay') + fqxsapp[_0x2e31('0xd3', '#JwX')] + '个账号');
+            let _0x374e0e = !![];
+            for (let _0x3e7553 = 0x0; _0x3e7553 < fqxsapp[_0x2e31('0x84', '()Kf')]; _0x3e7553++) {
+                $[_0x2e31('0x7e', 'S[#8')](_0x2e31('0x14b', '1k6O') + (_0x3e7553 + 0x1) + '个账号');
+                fqxs = fqxsapp[_0x3e7553];
+                await userInfo();
+                await invitation();
+                await $[_0x2e31('0x141', '#nay')](randomNum(0x3e8, 0xbb8));
+                await task_list();
+                await openBox();
+                await $['wait'](randomNum(0x88b8, 0xd6d8));
+                await boxAd();
+                if (!fqxsapp[_0x3e7553]['notify']) {
+                    fqxsapp[_0x3e7553][_0x2e31('0x123', '6ey%')] = 0x1;
+                    $['setdata'](JSON[_0x2e31('0x1ab', '4hvZ')](fqxsapp, null, 0x2), _0x2e31('0x47', 'xTGd'));
+                }
+                if (fqxsapp[_0x3e7553][_0x2e31('0x1bc', '4hvZ')] = 0x0) {
+                    _0x374e0e = ![];
+                }
+                if (_0x3e7553 != fqxsapp['length'] - 0x1) {
+                    content += _0x2e31('0x146', '()Kf');
+                }
+            }
+            if (_0x374e0e == !![]) await sendMsg(content);
         }
-        if (runAuth != !![]) {
-            $[_0x2e31('0x1bd', '^lcL')]('⚠️\x20抱歉,\x20\x20该用户今天可能已经达到最大运行次数，明天再试吧！');
-            return;
-        }
-        $['log'](_0x2e31('0x42', '#nay') + fqxsapp[_0x2e31('0xd3', '#JwX')] + '个账号');
-        let _0x374e0e = !![];
-        for (let _0x3e7553 = 0x0; _0x3e7553 < fqxsapp[_0x2e31('0x84', '()Kf')]; _0x3e7553++) {
-            $[_0x2e31('0x7e', 'S[#8')](_0x2e31('0x14b', '1k6O') + (_0x3e7553 + 0x1) + '个账号');
-            fqxs = fqxsapp[_0x3e7553];
-            await userInfo();
-            await invitation();
-            await $[_0x2e31('0x141', '#nay')](randomNum(0x3e8, 0xbb8));
-            await task_list();
-            await openBox();
-            await $['wait'](randomNum(0x88b8, 0xd6d8));
-            await boxAd();
-            if (!fqxsapp[_0x3e7553]['notify']) {
-                fqxsapp[_0x3e7553][_0x2e31('0x123', '6ey%')] = 0x1;
-                $['setdata'](JSON[_0x2e31('0x1ab', '4hvZ')](fqxsapp, null, 0x2), _0x2e31('0x47', 'xTGd'));
-            }
-            if (fqxsapp[_0x3e7553][_0x2e31('0x1bc', '4hvZ')] = 0x0) {
-                _0x374e0e = ![];
-            }
-            if (_0x3e7553 != fqxsapp['length'] - 0x1) {
-                content += _0x2e31('0x146', '()Kf');
-            }
-        }
-        if (_0x374e0e == !![]) await sendMsg(content);
-    }
-})()[_0x2e31('0x10a', 'log5')](_0x4df05e => $[_0x2e31('0x179', '1k6O')](_0x4df05e))[_0x2e31('0xfd', 'xTGd')](() => $[_0x2e31('0x29c', 'fo8L')]());
+    })()[_0x2e31('0x10a', 'log5')](_0x4df05e => $[_0x2e31('0x179', '1k6O')](_0x4df05e))[_0x2e31('0xfd', 'xTGd')](() => $[_0x2e31('0x29c', 'fo8L')]());  
+}
+
 async function getCk() {
     if ($request[_0x2e31('0xf9', 'ue1V')][_0x2e31('0x37', 'Xok(')](/sign_in/)) {
         const _0x47d472 = $request[_0x2e31('0x224', 'S[#8')][_0x2e31('0x278', '6ey%')]('?')[0x1];

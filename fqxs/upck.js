@@ -9,7 +9,7 @@
 const $ = new Env('番茄小说');
 let awyuserck = 1;
 let awyapp = $['getjson']('fqxsapp', []);
-let appid = 5;
+let appid = 12;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
