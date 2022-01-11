@@ -20,62 +20,45 @@ scheme：weixin://dl/business/?t=3rJaqR9Oqwo
 
 
 
-const $ = new Env('qkhq');
+const $ = new Env('趣看头条');
 let status;
 
 status = (status = ($.getval("qkhqstatus") || "1")) > 1 ? `${status}` : "";
-const qkhqhdArr = [],  qkhqcount = ''
 
-let qkhqhd = $.getdata('qkhqhd')
-let qkhqver = $.getdata('qkhqver')
-let qkhqua = $.getdata('qkhqua')
+
+let qkhqhd = ""
+let qkhqver = ""
+let qkhqua = ""
 let tz = ($.getval('tz') || '1'); 
 
-$.message = ''    
+$.message = ''  
+getck.getCKS("10").then(function(data){
+    console.log(data)
+    run(data);
+})  
 
 
 
 
 
 function run(data){
+
     !(async () => {
         if (typeof $request !== "undefined") {
             console.log('不用抓')
         } else {
-           
-            qkhqhdArr.push($.getdata('qkhqhd'))
-    
-    
-            let qkhqcount = ($.getval('qkhqcount') || '1');
-            for (let i = 2; i <= qkhqcount; i++) {
-              
-                qkhqhdArr.push($.getdata(`qkhqhd${i}`))
-           
-            }
-            console.log(
-                `\n\n=============================================== 脚本执行 - 北京时间(UTC+8)：${new Date(
-                    new Date().getTime() +
-                    new Date().getTimezoneOffset() * 60 * 1000 +
-                    8 * 60 * 60 * 1000
-                ).toLocaleString()} ===============================================\n`);
-            for (let i = 0; i < qkhqhdArr.length; i++) {
-                if (qkhqhdArr[i]) {
-    
-        
-                    qkhqhd = qkhqhdArr[i];
-             
-    
-                    $.index = i + 1;
-                    console.log(`\n\n开始【趣看行情${$.index}】`)
-    
-                    await xx()
-                
-            }
+           for (let i = 0 ; i <= data.length;i++){
+                item = JSON.parse(data[i])
+                qkhqhd = item.qkhqhd 
+                qkhqver = item.qkhqver
+                qkhqua = item.qkhqua
+                await xx()
+
+           }                
         }
-        
-        message() 
+        }       
     
-        }})()
+        )()
     
         .catch((e) => $.logErr(e))
         .finally(() => $.done())
