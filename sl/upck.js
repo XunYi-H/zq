@@ -43,7 +43,7 @@ async function getCk() {
         }
         $['msg']($['name'], '闪辆账号' + (_0x23050f + 0x1) + '基础数据获取成功！🎉');
     }
-    if ($request['url']['match'](/\/v1\/rcmfeed/)) {
+    if ($request['url']['match'](/\/switch\/get_user_switch_info/)) {
         const _0xb5af50 = $request['headers']['Cookie'];
         const _0x3958e9 = $request['headers']['User-Agent'];
         let _0x1a7e67 = awyuserck - 0x1;
