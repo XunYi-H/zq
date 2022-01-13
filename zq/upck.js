@@ -22,6 +22,136 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
+    if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/NewTaskIos\/getTaskList/)) {
+        RefererVal = $request['headers']['Referer'];
+        signheaderVal = RefererVal['match'](/&uid=\d+/) + RefererVal['match'](/&cookie=[_a-zA-Z0-9-]+/) + RefererVal['match'](/&cookie_id=[a-zA-Z0-9]+/);
+        let _0x13466c = awyuserck - 0x1;
+        if (signheaderVal) {            
+            if (awyapp[_0x13466c]) {
+                awyapp[_0x13466c]['youthheader_zq'] = signheaderVal;
+            } else {
+                awyapp[_0x13466c] = {
+                    'youthheader_zq': signheaderVal
+                };
+            }
+            const ua = $request['headers']['User-Agent'];
+            resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+            try{            
+                awyapp[_0x13466c]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
+            }
+        };
+        $['log'](`${''}${$['name']}${'获取Cookie: 成功, signheaderVal: $}'}`);
+        $['msg']($['name'], `${'获取Cookie: 成功🎉'}`, `${''}`)
+    } else {
+        if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/article\/info\/get/)) {
+            articlebodyVal = $request['url']['split']('?')[0x1];
+            let _0x13466c = awyuserck - 0x1;
+            if (articlebodyVal) {
+                if (awyapp[_0x13466c]) {
+                    awyapp[_0x13466c]['read_zq'] = articlebodyVal;
+                } else {
+                    awyapp[_0x13466c] = {
+                        'read_zq': articlebodyVal
+                    };
+                }
+                const ua = $request['headers']['User-Agent'];
+                resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+                try{            
+                    awyapp[_0x13466c]['sqlid'] = resdata.data.id
+                }catch{
+                    print(resdata)
+                }finally{
+                    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
+                }
+            };
+            $['log'](`${''}${$['name']}${'获取阅读: 成功, articbody: '}${articlebodyVal}${''}`);
+            $['msg']($['name'], `${'获取阅读请求: 成功🎉'}`, `${''}`)
+        } else {
+            if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/v5\/user\/stay/)) {
+                const _0xc2e1x46 = $request['body'];
+                let _0x13466c = awyuserck - 0x1;
+                if (_0xc2e1x46) {
+                    if (awyapp[_0x13466c]) {
+                        awyapp[_0x13466c]['readtime_zq'] = _0xc2e1x46;
+                    } else {
+                        awyapp[_0x13466c] = {
+                            'readtime_zq': _0xc2e1x46
+                        };
+                    }
+                    const ua = $request['headers']['User-Agent'];
+                    resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+                    try{            
+                        awyapp[_0x13466c]['sqlid'] = resdata.data.id
+                    }catch{
+                        print(resdata)
+                    }finally{
+                        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
+                    }
+                };
+                $['log'](`${''}${$['name']}${'获取阅读时长: 成功, timebodyVal: '}${_0xc2e1x46}${''}`);
+                $['msg']($['name'], `${'获取阅读时长: 成功🎉'}`, `${''}`)
+            } else {
+                if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/withdraw\d?\.json/)) {
+                    const _0xc2e1x47 = $request['body'];
+                    const _0xc2e1x48 = $request['url'];
+                    let _0x13466c = awyuserck - 0x1;
+                    if (_0xc2e1x47) {
+                        if (awyapp[_0x13466c]) {
+                            awyapp[_0x13466c]['cashbody_zq'] = _0xc2e1x47;
+                        } else {
+                            awyapp[_0x13466c] = {
+                                'cashbody_zq': _0xc2e1x47
+                            };
+                        }
+                        const ua = $request['headers']['User-Agent'];
+                        resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+                        try{            
+                            awyapp[_0x13466c]['sqlid'] = resdata.data.id
+                        }catch{
+                            print(resdata)
+                        }finally{
+                            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
+                        }
+
+                    };
+                    if (_0xc2e1x48) {
+                        if (awyapp[_0x13466c]) {
+                            awyapp[_0x13466c]['cashurl_zq'] = _0xc2e1x48;
+                        } else {
+                            awyapp[_0x13466c] = {
+                                'cashurl_zq': _0xc2e1x48
+                            };
+                        }
+                        const ua = $request['headers']['User-Agent'];
+                        resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+                        try{            
+                            awyapp[_0x13466c]['sqlid'] = resdata.data.id
+                        }catch{
+                            print(resdata)
+                        }finally{
+                            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
+                        }
+                    };
+                    $['log'](`${''}${$['name']}${', 获取提现请求: 成功, withdrawUrl: '}${_0xc2e1x48}${''}`);
+                    $['log'](`${''}${$['name']}${', 获取提现请求: 成功, withdrawBody: '}${_0xc2e1x47}${''}`);
+                    $['msg']($['name'], `${'获取提现请求: 成功🎉'}`, `${''}`)
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
     if ($request['url']['match'](/\/api\/index/)) {
         const _0x5a92cb = $request['headers']['Authorization'];
         let _0x13466c = awyuserck - 0x1;
