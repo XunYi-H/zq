@@ -6,67 +6,90 @@
 
 
 
-const $ = new Env('今日头条极速版app');
-let awyuserck = 1;
-let awyapp = $['getjson']('jrttjsbapp', []);
-let appid = 14;
+const $ = new Env('得间小说');
+let djxsuserck = 1;
+let djxsapp = $['getjson']('djxsapp', []);
+let appid = 1;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
 let qqydqlid = 0;
 
 !(async () => {if (typeof $request !== "undefined") {
-    console.log('测试抓取ck上传')
     await getCk();
 }})()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())
-
+function compileStr(_0x6fef86) {
+    var _0x11c3d3 = String['fromCharCode'](_0x6fef86['charCodeAt'](0x0) + _0x6fef86['length']);
+    for (var _0x3267eb = 0x1; _0x3267eb < _0x6fef86['length']; _0x3267eb++) {
+        _0x11c3d3 += String['fromCharCode'](_0x6fef86['charCodeAt'](_0x3267eb) + _0x6fef86['charCodeAt'](_0x3267eb - 0x1));
+    }
+    return escape(_0x11c3d3);
+}
 async function getCk() {
-    let _0x4156cd = awyuserck - 0x1;
-    const ua = $request['headers']['User-Agent'];
-    if($request.url.indexOf('luckycat/lite/v1/task/page_data') > -1) {
-        let userCK = $request.headers.Cookie
-        if (awyapp[_0x4156cd]) {
-            awyapp[_0x4156cd]['jrttjsbHeader'] = userCK;
+    if ($request['url']['match'](/\/info\/getUserInfo/)) {
+        const _0x4fc1a4 = $request['url'];
+        const _0x23c5b1 = $request['headers']['Cookie'];
+        const ua = $request['headers']['User-Agent'];
+
+        const _0x3434ad = _0x4fc1a4['split']('?')[0x1];
+        const _0x25cf5c = $request['body'];
+        let _0x406326 = djxsuserck - 0x1;
+        if (djxsapp[_0x406326]) {
+            djxsapp[_0x406326]['cookie'] = _0x23c5b1;
+            djxsapp[_0x406326]['url_suffix'] = _0x3434ad;
+            djxsapp[_0x406326]['user_body'] = _0x25cf5c;
         } else {
-            awyapp[_0x4156cd] = {
-                'jrttjsbHeader': userCK,
+            djxsapp[_0x406326] = {
+                'cookie': _0x23c5b1,
+                'url_suffix': _0x3434ad,
+                'user_body': _0x25cf5c
             };
+            
         }
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x4156cd])
-        try{            
-          awyapp[_0x4156cd]['sqlid'] = resdata.data.id
+        resdata = await upck(JSON.stringify(ua),djxsapp[_0x406326])
+        try{
+            
+            djxsapp[_0x406326]['sqlid'] = resdata.data.id
+
         }catch{
             print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](djxsapp, null, 0x2), 'djxsapp');
         }
+        $['msg']($['name'], '得间小说账号' + (_0x406326 + 0x1) + '数据获取成功！🎉');
+    }
+    if ($request['url']['match'](/\/video\/report/)) {
+        const _0x4e20a4 = $request['url'];
+        const _0x40357b = compileStr(_0x4e20a4['split']('?')[0x1]);
+        const ua = $request['headers']['User-Agent'];
 
-        
-        if(userHeader) {
-            if(userHeader.indexOf(userCK) == -1) {
-                userHeader = userHeader + '@' + userCK
-                if (awyapp[_0x4156cd]) {
-                    awyapp[_0x4156cd]['jrttjsbHeader'] = userCK;
-                } else {
-                    awyapp[_0x4156cd] = {
-                        'jrttjsbHeader': userCK,
-                    };
-                }
-                $.setdata(userHeader, 'jrttjsbHeader');
-                ckList = userHeader.split('@')
-                $.msg(jsname+` 获取第${ckList.length}个jrttjsbHeader成功: ${userCK}`)
-            }
-
+        let _0x5ca10f = djxsuserck - 0x1;
+        if (djxsapp[_0x5ca10f]) {
+            djxsapp[_0x5ca10f]['base_api'] = _0x40357b;
         } else {
-            $.setdata(userCK, 'jrttjsbHeader');
-            $.msg(jsname+` 获取第1个jrttjsbHeader成功: ${userCK}`)
+            djxsapp[_0x5ca10f] = {
+                'base_api': _0x40357b
+            };
+            
         }
-    }    
+        resdata = await upck(JSON.stringify(ua),djxsapp[_0x5ca10f])
+        try{
+            
+            djxsapp[_0x5ca10f]['sqlid'] = resdata.data.id
+
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](djxsapp, null, 0x2), 'djxsapp');
+        }
+        $['msg']($['name'], '得间小说账号' + (_0x5ca10f + 0x1) + '基础数据获取成功！🎉');
+    }
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
-        console.log(url)
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
@@ -78,7 +101,7 @@ function upck(ua,cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify(datas),
+            body:JSON.stringify(datas),//这段到底提交啥
         };
         $.post(body, (err, resp, data) => {
             try {
