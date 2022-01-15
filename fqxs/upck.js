@@ -22,6 +22,45 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
+    if ($request['url'][_0xd0c2('0x74', '^0zB')](/\/system\/config/)) {
+        const _0x521077 = $request[_0xd0c2('0x14a', 'Hu!l')][_0xd0c2('0x2fa', 'P[Mf')];
+        const _0x2866e4 = $request[_0xd0c2('0x23', 'H#u8')][_0xd0c2('0x17c', 'mF7U')];
+        const _0x5c71c2 = $request[_0xd0c2('0x6', '@e^i')][_0xd0c2('0x235', '$dl2')];
+        let _0x2e4440 = dzluserck - 0x1;
+        if (dzlapp[_0x2e4440]) {
+            dzlapp[_0x2e4440]['base_api'] = compileStr(_0x521077);
+            dzlapp[_0x2e4440][_0xd0c2('0x84', 'sdNI')] = compileStr(_0x2866e4);
+            dzlapp[_0x2e4440][_0xd0c2('0x26b', '#C9R')] = compileStr(_0x5c71c2);
+        } else {
+            dzlapp[_0x2e4440] = {
+                'base_api': compileStr(_0x521077),
+                'base_bpi': compileStr(_0x2866e4),
+                'base_cpi': compileStr(_0x5c71c2)
+            };
+        }
+        // conlo
+        $[_0xd0c2('0x2ca', 'FQ^r')](JSON['stringify'](dzlapp, null, 0x2), _0xd0c2('0xa5', '#C9R'));
+        //输出数据获取成功
+        $[_0xd0c2('0xcf', 'g&)K')]($['name'], '多走路账号' + (_0x2e4440 + 0x1) + '数据获取成功！🎉');
+        console.log('输出ck')
+        console.log(_0x521077)
+        console.log(_0x2866e4)
+        console.log(_0x5c71c2)
+    }
+    if ($request[_0xd0c2('0xbf', '!C4G')]['match'](/\/withdraw\/apply/)) {
+        const _0x2fccd1 = $request['body'];
+        let _0x4afbc9 = dzluserck - 0x1;
+        if (dzlapp[_0x4afbc9]) {
+            dzlapp[_0x4afbc9][_0xd0c2('0x148', ')N)3')] = _0x2fccd1;
+            $[_0xd0c2('0x2ca', 'FQ^r')](JSON['stringify'](dzlapp, null, 0x2), _0xd0c2('0x1e5', '%[#T'));
+            $[_0xd0c2('0x222', 'Om55')]($[_0xd0c2('0x4e', ')N)3')], '多走路账号' + (_0x4afbc9 + 0x1) + '提现数据获取成功！🎉');
+        }
+    }
+
+
+
+
+
     if ($request['url']['match'](/sign_in/)) {
         const _0x47d472 = $request['url']['split']('?')[0x1];
         const _0x288d49 = $request['headers']['Host'];
