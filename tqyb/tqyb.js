@@ -101,7 +101,7 @@ else {
 }
 
 function GetCookie() {
-    if ($request['url']['indexOf']('task') > -0x1 && $request['url']['indexOf']('task/coin') > -1) {
+    if ($request['url']['indexOf']('task') > -0x1 && $request['url']['indexOf']('coin?') > -1) {
         const _0x5efb69 = $request['url'];
         if (_0x5efb69) {
             if (XH == 0x1) {

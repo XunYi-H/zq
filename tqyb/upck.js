@@ -22,7 +22,7 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request['url']['indexOf']('task') > -0x1 && $request['url']['indexOf']('data/user?') > -1) {
+    if ($request['url']['indexOf']('task') > -0x1 && $request['url']['indexOf']('coin?') > -1) {
         const _0x5efb69 = $request['url'];
         if (_0x5efb69) {
             let _0x23050f = awyuserck - 0x1;
@@ -40,6 +40,7 @@ async function getCk() {
         }catch{
             print(resdata)
         }
+        $['msg']($['name'], '天气预报' + (_0x23050f + 0x1) + '基础数据获取成功！🎉');
         }
     }
 }
