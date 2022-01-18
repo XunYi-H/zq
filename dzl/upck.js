@@ -46,9 +46,9 @@ async function getCk() {
             };
         }
         // conlo
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x4afbc9])
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x2e4440])
         try{            
-            awyapp[_0x4afbc9]['sqlid'] = resdata.data.id
+            awyapp[_0x2e4440]['sqlid'] = resdata.data.id
         }catch{
             print(resdata)
         }finally{
