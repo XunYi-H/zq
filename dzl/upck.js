@@ -37,7 +37,7 @@ async function getCk() {
         if (awyapp[_0x2e4440]) {
             awyapp[_0x2e4440]['base_api'] = compileStr(_0x521077);
             awyapp[_0x2e4440]['base_bpi'] = compileStr(_0x2866e4);
-            awyapp[_0x2e4440][_0xd0c2('0x26b', '#C9R')] = compileStr(_0x5c71c2);
+            awyapp[_0x2e4440]['base_cpi'] = compileStr(_0x5c71c2);
         } else {
             awyapp[_0x2e4440] = {
                 'base_api': compileStr(_0x521077),
