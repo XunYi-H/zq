@@ -6,10 +6,10 @@
 
 
 
-const $ = new Env('爱微视');
+const $ = new Env('中青看点极速版');
 let awyuserck = 1;
-let awyapp = $['getjson']('awyapp', []);
-let appid = 2;
+let awyapp = $['getjson']('zqkdapp', []);
+let appid = 20;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
@@ -22,156 +22,72 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/NewTaskIos\/getTaskList/)) {
-        RefererVal = $request['headers']['Referer'];
-        signheaderVal = RefererVal['match'](/&uid=\d+/) + RefererVal['match'](/&cookie=[_a-zA-Z0-9-]+/) + RefererVal['match'](/&cookie_id=[a-zA-Z0-9]+/);
-        let _0x13466c = awyuserck - 0x1;
-        if (signheaderVal) {            
-            if (awyapp[_0x13466c]) {
-                awyapp[_0x13466c]['youthheader_zq'] = signheaderVal;
-            } else {
-                awyapp[_0x13466c] = {
-                    'youthheader_zq': signheaderVal
-                };
-            }
-            const ua = $request['headers']['User-Agent'];
-            resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-            try{            
-                awyapp[_0x13466c]['sqlid'] = resdata.data.id
-            }catch{
-                print(resdata)
-            }finally{
-                $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
-            }
-        };
-        $['log'](`${''}${$['name']}${'获取Cookie: 成功, signheaderVal: $}'}`);
-        $['msg']($['name'], `${'获取Cookie: 成功🎉'}`, `${''}`)
-    } else {
-        if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/article\/info\/get/)) {
-            articlebodyVal = $request['url']['split']('?')[0x1];
-            let _0x13466c = awyuserck - 0x1;
-            if (articlebodyVal) {
-                if (awyapp[_0x13466c]) {
-                    awyapp[_0x13466c]['read_zq'] = articlebodyVal;
-                } else {
-                    awyapp[_0x13466c] = {
-                        'read_zq': articlebodyVal
-                    };
-                }
-                const ua = $request['headers']['User-Agent'];
-                resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-                try{            
-                    awyapp[_0x13466c]['sqlid'] = resdata.data.id
-                }catch{
-                    print(resdata)
-                }finally{
-                    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
-                }
-            };
-            $['log'](`${''}${$['name']}${'获取阅读: 成功, articbody: '}${articlebodyVal}${''}`);
-            $['msg']($['name'], `${'获取阅读请求: 成功🎉'}`, `${''}`)
+    if ($request['url']['match'](/\/v5\/article\/info/)) {
+        const _0x527f6a = $request['url'];
+        const _0x411fa6 = _0x527f6a['split']('?')[0x1];
+        let _0x23050f = awyuserck - 0x1;
+        if (awyapp[_0x23050f]) {
+            awyapp[_0x23050f]['wz_body'] = _0x411fa6;
         } else {
-            if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/v5\/user\/stay/)) {
-                const _0xc2e1x46 = $request['body'];
-                let _0x13466c = awyuserck - 0x1;
-                if (_0xc2e1x46) {
-                    if (awyapp[_0x13466c]) {
-                        awyapp[_0x13466c]['readtime_zq'] = _0xc2e1x46;
-                    } else {
-                        awyapp[_0x13466c] = {
-                            'readtime_zq': _0xc2e1x46
-                        };
-                    }
-                    const ua = $request['headers']['User-Agent'];
-                    resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-                    try{            
-                        awyapp[_0x13466c]['sqlid'] = resdata.data.id
-                    }catch{
-                        print(resdata)
-                    }finally{
-                        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
-                    }
-                };
-                $['log'](`${''}${$['name']}${'获取阅读时长: 成功, timebodyVal: '}${_0xc2e1x46}${''}`);
-                $['msg']($['name'], `${'获取阅读时长: 成功🎉'}`, `${''}`)
-            } else {
-                if ($request && $request['method'] != `${'OPTIONS'}` && $request['url']['match'](/\/withdraw\d?\.json/)) {
-                    const _0xc2e1x47 = $request['body'];
-                    const _0xc2e1x48 = $request['url'];
-                    let _0x13466c = awyuserck - 0x1;
-                    if (_0xc2e1x47) {
-                        if (awyapp[_0x13466c]) {
-                            awyapp[_0x13466c]['cashbody_zq'] = _0xc2e1x47;
-                        } else {
-                            awyapp[_0x13466c] = {
-                                'cashbody_zq': _0xc2e1x47
-                            };
-                        }
-                        const ua = $request['headers']['User-Agent'];
-                        resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-                        try{            
-                            awyapp[_0x13466c]['sqlid'] = resdata.data.id
-                        }catch{
-                            print(resdata)
-                        }finally{
-                            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
-                        }
-
-                    };
-                    if (_0xc2e1x48) {
-                        if (awyapp[_0x13466c]) {
-                            awyapp[_0x13466c]['cashurl_zq'] = _0xc2e1x48;
-                        } else {
-                            awyapp[_0x13466c] = {
-                                'cashurl_zq': _0xc2e1x48
-                            };
-                        }
-                        const ua = $request['headers']['User-Agent'];
-                        resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
-                        try{            
-                            awyapp[_0x13466c]['sqlid'] = resdata.data.id
-                        }catch{
-                            print(resdata)
-                        }finally{
-                            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqjsbapp');
-                        }
-                    };
-                    $['log'](`${''}${$['name']}${', 获取提现请求: 成功, withdrawUrl: '}${_0xc2e1x48}${''}`);
-                    $['log'](`${''}${$['name']}${', 获取提现请求: 成功, withdrawBody: '}${_0xc2e1x47}${''}`);
-                    $['msg']($['name'], `${'获取提现请求: 成功🎉'}`, `${''}`)
-                }
-            }
-        }
-    }
-
-
-
-
-
-
-
-
-
-    if ($request['url']['match'](/\/api\/index/)) {
-        const _0x5a92cb = $request['headers']['Authorization'];
-        let _0x13466c = awyuserck - 0x1;
-        if (awyapp[_0x13466c]) {
-            awyapp[_0x13466c]['authorization'] = _0x5a92cb;
-        } else {
-            awyapp[_0x13466c] = {
-                'authorization': _0x5a92cb
+            awyapp[_0x23050f] = {
+                'wz_body': _0x411fa6
             };
         }
         const ua = $request['headers']['User-Agent'];
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x13466c])
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
         try{            
-            awyapp[_0x13466c]['sqlid'] = resdata.data.id
+            awyapp[_0x23050f]['sqlid'] = resdata.data.id
         }catch{
             print(resdata)
         }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'awyapp');
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqkdapp');
         }
-        $['msg']($['name'], '爱微视账号' + (_0x13466c + 0x1) + '权限数据获取成功！🎉');
+        $['msg']($['name'], '中青看点账号' + (_0x2d68be + 0x1) + '文章请求数据获取成功！🎉');
+    }
+    if ($request['url']['match'](/\/Nameless\/getTaskBrowse/)) {
+        const _0x4e42da = JSON['stringify']($request['headers']);
+        const _0x2be336 = $request['url'];
+        let _0xf4f9cb = awyuserck - 0x1;
+        if (awyapp[_0xf4f9cb]) {
+            awyapp[_0xf4f9cb]['kkz_headers'] = _0x4e42da;
+            awyapp[_0xf4f9cb]['kkz_url'] = _0x2be336;
+        } else {
+            awyapp[_0xf4f9cb] = {
+                'kkz_headers': _0x4e42da,
+                'kkz_url': _0x2be336
+            };
+        }
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),awyapp[_0xf4f9cb])
+        try{            
+            awyapp[_0xf4f9cb]['sqlid'] = resdata.data.id
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqkdapp');
+        }
+        $['msg']($['name'], '中青看点账号' + (_0xf4f9cb + 0x1) + '看看赚请求数据获取成功！🎉');
+    }
+    if ($request['url']['match'](/\/NewTaskIos\/getTaskList/)) {
+        const _0x4363ad = $request['url']['split']('?')[0x1];
+        let _0x4aa2b3 = awyuserck - 0x1;
+        if (awyapp[_0x4aa2b3]) {
+            awyapp[_0x4aa2b3]['tasks_url'] = _0x4363ad;
+        } else {
+            awyapp[_0x4aa2b3] = {
+                'tasks_url': _0x4363ad
+            };
+        }
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x4aa2b3])
+        try{            
+            awyapp[_0x4aa2b3]['sqlid'] = resdata.data.id
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqkdapp');
+        }
+        $['msg']($['name'], '中青看点账号' + (_0x4aa2b3 + 0x1) + '任务请求数据获取成功！🎉');
     }
 }
 function upck(ua,cookie) {
