@@ -1,7 +1,7 @@
 
 
 /*
-自用cookie上传脚本，上传至青龙自动更新cookie
+子用
 */
 
 
@@ -42,7 +42,7 @@ async function getCk() {
         }finally{
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'zqkdapp');
         }
-        $['msg']($['name'], '中青看点账号' + (_0x2d68be + 0x1) + '文章请求数据获取成功！🎉');
+        $['msg']($['name'], '中青看点账号' + (_0x23050f + 0x1) + '文章请求数据获取成功！🎉');
     }
     if ($request['url']['match'](/\/Nameless\/getTaskBrowse/)) {
         const _0x4e42da = JSON['stringify']($request['headers']);
