@@ -27,6 +27,7 @@ async function getCk() {
  
         const bsxxlhd = JSON.stringify($request.headers)
         const bsxxlbody = $request.body
+        const ua = $request['headers']['User-Agent'];
         let _0x406326 = djxsuserck - 0x1;
               if(bsxxlhd){
                 if(bsxxlbody){
