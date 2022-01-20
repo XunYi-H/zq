@@ -1,5 +1,5 @@
 /*
-偷脚本
+
 */
 const _0x5ed8 = ['wrjDnMK9wqzCv8K6', 'Eyw1w5NO', 'woPCmcKJwrPCnMKVw4LDuXo=', 'wo1owox4w7I=', 'wrBjJMK1', 'NT8KX8OtWyLClMOBw4bDkXnDgA==', 'w7zDtGEh', 'cTcrwozCu8KIFkQRw7wHwrHDsXs=', 'wpB0wqtyw7PCvQ==', 'wr7Cv0zClhQqw63CqA==', 'LRDDr8KgOMO/', 'AAsPwrDDoUfDlw==', 'aWUrSysZQQ==', 'RsKJw6DCpg==', 'EEwvw4LDmcOg', 'OwvDq8KgJsOlwo1gwrY=', 'dX/DocOWw4Ujw7nCs8Kxw5jCqMKOwrPCqcOfw4jDuHXCiMK3FsOqfQ==', 'TDzClRQ9AMKU', '5LqO6LWo5Yyt', 'w7LDpsKnwrjDtg==', 'NSZDBn1DKA==', 'MMKwMXrDqSvDiA==', 'wqDCt8KPaGfCjDTCmw==', 'ejYnwpfCtcKP', 'GcOHwrs=', 'wp/CmGdrwqnDkU8=', 'w7NywoXCsQ==', 'wrPCsFHCgxUsw7XCiMKgRw==', '5b+35aS25Yix5pa/5ZOg5LuF5peK6ZWG', 'R8OBHQ==', 'TDzClQgvAw==', 'wo4JYw==', 'DcOcwr0BMsOJw6rCiy4=', 'FsKCTQ==', 'wo/CgsKCw7h7', 'IUtZw496YA==', 'MMK5LH3DrQ==', 'wotiwoNow7/Ctg==', 'wqvCvcKc', 'wrTChxnDkMKqw4nCvnnDs8KD', '5byr5aWl5oid6KCp562s', 'FsKQTsKxwo/DicOLHsKaw597w5I1w5BUXhPDscKIGnk5wrZIIMKTFsOkXB5VfMKS', '5LqM5Yek5pyc', 'w4QKRFwcwonCu0Y=', 'wrzCt1vCgzssw6/Do8KoVBDCk1BBwq5dXGxjShxHLU0Sw67Drg==', 'w4ghwr0=', 'JcKnKnPDizfDiMOeB8KdJS4=', 'YMKew5s=', 'w4UAQVEZwr3CvUs=', 'wpjCi8KBwqQ=', 'w5AhwpbDmFEKHcOHB8KSw6/DpgQfwrjCqMKb', 'w7IKwrgEw7Q=', 'ccKPw5Z1C8O5', 'JwvDncKnC8Oswok=', 'wrzCqhbCmCPCsQ==', 'w7AOwrobw7B7w64=', 'YMKUw5scwqdFwrw=', 'bHMUWT4f', '4pii77mkw6rmi4bmr5jvvJTkv6vmsLrmnprmno/pmoDov4Xoo4zmr7boh5zmn4TCqMOc6K6w5YSF5rK555eK5oqB576jFcOMw5puwolASMK7wrDCjhfCjH7DoMO3wrzDpR1ow5JKc8OmwpRrKcKwwow=', 'LsOJwrE0QMKsw70=', 'YiE/', 'aDbCjhUnCsKwV8K0', 'H8OUw6HDkXFjU1U=', 'JQhxw5NDwqs=', 'DcOcwq4cKcOdw4DCgjPCuQ==', 'QMKDw6fCr8OWBQ==', 'GhPCjsOCPw==', 'wq82w4ktwrLDog==', 'KRVJ', '55SH6K6e5bCq6K+M5YmP5pSe6Zaw', 'wrnCtVLCliA=', 'wpbCkMK9w75qw408Vm4=', 'wrMrOsKA', 'w6p2cg==', 'bMK/w4Q=', 'wqPCsRA=', 'NTpUwqHCnXk2', '4pmL77moNeasmeiHsOafiOmHmOeXu+S4n+i2oOaphuW+j+OBuvCal7E=', 'w596w4/Cm8OlwoFn', 'IeOCvueVkuaJkuWRjeOAlcKPw58=', 'wqrCv0zCnw==', 'XMKJw7rCvA==', 'JwvDgsK9FsOl', 'w5htw5LDlg==', 'KUtmw4lyYA==', 'IB5Rw5tTwqY=', '44Ov55eL5ouH5ZKG44CPwpJQ', 'I8Ogw79wccKlw5/CosK3HQ5rT8Kew5xPw718CcO/wrHDoWEbLcOtwr/Cv8KGw6FPwoDDnF/DvsOxEcKzeh/DjsOB', 'ZTYjwpPCu8KIBw==', 'Q8KtAlgywrws', 'PhRKw5JD', 'WcK7P0k=', 'K0p6w44=', 'w64hd10ZwozCqlUzwqkCbsOTBCk0wq/Cl8KMIcOaw7XDrmlvwqleGsK8woNVw61gwotVJsKdwq7ChCUaCh9qw4Q=', 'W8KPw6Q=', '8L+1v8Oq5byk5Yuc6ISC5p6n54uT5p6/5Yy7w6o1', 'DjANw4NSw50y', 'Z8KQZg==', 'RzbChg==', 'fycnwo/CqcORTQIBw7AHwqrDvHFpbg5ww6INEcKOPsOQwqoXdm4lwqMlwozCjMK+w6/CrmvCkhDChHsdw6PCj3VHw6zCiShjADlcw4oRITspw60jw5Y=', 'EFw5w4fDjMO+', 'BcKBUMK5wonDhw==', 'wowlwoTChMKzw5A=', 'G8KPWQ==', '5p+X5Ym/5ZmQ6K2I6Za85pSz5o+v5Lu356q077y96K6J5qC05p+R6Iee6Lmr6K6M5aSt572Y57uT5oKh5YeK', 'wrzCrFfCmhErw6DCv8KNXhrCkQ==', 'w7Z2wp3CvnY=', 'wqnCs8KWRQ==', 'dMKEw40LwrJDwrQbw7U=', 'w7HDrsOXw54rw5U=', 'eiN0wrvCgSN1XMORc8KCwohrw4gcw4PCmMK5w77CjMK5wpXDtQ==', 'w5J3w53DkMOiwpQ=', 'wpXDu8KQwo/CjsKUwrIESBZtw6PCp8Owwp7CtsK/d8OeO3I8wps2KwDDjiPCizM5cwvCsMK4wrFLwq/DjXt5DcO/ZTnCoQJbY2powobCkB/Dl8KSwrzCjMKNOMO4wofCucKCwpE=', 'w5UnwqXDuDjDiA0=', 'HsOKw4hNNsKnw47Cv8KJ', 'a8Kew4g=', 'w7nDpnA7wqDDsFdn', 'w6nDu3YmwoXDoA==', 'Gx0twrDDrF0=', 'w5Y7wrTDtkcfGQ==', 'wpPCmGVgwqjDhg==', 'wqdiJMKpICkzw5zCmw==', 'ZW4TTT4ESsOYw48/', 'KxbDuA==', '44Kc5ZK55Lmz5pa/6Zae44KUGS/liZzmlIDmiqTliqnDkA==', 'RTjCjBs=', 'w5IjwpUebMKqw58=', 'PsOKLsOBwr7DksOSwonCnw==', 'ZCM/wpbCrg==', 'PhnDvMKhHA==', 'R8K7JUUvwr8=', 'dDsywo3CmcKEBkgmw60=', 'BcKFTsKxwofDicOP', 'wrN/M8KlIS4=', 'w5Vww5bDkcOkwpJg', 'w7x8wo4=', 'wq/Ct8KaRG3CizU=', 'PiZjwq0=', 'OSdx', 'IcOQKw==', 'w5sRV1EWwo/CpkFl', 'IQjDusKh', 'KSdjwrHCiXc9e8KE', 'w5jCqcOtw7BJwoHDjQ==', '5bO95paR55qC5LyV5ZKU77655oKU5aWE77yK5L+35pm75Lmy6LW255aN5oqh772m8Ye0nw==', 'ECI3w4I=', 'E2fCgsOCwq1q', 'SDHCgAwPGw==', 'wpnCkcKfw6Zdw4ARS0oQw7XDkw==', 'bsKCw7wNwrRWwrg=', 'c2MYTT4FcMOPw4Y=', 'UE90cTfCr8KX', 'wrTCsUzCnjQ6', 'EEwvw7fDl8Ojw4rDmwXCmcKWbVc=', 'wqbCrTnCgzLCpw==', 'dTw3woY=', 'Dlo8', 'wrVjNA==', 'PUp5', 'w6DDsHsuwpXDrQ==', 'wpnCmsKYwrI=', 'w5nCvMKEw7gj', 'Y3cOXSI=', 'w5YuwoAITMKq', 'w68Owq4ew7BNw7nDtw==', 'wrk/IsKN', 'wqrCq0vCnw==', 'w5YvwrTDk10G', 'w5vDssO3w4Uqw57CpjzCucOCw4fDuA==', 'JQhzw5NIwqA=', 'w5crwrTDkw==', 'MCZgwqc=', 'RMKDw6jCrMOHHzg=', 'wp5iwpM=', 'w409wpnDn1MZFsOH', 'I3rDocON', 'LBfDqsKr', 'Kz4wXsO6ei4=', 'c8K6w4Qu', 'ezw0wqzCv8KbA18Gw60Lwqw=', 'T8KOw6jCusOhAi/Ct0JU', 'wqcrPMKSVA==', 'PGXDt8OXwoZrwq3CnQ==', 'wpDCmMKDwqzCgMKTw4LDplwzw6/CgQ==', 'wptKw4TDnMOmwo4u', 'OmbDnMOcw456wo3ClMO3w53Ds8K1wrw=', 'GHdGw7Q=', 'b8KUw44cwqNDwq4=', 'wosswoXCgcK4w5I=', 'MH7DpsOWw555wrc=', 'KR3CksOFP8KAw6pHasK0bcKme20=', 'wrtiJMKpPg87', 'DMOWw6DDsXFyVV/DhSw=', 'w6tge1kJbg==', 'wrDDmMKnwqo=', 'woTCn8KCwpLCoMKJw4rDpGs=', 'wrslKQ==', 'NiQOTg==', 'w4fCuMO6w615', 'PFdGw5RnZwsN', 'w6PDpWE6', 'S8KJw70=', 'HQDClcOFP8KKw78eRw==', 'DsOQIsOGwq/DjsOPw4rCrMKmV8On', 'S8KDw73CnMOLAC4=', 'MCZmwrDCi38nfw==', 'wrPCu8KWRWfCjDI=', 'woMCdBnCj8KWbA==', 'wrnCtlnChRM3', 'L8OfwoMlV8K5w6s=', 'w4I8wrXDmnEDEMOQCMKSw7zDpg==', 'wr/CvwXCnzM=', 'TT3CmQ0vH8KK', 'OyxzwpnCgHAndg==', 'BsOdw4A=', '4puD77ime+aIheavse++gOS/geawk+adqeaeiemav+i/k+ihuOavp+iGs+afuxrDiuS9s+S5sOaZv+S4oOi2v+eWgOaKle+9huiuouWFi+axpeeWmeaLl+e8vSTCvXtdPsK0wqXDsMKLcV7Do1xxw7BpLEwRewkgYsOKwofDjgs5', 'E0gvw5w=', 'YcKDw4AVwoVZwrwHw5E9DXI=', 'w6BgYQ==', 'w7zDoGYh', 'w44XSlU7woDCrlVfw7RIPg==', 'w6/DvXQ7wqLDqkdqKsOE', 'wpBpwo5pw5vCvEzCqMK+Lg==', 'GmvDk056XMOI', 'woTChcKZwq/Cpw==', 'w7EfwqsDw6Rrw4jDtMO3wqk=', 'wr/CqwTChA==', 'KCFiwro=', 'w4fDn8Ofw7bDt8OK', 'wp5iwpNQw7XCvU3CmcK1Kw==', 'w5MkwoDDvg==', 'w48xwoDDqTjDkjQ=', 'w69gdFoYdMK9', 'eQgkwpkiNlQ=', 'RVhveBXCs8KXw7/Ch8K7J8K+', 'woXCicKewqjCs8KPw6LDoWs0', 'EsONwqEPKMOG', 'w77Dr8O2w5wMw5jCs2PCrsOUw5PDuA==', 'ezY9wpjCrsKD', 'GcONwrs=', 'K8ONI8OfwonDiMOawpXCu8KwQ8On', 'IF10w4RwfBY=', 'KQNPw5NVwrrCug==', 'w5F6w5A=', 'L11hw7R8YwA=', 'P8OaPMOewqvDg8Oe', 'CRnCiMOeL8KJw7Y=', 'wqbCsBPCiS7CjTE=', 'wpHCj2liwo/Di11LRcO4MMOP', 'wqrDo3A7wpLDrExhVsOGwo0=', 'w7TDsUvCkjwnw4/CosK6WBjCjQ==', 'WTzCkhEiGcKf', 'NT8KX8OteSrCjMOF', 'wqTCusKaUknCjQ==', 'Ol1lw4x0bQA=', 'CMOcw7vDiX10cFDDkw==', 'Jh3Dr8K2HMO5wp8=', 'aMKBw4oWw6tEwq8Z', 'wpvCi8KYwqLCqw==', 'DsOdw6I=', 'cMKvw546SMOV', 'X8KWw6XCocOW', 'wqHCvxrCiQ==', 'w4TCvMOmw7o=', 'w7/DoWcgwo/Dog==', '55W76K2C5bOc6Ky/6Let5Yyl', 'wqfDjcKywr/CvsKh', 'NTpLwrvCgHA=', 'SUVpew==', 'W8OPDg0=', 'LsOXLcOAwovDlA==', 'w5pww4PDkcOgwpRy', 'Ph5Mw4lLwro=', 'XsOcFg==', 'w4Yhwr7Djg==', 'IMOaOMOawqXDhA==', 'FSYuw5pBw5ky', 'wp4JcRjCjMKNccK2wqM=', 'AR0/wqHDpVvDvA==', 'w7zDssO3w5Q=', 'WcOBDwsk', 'P3rDtQ==', 'FcOdw4NJFMOiw5rCv8KmFwtq', 'RsKxNmgywqk=', 'wpnCknJmwqrDmg==', '4pus77m0H+aIjeatrsOiw6nmrZPohYfmnoDltorlgJTnlqPjgYU=', 'wrFkIcK+BzQ=', 'w6TDoWE5wpLCvwwgDcOZw5dCwrN/YH16AzHDlSo5ansOa8KJLiLCmkzCswHDicKCw5DDjhJsKzIqwq8nZkHDg3bCrsKdw6B6ejzDm0ZpNMODK0N2RGQ=', 'GBfCj8OeNsKYw7s=', 'w68xfcOxe31gwoTDgn0vXMOcw5TxjJKF57KI57ms6YKf55+d8KOyvzsYw5g3P27DosKiw7nCrEwRwoFr', 'NsKifcKZwqPDrMOtIsK6w7pewrEAwrNseTXCjsK9IV4Cw4xlC8KlEsOoXBVUf8KRKyRCw4PDsm5jFngPAcK1XMK/awrDlsOFw57DjCdawqnCiMKiwpDCpwzDgw==', 'OTt1wrvCnUE+bcKH', 'w7dqZko=', 'w7TDssO+w4I=', 'wpnCj8Kfw6Rs', 'wqrCt8KPSGfCnQ==', 'HRcNwrHDskDDoVU=', 'IMK9JGzDizDDjcOJBcKG', 'wqfDjMKxwrjCv8KgwpwiZg==', 'JwvDgMK9HcOu', 'OTFuwqfCm20AZ8KOZw==', 'w4Mrwq7Dv10eA8OR', 'OyxzwoDChnM2', 'MH3Ds8OLw6hxwrvClMOBw5s=', 'CsOAwqoG', 'woYGZQ==', 'WMKDw7rCvA==', 'woTCj8Kcwq3CosKYw4Y=', 'D0w1w5PDjMOk', 'w6nDrXAq', 'QF3Dlg==', 'BQLCiMOC', 'w4YqwogZaA==', 'wqHCoMKUTUvCkSfCmnbCv8OsYg==', 'S150ZWzDtMOZw7XCqcKtJ8Kxwp/Ci0I7wrJmCQrDgsKTw6drY8KewqfChMOxGxvDksK1wqcUMF1TPcOjTMOPw7zClsOtw5wNIcKiB8Kj', 'MT86wozCrsKODHITw7AJwrvCqA==', 'X8Klw54pWcOTwrMjw5TCm1rCp0fCig==', '5Yuj5ZKV5Lq15pS96Za05ouC5YmqbPCfn5U=', 'KxbDrcK9HcOu', 'TMK6KV4hwqs5', 'TB7ClcOCLsKLw7A1UsK4bsKkMg==', 'TcKVw7rCocOFAw==', 'w5TCssOiw79u', 'wqclPcKV', 'w5A7wpM=', 'w4cjwpEWbMK9w5s=', 'LMKlIHDCpSrDm8OA', 'XsKxAlkywrInVQ==', 'JQh+w45Vwq/CsA==', 'HsKTcMKywoLDjw==', 'fUwHwogRw78=', 'wrLClxHDkcKdw5XCiWXDnMKU', 'YMKUw5sOwqdd', 'MH3Ds8OLw6pq', 'F0Yww5HDlg==', 'w6Z1ZVIUZcKvLsK/w5loTcKQwrZow5k=', 'M8OSwocv', 'RTbClRcoFg==', 'JFdxw4FmZjoZHcOS', 'J8KvbcKJw4DChcOOBcKhw5V0wpkowo8MSBTCtcOBGWInw69YPMKgB8OjUhQXRsKFNXBewpnCuFx5FmMbHcO7', 'wqnCu0zCgTMv', 'RMOMEAAjcA==', 'wrZtNMKt', 'bMKrw4Q1', 'w5vCtsOv', 'G8KFUMK6wpLDgg==', 'wozChsKEw69/w5wR', '4pmZ77iIw4fmiqzmr5XDvxjDjeisteeVsOaLn+S7r+WlguWNtOiCieW1m+e7gei9tuWLt+afhOWngei/ueiiteatiuaUpe+/o+abpOWli+WFseiukOWSoe+/jg==', 'wolowpRp', 'DsOJwrsA', 'EMKFSsKQwo/DhsOGA8KAw5V2wpIjwplQ', 'E3bDusOYw51nwoDCk8Ovw5fDsMKywobCkMOCw6jDmEHDmMK2PcKieQzDu8K4acOCK8KcwrxJasO2wo5Lw5M=', 'FsOGw73Cp8OJCCXojaXlj5XmiLDli5Dvvrnwtq6z', 'w6EAwqAWw6M=', 'GMOawqAFH8OGw6LCnxTCs8OTw48=', 'w74s6ZWZ6KyjZw==', 'wrPCvcKQRWY=', 'IcOQK8OB', 'JQhsw5RGwqrCpkAvw4MbI8OuMw==', 'AcOOw4JAOMOn', 'w5o2wpUJ', 'w6DDunQtwoXDpFdu', 'wpVowoA=', 'cSE8wpLCmcKDA18kw7YAwrs=', '5b2N5aW05Ym75pSC6ZuP6K2b5pWN6ZaY', 'DMOWw6DDr31/T0XDhCw=', 'R0t0dA==', 'I8OfwoEuVsKu', 'w4QAS18MwoA=', 'w6HCjcKPUzU=', 'wolmwpN1', '4pmZ77iIw4fmrbnohobmn7/ph7/nl4Xlhp3otaHmq4nlvKrjganwuaWn', 'wqvCt8KVR3zCkQ==', 'w652REscaMKW', 'wqF4IcK+MhQ0w5TCmg==', 'J3rDucOcw4U=', 'w7IEwrkD', 'Q8KtH0Ikwr4=', 'wrnCmhHDh8K7w4jCng==', 'wpzCiMKEw6Rrw48Y', 'V3JswoUUwo9hw6HDmMK5Zg3DqcKIfcKv', 'YFvlvL/lpbcG', 'w6sYwpsCw7B2w5M=', 'LQtPw5BOwq3CqEM0w4MWZ8OzasOnw7HCt8K/wqYSHMKaOBPCr8OydcOmGzPCpmI3', 'w6DDunI=', 'YMKUw5s1wqlfwqkd', 'w5/CvMOpw7p5woHDkg==', 'w652WVESaA==', 'SsKDw73Cq8OK', 'wqPCmhHDhw==', 'KsOaOA==', 'DsOHwrwc', 'HAoy', 'w7RxdF0W', 'w5g1woDDrA==', 'KyMHTsOwUi0=', 'AsOAw5rDh3F1aFTDli0ywrNI', 'wrvCsSTCmCTCqzll', 'wrbDlsK3wrI=', 'LigNTMO8dQ==', 'IEY0w5/DkcOp', 'w7Rywp3CvA==', 'fcK5w4M0W8OT', 'BUA1w5XDlMOgw5g=', 'w4k9wr0=', 'HGrCjcOXwpptw7XCnsKlEg==', 'SDHCgAwNAMKeU8KHZg==', 'CMObw7XDkFVl', 'wrslKcKS', 'OcOQAMOdwr3DhcOJwqTCmcKsQg==', 'wrt/DsKpIyQPw5zCiDJ7FcKE', 'w5INCHAZwobCvApfw5UXKsOABiU8wqPCqcOJDcO6wqvCpHQ2w4g0', 'C23Cv8ORwqtrw7/CnA==', 'w6EKwr4Uw7k=', 'wqcrOsKJ', 'w67Drw7DhGB6wrDDvw==', 'LsOUJsOTwrg=', 'G8OGw6A=', 'CcOawqYcOcOow6rCgTLCj8OOw4RJ', 'OcOQA8OQwqA=', 'w6QPwrIEw6Rrw67DqcOwwqc=', 'OyxzwpDCjmo2', 'wpfChsKRw697w5oD', 'wqQ0wr4Ewqw=', 'EsOcw59NMMOk', 'wp7CjlV6wr7DhFk=', 'cGnnu5TmnovDjvCYtIg=', 'wrXCngTDgg==', 'w6jDtGEo', 'QMKJw63CqcORBRTCtWZU', 'w7vDtHw9', 'HhvCkcOUNcKbw6o=', 'T09uciLCsw==', 'w4U9wqnDnlUF', 'w4EEwqQDw7R2w7/CtsOfwqnCvnLDtMO6', 'LsOJwqwkV8Kvw4pLXsO4TEQr', 'XsKsOEA=', 'K8OfwowmRsKj', 'B1LDh8Oqw65MwpbCtQ==', 'VcOFw59LOcK3wp3Cj8OUD11AQMKgwp1rw59iEMOrwozDpmk=', 'wrzCrhvChSI=', 'wp/CmcKgwq7CrMKV', 'w65rfEo6acK6H8K4w4A=', 'KsKmC3vDrTvDu8OJM8KAKD/Cpg==', 'w48rwr/Dhx8KHcOLPcKY', 'LMOMP8Obwq3Djg==', '4piE77mBw7rmiIbmrbvvvafkvJHmsIPmnYLmnr7pm4jovZPooLrmrLjoh4Pmn7fDksKy6K245YWa5rOW55aP5omI57+Mw5LDgcORVMKPG8KMwoB0wpd0w78bJmhWCCYVEXQGecK4BWFWBg==', 'IUtYw5Vhaw==', 'wo/DqsK4wqosw4bClEs=', 'cHcITS8=', 'w6XDplsmwoXDoA==', 'M8OBwpdAw7IDw6pH', 'KcO6wohvDsKJw7Y=', 'wqIkKsKEV8OMwo7CgA8=', 'wq7CocKqVWnClx4=', 'wrzCjBc=', 'w4YywoAIecKKw5dPMg==', 'w5Rmw7nDkMOkwoRBATnDt8KOwqZK', 'cnMJSyYDRsOCw444wqo=', 'O3DDs8Odw45swqw=', 'w5sxwoDDnjrDlDwMXA==', 'ScK2MF8Bwq8=', 'GcONwrsuKcOCw6/CtDLCvcOF', 'SllOejLCvg==', 'UcOew75HL8ONw7HChCfCqMOew4RNwpnCu8Kww5AwRMKqw7QD', 'w6HDukY=', 'V8K+w7ws', 'c2IbSj8EWsOOw4U5', 'fiAeworCrsKO', 'wrnCv1TCmw==', 'MMKhN3fDpjg=', 'Gh3Cj8OF', 'Eys7w5g=', 'w5crwq7DgVMH', 'wpTCimI=', 'b8KJw6fCvMOHAz/Dv1dZP8Od', 'w4QKQg==', 'woHClsKjc0nCqRY=', 'w7d2wp3CuX9bw6I=', 'ZMKZw44KwoVewrkQw5Mm', 'wqJjM8K4', 'Cyw5w4U=', 'PyZowr/ChnsZf8KS', 'AhfCncOVP8Kcw60=', 'w5kpwoY=', 'wrbCicKEwqDCtcKCw7zDtnAkw6HCl8KvUWdjUsOmeFXDq8KWecKfUMKCTTQP', 'PQ3DrMKhDcO5', 'SMKHw73CqcOkBCfCtw==', 'QsOdNAokYQ==', 'AMK6K2rDrTHDncKBEMKLMS4=', 'w5Rmw6bDgMOgwo5L', 'w77DuMOtw5In', 'w48AUQ==', 'OEfCuMKDw7Zmw77CqcKBB8ODFXLCsD0Uwqo/Wx99w6FvGMK6XcOow71Iw4csw7Mow6UtMns/Zk/DnMO3w4YbGQ==', 'ZHcOXwwedcOE', 'AMObw55NOcOtw5LCq8Kc', 'TSvCjhMNB8KbRMKFfcOowr0=', 'Pyhrwrg=', 'BhfCksOWLsKG', 'AwHCssOePsKL', 'Yzw4wprCtA==', 'EsOHwqg=', 'eCMnwow=', 'wocIcg==', 'cDwn', 'wrfCu0vChDMkw6Q=', 'wo9uwpdcw6nCp1A=', 'wpLCkB7Dl8K7w5TCmS3DicKZCDA=', 'wrppIcKoIzIu', 'w7YOwrkD', 'H8OAw4thJcO4', 'LiIE', 'NHDDpg==', 'MiZID3JPKMKT', 'QsOdNAAlYMOnwpoPwpLCqMKLGg==', 'AAsNwrDDsk7Dqg==', 'w6TDoWE5w5vCpQwg', 'w7V9wp8=', 'w7ZhwobCsF1Hw6LCscObNsOow64=', 'w4FBTW08RcKaE8KAw7NFLcK+woA=', 'DRfCiMO8M8KAw6seQ8Ki', 'w55iw5M=', 'woTCiXRmwqLDhFVffw==', 'ISUCWcOLci/CncOlw6E=', 'SDLCix88', 'wqFaZkhAcMO/fMKJw4J1Xw==', 'WC3CkxcgCMKTUMK/', 'w7DDuMO4w5Uqw4LCoQ==', 'wpvCmGhowrjDiw==', '4puK77m9w5zlv6LliJfoh7TmnrLniKLmnIrljKbkvY3kuY/mnILliqTlmp7niILmnJXvv4norqfmmqfmlrHoh7TmnbblkJnvvpM=', 'EMOJwqIN', 'IBRY', 'wpsGZw7Cjw=='];
 (function (_0x1f419a, _0x5ed8e4) {
@@ -121,53 +121,66 @@ const GLOD_BALL_1 = _0x1845('0x2', 'H&ks');
 const GLOD_BALL_2 = _0x1845('0xdc', '24Jy');
 const GLOD_BALL_3 = _0x1845('0x142', 'Btk9');
 const SETTING_CAL = _0x1845('0x20d', '0H[&');
-if ($[_0x1845('0x10c', '&yny')]()) {
-    fdxsapp = JSON[_0x1845('0x161', 'kKQ$')](process[_0x1845('0x1b8', 'esgm')][_0x1845('0xf6', 'l4)c')]);
-    userId = process[_0x1845('0x1c', 'XGHT')][_0x1845('0xcf', '))c5')];
-    activeCode = process[_0x1845('0x11e', 'f4i3')][_0x1845('0x120', '5mel')];
-    hour = new Date(new Date()['getTime']() + 0x8 * 0x3c * 0x3c * 0x3e8)['getHours']();
-    minute = new Date(new Date()[_0x1845('0x1fa', '@nKB')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x1845('0x121', '&yny')]();
-} else {
-    hour = new Date()[_0x1845('0x144', 'l4)c')]();
-    minute = new Date()[_0x1845('0x213', 'zIaE')]();
-}!(async () => {
-    if (typeof $request !== _0x1845('0xde', '$NlW')) {
-        await getCk();
+
+let getck = require("./getck")
+getck.getCKS("5").then(function(data){
+        run(data);
+})
+function run(data){
+    if ($[_0x1845('0x10c', '&yny')]()) {
+        fdxsapp = data;
+        userId = process[_0x1845('0x1c', 'XGHT')][_0x1845('0xcf', '))c5')];
+        activeCode = process[_0x1845('0x11e', 'f4i3')][_0x1845('0x120', '5mel')];
+        hour = new Date(new Date()['getTime']() + 0x8 * 0x3c * 0x3c * 0x3e8)['getHours']();
+        minute = new Date(new Date()[_0x1845('0x1fa', '@nKB')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x1845('0x121', '&yny')]();
     } else {
-        $[_0x1845('0x1b9', 'u!Cl')]('📢\x20' + systemNotify);
-        $[_0x1845('0xf5', 'bDw7')](_0x1845('0x18d', 'kKQ$') + version + '，最新版本号:\x20' + newest_version);
-        if (isCharge == !![]) {
-            $['log'](_0x1845('0x17b', '*4Ay'));
+        hour = new Date()[_0x1845('0x144', 'l4)c')]();
+        minute = new Date()[_0x1845('0x213', 'zIaE')]();
+    }!(async () => {
+        if (typeof $request !== _0x1845('0xde', '$NlW')) {
+            await getCk();
         } else {
-            $[_0x1845('0x10e', 'yCdQ')](_0x1845('0x8c', 'zIaE'));
-        }
-        if (false) {
-            $[_0x1845('0x83', 'zIaE')](_0x1845('0x205', 'xYOh'));
-            return;
-        } else {
+
+            $[_0x1845('0x1b9', 'u!Cl')]('📢\x20' + systemNotify);
+            $[_0x1845('0xf5', 'bDw7')](_0x1845('0x18d', 'kKQ$') + version + '，最新版本号:\x20' + newest_version);
+
             if (isCharge == !![]) {
-                $[_0x1845('0x14b', 'GOy#')](_0x1845('0x1be', 'A0Eo'));
-            }
-        }
-        $[_0x1845('0xc', 'Ig%N')](_0x1845('0x158', 'Mbht') + fdxsapp[_0x1845('0xa8', 'aAIj')] + '个账号');
-        for (let _0x3441da = 0x0; _0x3441da < fdxsapp['length']; _0x3441da++) {
-            $[_0x1845('0x154', 'l4)c')](_0x1845('0x156', 'GOy#') + (_0x3441da + 0x1) + _0x1845('0x140', 'B&9&'));
-            fdxs = fdxsapp[_0x3441da];
-            await userInfo();
-            $[_0x1845('0x195', 'K^V*')](_0x1845('0x85', 'u!Cl'));
-            await readTime();
-            await $[_0x1845('0x1bf', 'HDl[')](randomNum(0xc350, 0xfde8));
-            $[_0x1845('0x5d', ')!jb')](_0x1845('0x14a', 'A0Eo'));
-            await listenTime();
-            if (!fdxsapp[_0x3441da][_0x1845('0x35', 'A0Eo')]) {
-                fdxsapp[_0x3441da][_0x1845('0x6a', '0H[&')] = 0x1;
-                $[_0x1845('0x0', ')!jb')](JSON[_0x1845('0x1ba', 'bDw7')](fdxsapp, null, 0x2), 'fdxsapp');
+                $['log'](_0x1845('0x17b', '*4Ay'));
             } else {
-                if (fdxsapp[_0x3441da][_0x1845('0x1c6', 'itJp')] == 0x1) await sendMsg(content);
+                $[_0x1845('0x10e', 'yCdQ')](_0x1845('0x8c', 'zIaE'));
+            }
+            if (vipAuth != !![]) {
+
+            } else {
+                if (isCharge == !![]) {
+                    $[_0x1845('0x14b', 'GOy#')](_0x1845('0x1be', 'A0Eo'));
+                }
+            }
+
+            $[_0x1845('0xc', 'Ig%N')](_0x1845('0x158', 'Mbht') + fdxsapp[_0x1845('0xa8', 'aAIj')] + '个账号');
+            for (let _0x3441da = 0x0; _0x3441da < fdxsapp['length']; _0x3441da++) {
+                $[_0x1845('0x154', 'l4)c')](_0x1845('0x156', 'GOy#') + (_0x3441da + 0x1) + _0x1845('0x140', 'B&9&'));
+                fdxs = fdxsapp[_0x3441da];
+                await userInfo();
+                $[_0x1845('0x195', 'K^V*')](_0x1845('0x85', 'u!Cl'));
+                await readTime();
+                await $[_0x1845('0x1bf', 'HDl[')](randomNum(0xc350, 0xfde8));
+                $[_0x1845('0x5d', ')!jb')](_0x1845('0x14a', 'A0Eo'));
+                await listenTime();
+                if (!fdxsapp[_0x3441da][_0x1845('0x35', 'A0Eo')]) {
+                    fdxsapp[_0x3441da][_0x1845('0x6a', '0H[&')] = 0x1;
+                    $[_0x1845('0x0', ')!jb')](JSON[_0x1845('0x1ba', 'bDw7')](fdxsapp, null, 0x2), 'fdxsapp');
+                } else {
+                    if (fdxsapp[_0x3441da][_0x1845('0x1c6', 'itJp')] == 0x1) await sendMsg(content);
+                }
             }
         }
-    }
-})()[_0x1845('0xb6', 'kKQ$')](_0x3c33ae => $[_0x1845('0x117', 'iorC')](_0x3c33ae))[_0x1845('0xac', 'xYOh')](() => $['done']());
+    })()[_0x1845('0xb6', 'kKQ$')](_0x3c33ae => $[_0x1845('0x117', 'iorC')](_0x3c33ae))[_0x1845('0xac', 'xYOh')](() => $['done']());
+}
+
+
+
+
 async function getCk() {
     if ($request[_0x1845('0xa1', 'O$(j')][_0x1845('0x1b', 'tgiI')](/\/app\/cfg/)) {
         const _0x358509 = $request[_0x1845('0x1cc', 'H&ks')];
@@ -278,6 +291,43 @@ function listenTime() {
                 $[_0x1845('0x83', 'zIaE')](_0x39cd12);
             }
             _0x15edfc();
+        });
+    });
+}
+
+function getScriptAuth(_0x431683, _0x4cb99e, _0x40a952) {
+    return new Promise((_0x4e7df3, _0x392ba6) => {
+        const _0x1cc03e = _0x1845('0x53', 'l65i');
+        const _0x1fd613 = {
+            'appName': _0x431683,
+            'userId': _0x4cb99e,
+            'activityCode': _0x40a952,
+            'version': version
+        };
+        const _0x26e62b = {
+            'url': _0x1cc03e,
+            'headers': {
+                'Content-Type': _0x1845('0x68', '5mel'),
+                'accept': 'application/json'
+            },
+            'body': JSON['stringify'](_0x1fd613)
+        };
+        $[_0x1845('0x5c', '$NlW')](_0x26e62b, async (_0x306602, _0x577a09, _0x4c4d12) => {
+            const _0x55424c = _0x4c4d12[_0x1845('0x1b2', 'K^V*')](/\"/g, '')[_0x1845('0x152', 'uY6y')](0x22);
+            const _0x2fe814 = new Base64();
+            result = JSON[_0x1845('0x201', 'M9^x')](_0x2fe814[_0x1845('0x1a6', 'A0Eo')](_0x55424c));
+            try {
+                newest_version = result['version'];
+                userAuth = result[_0x1845('0x1a2', 'Mbht')];
+                scriptAuth = result[_0x1845('0x4', 'tgiI')];
+                runAuth = result[_0x1845('0x1a5', 'B&9&')];
+                systemNotify = result['notify'];
+                vipAuth = result[_0x1845('0x113', 'zIaE')];
+                isCharge = result[_0x1845('0x1dc', 'B&9&')];
+            } catch (_0x22773d) {
+                $[_0x1845('0x12c', '@4KI')](_0x22773d);
+            }
+            _0x4e7df3();
         });
     });
 }

@@ -1,14 +1,14 @@
 
 
 /*
-自用cookie上传脚本，上传至青龙自动更新cookie
+自用cookie上传脚本，上传至青龙自动更新cookieddd
 */
 
 
 
 const $ = new Env('疯读小说');
 let fdxsuserck = 1;
-let awyapp = $['getjson']('fdxsapp', []);
+let fdxsapp = $['getjson']('fdxsapp', []);
 let appid = 5;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
@@ -22,31 +22,29 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request['url']['match'](/\/app\/cfg/)) {
-        const _0x51f2bb = $request['url'];
-        const _0x945ea9 = _0x51f2bb['split']('_token=')[0x1]['split']('&')[0x0];
-        const ua = $request['headers']['User-Agent'];
-        let _0x3d4ae6 = fdxsuserck - 0x1;
-        if (awyapp[_0x3d4ae6]) {
-            if (awyapp[_0x3d4ae6]['token'] != _0x945ea9) {
-                awyapp[_0x3d4ae6]['token'] = _0x945ea9;
-            } else {
-                return;
+    if ($request['url']['match'](/\/cashIncentive\/center/)) {
+        const _0x569dac = $request['url'];
+        const _0x2abb63 = _0x569dac['split']('_token=')[0x1];
+        let _0x15889c = fdxsuserck - 0x1;
+        if (fdxsapp[_0x15889c]) {
+            if (fdxsapp[_0x15889c]['token'] != _0x2abb63) {
+                fdxsapp[_0x15889c]['token'] = _0x2abb63;
             }
         } else {
-            awyapp[_0x3d4ae6] = {
-                'token': _0x945ea9
+            fdxsapp[_0x15889c] = {
+                'token': _0x2abb63
             };
         }
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x3d4ae6])
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x15889c])
         try{            
-            awyapp[_0x3d4ae6]['sqlid'] = resdata.data.id
+            fdxsapp[_0x15889c]['sqlid'] = resdata.data.id
         }catch{
             print(resdata)
         }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'fdxsapp');
+            $['setdata'](JSON['stringify'](fdxsapp, null, 0x2), 'fdxsapp');
         }
-        $['msg']($['name'], '疯读小说账号' + (_0x3d4ae6 + 0x1) + ': token获取成功！🎉');
+        $['msg']($['name'], '疯读小说账号' + (_0x15889c + 0x1) + ':\x20token获取成功！🎉');
     }
 }
 function upck(ua,cookie) {
