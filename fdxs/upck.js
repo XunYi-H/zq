@@ -36,7 +36,7 @@ async function getCk() {
             };
         }
         const ua = $request['headers']['User-Agent'];
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x15889c])
+        resdata = await upck(JSON.stringify(ua),fdxsapp[_0x15889c])
         try{            
             fdxsapp[_0x15889c]['sqlid'] = resdata.data.id
         }catch{
