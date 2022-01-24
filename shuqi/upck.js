@@ -343,18 +343,19 @@ async function getCk() {
         $['log']('极速版福利中心浏览书城数据url: ' + _0x4c388b);
         $['log']('极速版福利中心浏览书城数据body: '+ _0x1adfb9);
         $['msg']($['name'], '书旗小说极速版账号' + (_0x580008 + 0x1) + '福利中心浏览书城数据获取成功！');
-    }
-    if(sqxsapp[_0x580008]){
-        const ua = $request['headers']['User-Agent'];
-        resdata = await upck(JSON.stringify(ua),sqxsapp[_0x580008])
-        try{            
-            sqxsapp[_0x580008]['sqlid'] = resdata.data.id
-        }catch{
-            print(resdata)
-        }finally{
-            $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+        if(sqxsapp[_0x580008]){
+            const ua = $request['headers']['User-Agent'];
+            resdata = await upck(JSON.stringify(ua),sqxsapp[_0x580008])
+            try{            
+                sqxsapp[_0x580008]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+            }
         }
     }
+
     
 }
 function upck(ua,cookie) {
