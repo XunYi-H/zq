@@ -244,7 +244,118 @@ async function getCk() {
         $['log']('书旗小说阅读进度数据url: ' + _0x3b9f34);
         $['log']('书旗小说阅读进度数据header: ' + _0x47c00b);
         $['msg']($['name'], '书旗小说账号' + (_0x1fbb0d + 0x1) +'阅读进度数据获取成功！🎉');
+        if(sqxsapp[_0x1fbb0d]){
+            const ua = $request['headers']['User-Agent'];
+            resdata = await upck(JSON.stringify(ua),sqxsapp[_0x1fbb0d])
+            try{            
+                sqxsapp[_0x1fbb0d]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+            }
+        }
     }
+
+    if ($request && $request['method'] != 'OPTIONS' && $request['url']['match'](/\/prize\/lottery/)) {
+        const _0x52211d = JSON['stringify']($request['headers']);
+        const _0x16564d = $request['body'];
+        let _0x2b917f = sqxsuserck - 0x1;
+        if (_0x52211d['indexOf']('1.0.3') > -0x1) {
+            sqxsapp[_0x2b917f]['jsb_oldest_sign_video_header'] = _0x52211d;
+            sqxsapp[_0x2b917f]['jsb_oldest_sign_video_body'] = _0x16564d;
+            $['log']('极速版1.0.3签到视频数据header: ' + _0x52211d);
+            $['log']('极速版1.0.3签到视频数据body: ' + _0x16564d);
+            $['msg']($['name'], '书旗小说极速版1.0.3账号' + (_0x2b917f + 0x1) + '签到视频数据获取成功！');
+        } else if (_0x52211d['indexOf']('1.0.5') > -0x1 && _0x16564d['indexOf']('1.0.5') > -0x1) {
+            sqxsapp[_0x2b917f]['jsb_video_header'] = _0x52211d;
+            sqxsapp[_0x2b917f]['jsb_video_body'] = _0x16564d;
+            $['log']('极速版激励视频数据header:\x20' + _0x52211d);
+            $['log']('极速版激励视频数据body:\x20' + _0x16564d);
+            $['msg']($['name'], '书旗小说极速版账号' + (_0x2b917f + 0x1) + '激励视频数据获取成功！');
+        } else {
+            sqxsapp[_0x2b917f]['jsb_sign_video_header'] = _0x52211d;
+            sqxsapp[_0x2b917f]['jsb_sign_video_body'] = _0x16564d;
+            $['log']('极速版1.0.5签到视频数据header: ' + _0x52211d);
+            $['log']('极速版1.0.5签到视频数据body: ' + _0x16564d);
+            $['msg']($['name'], '书旗小说极速版账号' + (_0x2b917f + 0x1) + '签到视频数据获取成功！');
+        }
+        if(sqxsapp[_0x2b917f]){
+            const ua = $request['headers']['User-Agent'];
+            resdata = await upck(JSON.stringify(ua),sqxsapp[_0x2b917f])
+            try{            
+                sqxsapp[_0x2b917f]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+            }
+        }
+    }
+    if ($request && $request['method'] != 'OPTIONS' && $request['url']['match'](/\/reading\/upload/)) {
+        const _0x2d30c2 = JSON['stringify']($request['headers']);
+        const _0xd9359f = $request['body'];
+        let _0x3934db = sqxsuserck - 0x1;
+        sqxsapp[_0x3934db]['read_upload_header'] = _0x2d30c2;
+        sqxsapp[_0x3934db]['read_upload_body'] = _0xd9359f;
+        $['log']('阅读上传时间数据header: ' + _0x2d30c2);
+        $['log']('阅读上传时间数据body: ' + _0xd9359f);
+        $['msg']($['name'],'书旗小说账号' + (_0x3934db + 0x1) + '阅读上传时间数据获取成功！');
+        if(sqxsapp[_0x3934db]){
+            const ua = $request['headers']['User-Agent'];
+            resdata = await upck(JSON.stringify(ua),sqxsapp[_0x3934db])
+            try{            
+                sqxsapp[_0x3934db]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+            }
+        }
+    }
+    if ($request && $request['method'] != 'OPTIONS' && $request['url']['match'](/\/pendant\/lottery\/action/)) {
+        const _0x3e1997 = JSON['stringify']($request['headers']);
+        const _0x4b2016 = $request['body'];
+        let _0x55578f = sqxsuserck - 0x1;
+        sqxsapp[_0x55578f]['read_lottery_header'] = _0x3e1997;
+        sqxsapp[_0x55578f]['read_lottery_body'] = _0x4b2016;
+        $['log']('阅读30秒奖励数据header: ' + _0x3e1997);
+        $['log']('阅读30秒奖励数据body: ' + _0x4b2016);
+        $['msg']($['name'], '书旗小说账号' + (_0x55578f + 0x1) + '阅读30秒奖励数据获取成功！');
+        if(sqxsapp[_0x55578f]){
+            const ua = $request['headers']['User-Agent'];
+            resdata = await upck(JSON.stringify(ua),sqxsapp[_0x55578f])
+            try{            
+                sqxsapp[_0x55578f]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+            }
+        }
+    }
+    if ($request['url']['match'](/\/v1\/task\/reward/)) {
+        const _0x4c388b = $request['url'];
+        const _0x1adfb9 = $request['body'];
+        let _0x580008 = sqxsuserck - 0x1;
+        sqxsapp[_0x580008]['jsbwelfare_url'] = _0x4c388b;
+        sqxsapp[_0x580008]['jsbwelfare_body'] = _0x1adfb9;
+        $['log']('极速版福利中心浏览书城数据url: ' + _0x4c388b);
+        $['log']('极速版福利中心浏览书城数据body: '+ _0x1adfb9);
+        $['msg']($['name'], '书旗小说极速版账号' + (_0x580008 + 0x1) + '福利中心浏览书城数据获取成功！');
+    }
+    if(sqxsapp[_0x580008]){
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),sqxsapp[_0x580008])
+        try{            
+            sqxsapp[_0x580008]['sqlid'] = resdata.data.id
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+        }
+    }
+    
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {

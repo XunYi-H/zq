@@ -102,241 +102,232 @@ let systemNotify = '';
 let vipAuth = '';
 let isCharge = '';
 let taskProcess = '';
-if ($[_0x34e1('0x256', 'uGEo')]()) {
-    sqxsapp = JSON[_0x34e1('0x1af', 'v2]o')](process[_0x34e1('0x2f4', 'lRjs')][_0x34e1('0x290', 'sEuw')]);
-    userId = process[_0x34e1('0x155', '@*dd')][_0x34e1('0x222', '%w$&')];
-    activeCode = process[_0x34e1('0xf5', 'vp9N')]['SQXSACTIVECODE'];
-    hour = new Date(new Date()[_0x34e1('0x79', '&$Wn')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x34e1('0x227', 'Q[)A')]();
-    minute = new Date(new Date()['getTime']() + 0x8 * 0x3c * 0x3c * 0x3e8)['getMinutes']();
-} else {
-    hour = new Date()[_0x34e1('0x322', 'pVeH')]();
-    minute = new Date()[_0x34e1('0x24d', 'JE5U')]();
-}!(async () => {
-    if (typeof $request !== _0x34e1('0x3b', '&$Wn')) {
-        await sqxsck();
+
+
+let getck = require("./getck")
+getck.getCKS("23").then(function(data){
+        run(data);
+})
+
+
+function run(data){
+    if ($[_0x34e1('0x256', 'uGEo')]()) {
+        sqxsapp = data;
+        userId = process[_0x34e1('0x155', '@*dd')][_0x34e1('0x222', '%w$&')];
+        activeCode = process[_0x34e1('0xf5', 'vp9N')]['SQXSACTIVECODE'];
+        hour = new Date(new Date()[_0x34e1('0x79', '&$Wn')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x34e1('0x227', 'Q[)A')]();
+        minute = new Date(new Date()['getTime']() + 0x8 * 0x3c * 0x3c * 0x3e8)['getMinutes']();
     } else {
-        if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x34e1('0x34', 'lRjs')] != 0x20) {
-            $[_0x34e1('0x15', 'atS#')](_0x34e1('0x221', 'dIuX'));
-            return;
-        }
-        await getScriptAuth(_0x34e1('0x2a0', 'QEVA'), userId, activeCode);
-        $['log'](_0x34e1('0x283', '2tNF') + systemNotify);
-        $[_0x34e1('0x15', 'atS#')](_0x34e1('0x275', 'Q[)A') + version + _0x34e1('0x13a', 'y0SD') + newest_version);
-        if (version < newest_version) {
-            $[_0x34e1('0x1b1', 'Uzpg')](_0x34e1('0x26f', 'atS#'));
-            sendMsg(_0x34e1('0x119', 'N[lP'));
-            return;
-        }
-        if (scriptAuth != !![]) {
-            $[_0x34e1('0x138', '9m^9')](_0x34e1('0x203', 'J6MM'));
-            return;
-        }
-        if (userAuth != !![]) {
-            $[_0x34e1('0x1a3', 'vp9N')](_0x34e1('0x85', 'XlVl'));
-            return;
-        }
-        if (isCharge == !![]) {
-            $[_0x34e1('0x1a3', 'vp9N')](_0x34e1('0x1cf', 'Lsjq'));
-        }
-        if (vipAuth != !![]) {
-            $[_0x34e1('0x212', 'iC*F')](_0x34e1('0x15d', 'X6gO'));
+        hour = new Date()[_0x34e1('0x322', 'pVeH')]();
+        minute = new Date()[_0x34e1('0x24d', 'JE5U')]();
+    }!(async () => {
+        if (typeof $request !== _0x34e1('0x3b', '&$Wn')) {
+            await sqxsck();
         } else {
+            $['log'](_0x34e1('0x283', '2tNF') + systemNotify);
+            $[_0x34e1('0x15', 'atS#')](_0x34e1('0x275', 'Q[)A') + version + _0x34e1('0x13a', 'y0SD') + newest_version);
+
             if (isCharge == !![]) {
-                $[_0x34e1('0x2b2', 'qPsC')](_0x34e1('0x284', 'F6Ze'));
+                $[_0x34e1('0x1a3', 'vp9N')](_0x34e1('0x1cf', 'Lsjq'));
+            }
+            if (vipAuth != !![]) {
+                $[_0x34e1('0x212', 'iC*F')](_0x34e1('0x15d', 'X6gO'));
+            } else {
+                if (isCharge == !![]) {
+                    $[_0x34e1('0x2b2', 'qPsC')](_0x34e1('0x284', 'F6Ze'));
+                }
+            }
+            $['log'](_0x34e1('0x132', 'Y9H!') + sqxsapp[_0x34e1('0x145', 'pVeH')] + '个账号');
+            for (let _0x5c4c2b = 0x0; _0x5c4c2b < sqxsapp['length']; _0x5c4c2b++) {
+                $[_0x34e1('0x89', 'WcFh')](_0x34e1('0x22b', 'nqjy') + (_0x5c4c2b + 0x1) + _0x34e1('0x16e', '9m^9'));
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0xba', 'lRjs')]) {
+                    let _0x49e466 = getShuQiId(sqxsapp[_0x5c4c2b][_0x34e1('0x6f', 'N[lP')]);
+                    content += _0x34e1('0x11e', '5GGZ') + _0x49e466 + '\x0a';
+                    $['log'](_0x34e1('0x2ea', 'atS#'));
+                    await dailysign(sqxsapp[_0x5c4c2b][_0x34e1('0x64', 'F6Ze')]);
+                    await $[_0x34e1('0xfb', '5GGZ')](0x3e8);
+                } else {
+                    $[_0x34e1('0x301', 'Y9H!')](_0x34e1('0x1c6', 'aUbu'));
+                    content += _0x34e1('0x289', 'Bw9n');
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x54', 'vp9N')]) {
+                    $[_0x34e1('0x2b1', 'pVeH')](_0x34e1('0x182', '9m^9'));
+                    taskProcess = 0x0;
+                    for (let _0xceea51 = 0x0; _0xceea51 < sqxsapp[_0x5c4c2b][_0x34e1('0x13e', 'F6Ze')][_0x34e1('0x61', 'F6Ze')]; _0xceea51++) {
+                        if (sqxsapp[_0x5c4c2b][_0x34e1('0x149', 'lRjs')][_0xceea51]) {
+                            await task(sqxsapp[_0x5c4c2b]['welfare_bodys'][_0xceea51]);
+                            await $[_0x34e1('0x31c', 'lRjs')](0x3e8);
+                        }
+                    }
+                    if (taskProcess == sqxsapp[_0x5c4c2b][_0x34e1('0x2c9', 'WcFh')][_0x34e1('0x1a6', '5GGZ')]) {
+                        content += _0x34e1('0x102', 'nqjy');
+                    } else {
+                        content += _0x34e1('0x245', 'iC*F');
+                    }
+                } else {
+                    $[_0x34e1('0x15', 'atS#')](_0x34e1('0x2a6', 'FRMi'));
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x11b', '($aV')]) {
+                    await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x63', 'sRPR')]);
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x1f9', 'u@XT')]) {
+                    if (videostate != 0xa) {
+                        $['log']('▶️开始执行书旗小说极速版【1.0.5】激励视频任务');
+                        for (let _0xd4b7e1 = 0x0; _0xd4b7e1 < 0xa - videostate; _0xd4b7e1++) {
+                            await prizelottery(sqxsapp[_0x5c4c2b][_0x34e1('0xe5', '1S1&')], sqxsapp[_0x5c4c2b][_0x34e1('0x26d', 'WcFh')]);
+                            await $[_0x34e1('0x31c', 'lRjs')](0x3e8);
+                        }
+                    } else {
+                        $[_0x34e1('0xaa', '&$Wn')](_0x34e1('0x1b5', '@*dd'));
+                        content += _0x34e1('0x1f6', 'aUbu');
+                    }
+                } else {
+                    $[_0x34e1('0x25a', 'v2]o')](_0x34e1('0x254', 'mDLA'));
+                    content += '【极速版激励视频】:\x20请先抓取V1.0.5视频CK\x0a';
+                }
+                if (sqxsapp[_0x5c4c2b]['jsb_oldest_sign_video_info_url']) {
+                    await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x2ca', 'Bw9n')]);
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x28', '%w$&')]) {
+                    if (videostate != 0xa) {
+                        $[_0x34e1('0x202', '[fvI')](_0x34e1('0xb3', 'Lsjq'));
+                        for (let _0x57e4aa = 0x0; _0x57e4aa < 0xa - videostate; _0x57e4aa++) {
+                            await prizelottery(sqxsapp[_0x5c4c2b]['jsb_oldest_sign_video_body'], sqxsapp[_0x5c4c2b][_0x34e1('0x17e', 'TzeF')]);
+                            await $[_0x34e1('0x24c', 'uGEo')](0x3e8);
+                        }
+                    } else {
+                        $[_0x34e1('0x30b', 'uGEo')](_0x34e1('0x103', 'g3PL'));
+                        content += _0x34e1('0x60', '9m^9');
+                    }
+                } else {
+                    content += _0x34e1('0x2da', 'FRMi');
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x31e', 'WqAM')]) {
+                    await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x1d4', 'aUbu')]);
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0xa9', 'XlVl')]) {
+                    if (videostate != 0xa) {
+                        $[_0x34e1('0xaa', '&$Wn')](_0x34e1('0x30f', 'atS#'));
+                        for (let _0x3cd68a = 0x0; _0x3cd68a < 0xa - videostate; _0x3cd68a++) {
+                            await prizelottery(sqxsapp[_0x5c4c2b][_0x34e1('0xec', ']hw7')], sqxsapp[_0x5c4c2b][_0x34e1('0x264', 'QEVA')]);
+                            await $[_0x34e1('0x31c', 'lRjs')](0x3e8);
+                        }
+                    } else {
+                        $[_0x34e1('0xaa', '&$Wn')](_0x34e1('0xcb', 'FRMi'));
+                        content += _0x34e1('0x1e0', 'FRMi');
+                    }
+                } else {
+                    $[_0x34e1('0x2b2', 'qPsC')](_0x34e1('0x246', 'v7xc'));
+                    content += '【极速版V1.0.5签到视频】:\x20请先抓取视频CK\x0a';
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x208', 'Bw9n')]) {
+                    await videoinfo(sqxsapp[_0x5c4c2b]['old_video_info_url']);
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x157', '1S1&')] && sqxsapp[_0x5c4c2b][_0x34e1('0x1c4', 'J6MM')][0x0]) {
+                    if (videostate != 0xa) {
+                        $[_0x34e1('0x136', 'sEuw')](_0x34e1('0x16f', 'mDLA'));
+                        for (let _0x2ea930 = 0x0; _0x2ea930 < 0xa - videostate; _0x2ea930++) {
+                            await vedioreward(sqxsapp[_0x5c4c2b]['video_bodys'][0x0]);
+                            await $['wait'](0x3e8);
+                        }
+                    } else {
+                        $[_0x34e1('0x212', 'iC*F')]('书旗小说旧版【4.2.6】激励视频任务已完成\x20🎉');
+                        content += _0x34e1('0x17b', 'sRPR');
+                    }
+                } else {
+                    $[_0x34e1('0x16d', 'TzeF')]('📌请获取书旗小说旧版【4.2.6】激励视频任务CK');
+                    content += _0x34e1('0x2c2', 'Y9H!');
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x241', 'WcFh')]) {
+                    await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x11d', 'QEVA')]);
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x109', 'sRPR')] && sqxsapp[_0x5c4c2b]['video_bodys'][0x1]) {
+                    if (videostate != 0xa) {
+                        $[_0x34e1('0x10d', 'sRPR')](_0x34e1('0xe1', 'QEVA'));
+                        for (let _0x189267 = 0x0; _0x189267 < 0xa - videostate; _0x189267++) {
+                            await vedioreward(sqxsapp[_0x5c4c2b][_0x34e1('0x32', 'y0SD')][0x1]);
+                            await $[_0x34e1('0x188', 'pVeH')](0x3e8);
+                        }
+                    } else {
+                        $[_0x34e1('0xaa', '&$Wn')]('书旗小说新版【4.3.0】激励视频任务已完成\x20🎉');
+                        content += _0x34e1('0xe3', '&$Wn');
+                    }
+                } else {
+                    $[_0x34e1('0x25a', 'v2]o')]('📌请获取书旗小说新版【4.3.0】激励视频任务CK');
+                    content += _0x34e1('0x68', 'TzeF');
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x9e', 'dIuX')]) {
+                    await lotteryinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x304', 'TzeF')]);
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0xcd', 'N[lP')] && sqxsapp[_0x5c4c2b][_0x34e1('0x166', 'mDLA')][0x2]) {
+                    if (lotterynow != 0xa) {
+                        $[_0x34e1('0x15', 'atS#')](_0x34e1('0x240', 'sEuw'));
+                        for (let _0x5dbf31 = 0x0; _0x5dbf31 < 0xa - lotterynow; _0x5dbf31++) {
+                            await vedioreward(sqxsapp[_0x5c4c2b]['video_bodys'][0x2]);
+                            await $[_0x34e1('0xc1', 'mDLA')](0x3e8);
+                            $[_0x34e1('0x2f1', '($aV')]('福利转转转，开始第' + (_0x5dbf31 + 0x1) + '次抽奖');
+                            await drawreward(sqxsapp[_0x5c4c2b][_0x34e1('0x306', 'uGEo')], sqxsapp[_0x5c4c2b][_0x34e1('0x262', 't2Y$')]);
+                        }
+                    } else {
+                        $[_0x34e1('0x1d', '1S1&')](_0x34e1('0x2a9', 'aUbu'));
+                        content += _0x34e1('0xbb', 'u@XT');
+                    }
+                } else {
+                    $[_0x34e1('0x2f1', '($aV')](_0x34e1('0x274', 'uGEo'));
+                    content += '【书旗小说转转转】:\x20请先获取CK\x0a';
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x39', '9m^9')]) {
+                    $[_0x34e1('0xf6', 'XlVl')]('▶️开始执行书旗小说极速版看书30秒任务');
+                    await jsread(sqxsapp[_0x5c4c2b][_0x34e1('0x19e', 'F6Ze')], sqxsapp[_0x5c4c2b][_0x34e1('0xf1', 'YJI8')]);
+                    await $['wait'](0x3e8);
+                } else {
+                    $[_0x34e1('0x138', '9m^9')](_0x34e1('0x2b5', 'J6MM'));
+                    content += _0x34e1('0x2c7', 'X6gO');
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x32b', 'aUbu')]) {
+                    $[_0x34e1('0x9d', 'QEVA')](_0x34e1('0x249', 'X6gO'));
+                    await doReadTask(sqxsapp[_0x5c4c2b][_0x34e1('0x183', 'Lsjq')]);
+                    await $[_0x34e1('0x26', 'atS#')](0x3e8);
+                } else {
+                    $[_0x34e1('0x67', 'Q[)A')](_0x34e1('0x1b8', ']hw7'));
+                    content += _0x34e1('0x24e', 'lRjs');
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x6c', 'YJI8')]) {
+                    $[_0x34e1('0x95', 'N[lP')](_0x34e1('0x281', '3Hwi'));
+                    await jsshucheng(sqxsapp[_0x5c4c2b][_0x34e1('0x1c5', '2tNF')], sqxsapp[_0x5c4c2b][_0x34e1('0x18e', 'pVeH')]);
+                    await $['wait'](0x3e8);
+                } else {
+                    $[_0x34e1('0x138', '9m^9')](_0x34e1('0x25', 'Lsjq'));
+                    content += '【极速版浏览书城】:\x20请先抓取CK\x0a';
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0xb0', 'Uzpg')]) {
+                    $[_0x34e1('0x138', '9m^9')](_0x34e1('0x27a', 'JE5U'));
+                    await dailysign(sqxsapp[_0x5c4c2b][_0x34e1('0x189', 'JE5U')]);
+                    await $[_0x34e1('0xac', 'dIuX')](0x3e8);
+                } else {
+                    $[_0x34e1('0xaa', '&$Wn')]('📌请抓取书旗极速版签到任务CK');
+                    content += '【极速版签到】:\x20请先抓取CK\x0a';
+                }
+                if (sqxsapp[_0x5c4c2b][_0x34e1('0x129', 'TzeF')]) {
+                    $[_0x34e1('0x1f0', 'J6MM')](_0x34e1('0xc6', 'mDLA'));
+                    await receive(sqxsapp[_0x5c4c2b][_0x34e1('0x92', 'gQOv')]);
+                } else {
+                    $[_0x34e1('0x8d', 't2Y$')](_0x34e1('0x1fe', '9m^9'));
+                    content += _0x34e1('0x329', 'Q[)A');
+                    content += _0x34e1('0x14e', 'nqjy');
+                }
+                if (!sqxsapp[_0x5c4c2b][_0x34e1('0x53', 'WcFh')]) {
+                    sqxsapp[_0x5c4c2b][_0x34e1('0x2f5', 'WqAM')] = 0x1;
+                    $[_0x34e1('0x1ed', 'Lsjq')](JSON[_0x34e1('0x228', 'qPsC')](sqxsapp, null, 0x2), 'sqxsapp');
+                } else {
+                    if (sqxsapp[_0x5c4c2b][_0x34e1('0xc5', 'D4]q')] == 0x1) await sendMsg(content);
+                }
             }
         }
-        if (runAuth != !![]) {
-            $[_0x34e1('0x11a', '@*dd')](_0x34e1('0x8c', 'pVeH'));
-            return;
-        }
-        $['log'](_0x34e1('0x132', 'Y9H!') + sqxsapp[_0x34e1('0x145', 'pVeH')] + '个账号');
-        for (let _0x5c4c2b = 0x0; _0x5c4c2b < sqxsapp['length']; _0x5c4c2b++) {
-            $[_0x34e1('0x89', 'WcFh')](_0x34e1('0x22b', 'nqjy') + (_0x5c4c2b + 0x1) + _0x34e1('0x16e', '9m^9'));
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0xba', 'lRjs')]) {
-                let _0x49e466 = getShuQiId(sqxsapp[_0x5c4c2b][_0x34e1('0x6f', 'N[lP')]);
-                content += _0x34e1('0x11e', '5GGZ') + _0x49e466 + '\x0a';
-                $['log'](_0x34e1('0x2ea', 'atS#'));
-                await dailysign(sqxsapp[_0x5c4c2b][_0x34e1('0x64', 'F6Ze')]);
-                await $[_0x34e1('0xfb', '5GGZ')](0x3e8);
-            } else {
-                $[_0x34e1('0x301', 'Y9H!')](_0x34e1('0x1c6', 'aUbu'));
-                content += _0x34e1('0x289', 'Bw9n');
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x54', 'vp9N')]) {
-                $[_0x34e1('0x2b1', 'pVeH')](_0x34e1('0x182', '9m^9'));
-                taskProcess = 0x0;
-                for (let _0xceea51 = 0x0; _0xceea51 < sqxsapp[_0x5c4c2b][_0x34e1('0x13e', 'F6Ze')][_0x34e1('0x61', 'F6Ze')]; _0xceea51++) {
-                    if (sqxsapp[_0x5c4c2b][_0x34e1('0x149', 'lRjs')][_0xceea51]) {
-                        await task(sqxsapp[_0x5c4c2b]['welfare_bodys'][_0xceea51]);
-                        await $[_0x34e1('0x31c', 'lRjs')](0x3e8);
-                    }
-                }
-                if (taskProcess == sqxsapp[_0x5c4c2b][_0x34e1('0x2c9', 'WcFh')][_0x34e1('0x1a6', '5GGZ')]) {
-                    content += _0x34e1('0x102', 'nqjy');
-                } else {
-                    content += _0x34e1('0x245', 'iC*F');
-                }
-            } else {
-                $[_0x34e1('0x15', 'atS#')](_0x34e1('0x2a6', 'FRMi'));
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x11b', '($aV')]) {
-                await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x63', 'sRPR')]);
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x1f9', 'u@XT')]) {
-                if (videostate != 0xa) {
-                    $['log']('▶️开始执行书旗小说极速版【1.0.5】激励视频任务');
-                    for (let _0xd4b7e1 = 0x0; _0xd4b7e1 < 0xa - videostate; _0xd4b7e1++) {
-                        await prizelottery(sqxsapp[_0x5c4c2b][_0x34e1('0xe5', '1S1&')], sqxsapp[_0x5c4c2b][_0x34e1('0x26d', 'WcFh')]);
-                        await $[_0x34e1('0x31c', 'lRjs')](0x3e8);
-                    }
-                } else {
-                    $[_0x34e1('0xaa', '&$Wn')](_0x34e1('0x1b5', '@*dd'));
-                    content += _0x34e1('0x1f6', 'aUbu');
-                }
-            } else {
-                $[_0x34e1('0x25a', 'v2]o')](_0x34e1('0x254', 'mDLA'));
-                content += '【极速版激励视频】:\x20请先抓取V1.0.5视频CK\x0a';
-            }
-            if (sqxsapp[_0x5c4c2b]['jsb_oldest_sign_video_info_url']) {
-                await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x2ca', 'Bw9n')]);
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x28', '%w$&')]) {
-                if (videostate != 0xa) {
-                    $[_0x34e1('0x202', '[fvI')](_0x34e1('0xb3', 'Lsjq'));
-                    for (let _0x57e4aa = 0x0; _0x57e4aa < 0xa - videostate; _0x57e4aa++) {
-                        await prizelottery(sqxsapp[_0x5c4c2b]['jsb_oldest_sign_video_body'], sqxsapp[_0x5c4c2b][_0x34e1('0x17e', 'TzeF')]);
-                        await $[_0x34e1('0x24c', 'uGEo')](0x3e8);
-                    }
-                } else {
-                    $[_0x34e1('0x30b', 'uGEo')](_0x34e1('0x103', 'g3PL'));
-                    content += _0x34e1('0x60', '9m^9');
-                }
-            } else {
-                content += _0x34e1('0x2da', 'FRMi');
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x31e', 'WqAM')]) {
-                await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x1d4', 'aUbu')]);
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0xa9', 'XlVl')]) {
-                if (videostate != 0xa) {
-                    $[_0x34e1('0xaa', '&$Wn')](_0x34e1('0x30f', 'atS#'));
-                    for (let _0x3cd68a = 0x0; _0x3cd68a < 0xa - videostate; _0x3cd68a++) {
-                        await prizelottery(sqxsapp[_0x5c4c2b][_0x34e1('0xec', ']hw7')], sqxsapp[_0x5c4c2b][_0x34e1('0x264', 'QEVA')]);
-                        await $[_0x34e1('0x31c', 'lRjs')](0x3e8);
-                    }
-                } else {
-                    $[_0x34e1('0xaa', '&$Wn')](_0x34e1('0xcb', 'FRMi'));
-                    content += _0x34e1('0x1e0', 'FRMi');
-                }
-            } else {
-                $[_0x34e1('0x2b2', 'qPsC')](_0x34e1('0x246', 'v7xc'));
-                content += '【极速版V1.0.5签到视频】:\x20请先抓取视频CK\x0a';
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x208', 'Bw9n')]) {
-                await videoinfo(sqxsapp[_0x5c4c2b]['old_video_info_url']);
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x157', '1S1&')] && sqxsapp[_0x5c4c2b][_0x34e1('0x1c4', 'J6MM')][0x0]) {
-                if (videostate != 0xa) {
-                    $[_0x34e1('0x136', 'sEuw')](_0x34e1('0x16f', 'mDLA'));
-                    for (let _0x2ea930 = 0x0; _0x2ea930 < 0xa - videostate; _0x2ea930++) {
-                        await vedioreward(sqxsapp[_0x5c4c2b]['video_bodys'][0x0]);
-                        await $['wait'](0x3e8);
-                    }
-                } else {
-                    $[_0x34e1('0x212', 'iC*F')]('书旗小说旧版【4.2.6】激励视频任务已完成\x20🎉');
-                    content += _0x34e1('0x17b', 'sRPR');
-                }
-            } else {
-                $[_0x34e1('0x16d', 'TzeF')]('📌请获取书旗小说旧版【4.2.6】激励视频任务CK');
-                content += _0x34e1('0x2c2', 'Y9H!');
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x241', 'WcFh')]) {
-                await videoinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x11d', 'QEVA')]);
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x109', 'sRPR')] && sqxsapp[_0x5c4c2b]['video_bodys'][0x1]) {
-                if (videostate != 0xa) {
-                    $[_0x34e1('0x10d', 'sRPR')](_0x34e1('0xe1', 'QEVA'));
-                    for (let _0x189267 = 0x0; _0x189267 < 0xa - videostate; _0x189267++) {
-                        await vedioreward(sqxsapp[_0x5c4c2b][_0x34e1('0x32', 'y0SD')][0x1]);
-                        await $[_0x34e1('0x188', 'pVeH')](0x3e8);
-                    }
-                } else {
-                    $[_0x34e1('0xaa', '&$Wn')]('书旗小说新版【4.3.0】激励视频任务已完成\x20🎉');
-                    content += _0x34e1('0xe3', '&$Wn');
-                }
-            } else {
-                $[_0x34e1('0x25a', 'v2]o')]('📌请获取书旗小说新版【4.3.0】激励视频任务CK');
-                content += _0x34e1('0x68', 'TzeF');
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x9e', 'dIuX')]) {
-                await lotteryinfo(sqxsapp[_0x5c4c2b][_0x34e1('0x304', 'TzeF')]);
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0xcd', 'N[lP')] && sqxsapp[_0x5c4c2b][_0x34e1('0x166', 'mDLA')][0x2]) {
-                if (lotterynow != 0xa) {
-                    $[_0x34e1('0x15', 'atS#')](_0x34e1('0x240', 'sEuw'));
-                    for (let _0x5dbf31 = 0x0; _0x5dbf31 < 0xa - lotterynow; _0x5dbf31++) {
-                        await vedioreward(sqxsapp[_0x5c4c2b]['video_bodys'][0x2]);
-                        await $[_0x34e1('0xc1', 'mDLA')](0x3e8);
-                        $[_0x34e1('0x2f1', '($aV')]('福利转转转，开始第' + (_0x5dbf31 + 0x1) + '次抽奖');
-                        await drawreward(sqxsapp[_0x5c4c2b][_0x34e1('0x306', 'uGEo')], sqxsapp[_0x5c4c2b][_0x34e1('0x262', 't2Y$')]);
-                    }
-                } else {
-                    $[_0x34e1('0x1d', '1S1&')](_0x34e1('0x2a9', 'aUbu'));
-                    content += _0x34e1('0xbb', 'u@XT');
-                }
-            } else {
-                $[_0x34e1('0x2f1', '($aV')](_0x34e1('0x274', 'uGEo'));
-                content += '【书旗小说转转转】:\x20请先获取CK\x0a';
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x39', '9m^9')]) {
-                $[_0x34e1('0xf6', 'XlVl')]('▶️开始执行书旗小说极速版看书30秒任务');
-                await jsread(sqxsapp[_0x5c4c2b][_0x34e1('0x19e', 'F6Ze')], sqxsapp[_0x5c4c2b][_0x34e1('0xf1', 'YJI8')]);
-                await $['wait'](0x3e8);
-            } else {
-                $[_0x34e1('0x138', '9m^9')](_0x34e1('0x2b5', 'J6MM'));
-                content += _0x34e1('0x2c7', 'X6gO');
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x32b', 'aUbu')]) {
-                $[_0x34e1('0x9d', 'QEVA')](_0x34e1('0x249', 'X6gO'));
-                await doReadTask(sqxsapp[_0x5c4c2b][_0x34e1('0x183', 'Lsjq')]);
-                await $[_0x34e1('0x26', 'atS#')](0x3e8);
-            } else {
-                $[_0x34e1('0x67', 'Q[)A')](_0x34e1('0x1b8', ']hw7'));
-                content += _0x34e1('0x24e', 'lRjs');
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x6c', 'YJI8')]) {
-                $[_0x34e1('0x95', 'N[lP')](_0x34e1('0x281', '3Hwi'));
-                await jsshucheng(sqxsapp[_0x5c4c2b][_0x34e1('0x1c5', '2tNF')], sqxsapp[_0x5c4c2b][_0x34e1('0x18e', 'pVeH')]);
-                await $['wait'](0x3e8);
-            } else {
-                $[_0x34e1('0x138', '9m^9')](_0x34e1('0x25', 'Lsjq'));
-                content += '【极速版浏览书城】:\x20请先抓取CK\x0a';
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0xb0', 'Uzpg')]) {
-                $[_0x34e1('0x138', '9m^9')](_0x34e1('0x27a', 'JE5U'));
-                await dailysign(sqxsapp[_0x5c4c2b][_0x34e1('0x189', 'JE5U')]);
-                await $[_0x34e1('0xac', 'dIuX')](0x3e8);
-            } else {
-                $[_0x34e1('0xaa', '&$Wn')]('📌请抓取书旗极速版签到任务CK');
-                content += '【极速版签到】:\x20请先抓取CK\x0a';
-            }
-            if (sqxsapp[_0x5c4c2b][_0x34e1('0x129', 'TzeF')]) {
-                $[_0x34e1('0x1f0', 'J6MM')](_0x34e1('0xc6', 'mDLA'));
-                await receive(sqxsapp[_0x5c4c2b][_0x34e1('0x92', 'gQOv')]);
-            } else {
-                $[_0x34e1('0x8d', 't2Y$')](_0x34e1('0x1fe', '9m^9'));
-                content += _0x34e1('0x329', 'Q[)A');
-                content += _0x34e1('0x14e', 'nqjy');
-            }
-            if (!sqxsapp[_0x5c4c2b][_0x34e1('0x53', 'WcFh')]) {
-                sqxsapp[_0x5c4c2b][_0x34e1('0x2f5', 'WqAM')] = 0x1;
-                $[_0x34e1('0x1ed', 'Lsjq')](JSON[_0x34e1('0x228', 'qPsC')](sqxsapp, null, 0x2), 'sqxsapp');
-            } else {
-                if (sqxsapp[_0x5c4c2b][_0x34e1('0xc5', 'D4]q')] == 0x1) await sendMsg(content);
-            }
-        }
-    }
-})()['catch'](_0x53cc4f => $[_0x34e1('0x2b8', 'uGEo')](_0x53cc4f))[_0x34e1('0x215', '&$Wn')](() => $[_0x34e1('0x216', '@*dd')]());
+    })()['catch'](_0x53cc4f => $[_0x34e1('0x2b8', 'uGEo')](_0x53cc4f))[_0x34e1('0x215', '&$Wn')](() => $[_0x34e1('0x216', '@*dd')]());
+}
+
+
 async function sqxsck() {
     if ($request[_0x34e1('0x8b', 'Uzpg')][_0x34e1('0x197', '@*dd')](/\/v5\/signInAction/)) {
         const _0x4ce3d1 = $request[_0x34e1('0x97', 't2Y$')];
