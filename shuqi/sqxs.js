@@ -83,7 +83,6 @@ const _0x34e1 = function (_0x4070f5, _0x2aeae6) {
 const $ = new Env(_0x34e1('0x271', 'X6gO'));
 const version = _0x34e1('0x2b7', 'JE5U');
 let sqxsapp = $['getjson'](_0x34e1('0xaf', '2tNF'), []);
-const notify = $[_0x34e1('0x320', 'dIuX')]() ? require(_0x34e1('0x316', 'X6gO')) : '';
 let sqxsuserck = $[_0x34e1('0x2ef', '[fvI')](_0x34e1('0x244', 'F6Ze')) || 0x1;
 let userId = $[_0x34e1('0x172', 'uGEo')](_0x34e1('0x292', '[fvI')) || 0x1;
 let activeCode = $['getdata'](_0x34e1('0xb8', '($aV')) || 0x0;

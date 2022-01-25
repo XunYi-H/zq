@@ -85,6 +85,7 @@ const $ = Env(jsname);
 const version = 'V2.0.2';
 const logs = 0x1;
 const notifyInterval = 0x1;
+const notify = $['isNode']() ? require('./sendNotify') : '';
 let sqxsapp = $['getjson'](_0x62f5('0x9f', 'EWzS'), []);
 let sqxsuserck = $[_0x62f5('0x1ca', 'Yy08')](_0x62f5('0x36', '^pdn')) || 0x1;
 let userId = $[_0x62f5('0x193', 'f!(g')](_0x62f5('0xcd', 'l%A*')) || 0x1;
@@ -101,16 +102,7 @@ let runAuth = '';
 let systemNotify = '';
 let vipAuth = '';
 let isCharge = '';
-if ($['isNode']()) {
-    sqxsapp = JSON[_0x62f5('0x9c', 'l%A*')](process[_0x62f5('0x79', ')J1O')][_0x62f5('0x1cd', ')$jb')]);
-    userId = process[_0x62f5('0x30', 'bAM!')][_0x62f5('0x1a7', 'pbx)')];
-    activeCode = process[_0x62f5('0x23a', 'EOgf')][_0x62f5('0x4e', 'yv4y')];
-    hour = new Date(new Date()[_0x62f5('0x205', 'f!(g')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x62f5('0x15', '4V7*')]();
-    minute = new Date(new Date()['getTime']() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x62f5('0xed', 'V0un')]();
-} else {
-    hour = new Date()['getHours']();
-    minute = new Date()[_0x62f5('0x1bd', '(q1y')]();
-}
+
 let todaytimems = Math[_0x62f5('0x1ba', '(Nq2')](Date[_0x62f5('0x8a', '8N^y')]());
 let todaytimes = Math['round'](Date[_0x62f5('0xce', 'Yy08')]() / 0x3e8);
 let today1 = formatDateTime(new Date());
@@ -127,82 +119,81 @@ const readlotteryheaderArr = [];
 let readlotteryheaderVal = '';
 const readlotterybodyArr = [];
 let readlotterybodyVal = '';
-if ($[_0x62f5('0x16f', ')J1O')]()) {
-    sqxsapp = JSON['parse'](process[_0x62f5('0x79', ')J1O')][_0x62f5('0x20b', 'o29w')]);
-    for (let i = 0x0; i < sqxsapp[_0x62f5('0x146', 'f!(g')]; i++) {
-        readuploadbodyArr['push'](sqxsapp[i]['read_upload_body']);
-        readuploadkeyArr[_0x62f5('0xde', '7ode')](sqxsapp[i][_0x62f5('0x115', 'QUR1')]);
-        boxtaskbodyArr['push'](sqxsapp[i]['task_box_url']);
-        boxtaskkeyArr[_0x62f5('0x1b4', '8N^y')](sqxsapp[i][_0x62f5('0x107', 'bpA&')]);
-        readlotteryheaderArr[_0x62f5('0xf3', 'QUR1')](sqxsapp[i][_0x62f5('0x26', '*VEb')]);
-        readlotterybodyArr[_0x62f5('0x24a', 'f!(g')](sqxsapp[i][_0x62f5('0x1d7', 'aClo')]);
-    }
-} else {
-    for (let i = 0x0; i < sqxsapp[_0x62f5('0x14e', 'EWzS')]; i++) {
-        readuploadbodyArr[_0x62f5('0x191', 'u#]Z')](sqxsapp[i][_0x62f5('0x17a', 'yv4y')]);
-        readuploadkeyArr['push'](sqxsapp[i][_0x62f5('0x213', 'Yy08')]);
-        boxtaskbodyArr[_0x62f5('0xb4', 'qbVV')](sqxsapp[i][_0x62f5('0x16d', 'bpA&')]);
-        boxtaskkeyArr[_0x62f5('0x1c2', '(q1y')](sqxsapp[i][_0x62f5('0xbd', '(q1y')]);
-        readlotteryheaderArr[_0x62f5('0x233', 'o29w')](sqxsapp[i][_0x62f5('0x13c', '8N^y')]);
-        readlotterybodyArr[_0x62f5('0x1b', 'LFFH')](sqxsapp[i][_0x62f5('0x124', ']pQl')]);
-    }
-}!(async () => {
-    cc = jsname + '任务执行通知🔔';
-    if (typeof $request !== _0x62f5('0x22', 'EOgf')) {
-        await sqxsck();
+let getck = require("./getck")
+getck.getCKS("23").then(function(data){
+        run(data);
+})
+function run(data){
+    if ($['isNode']()) {
+        sqxsapp = data;
+        userId = process[_0x62f5('0x30', 'bAM!')][_0x62f5('0x1a7', 'pbx)')];
+        activeCode = process[_0x62f5('0x23a', 'EOgf')][_0x62f5('0x4e', 'yv4y')];
+        hour = new Date(new Date()[_0x62f5('0x205', 'f!(g')]() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x62f5('0x15', '4V7*')]();
+        minute = new Date(new Date()['getTime']() + 0x8 * 0x3c * 0x3c * 0x3e8)[_0x62f5('0xed', 'V0un')]();
     } else {
-        if (!activeCode || !userId || userId == 0x1 || activeCode == 0x0 || activeCode[_0x62f5('0x43', 'Axul')] != 0x20) {
-            $[_0x62f5('0x131', 'iGs%')](_0x62f5('0x112', 'yv4y'));
-            return;
+        hour = new Date()['getHours']();
+        minute = new Date()[_0x62f5('0x1bd', '(q1y')]();
+    }
+    if ($[_0x62f5('0x16f', ')J1O')]()) {
+        sqxsapp = data;
+        for (let i = 0x0; i < sqxsapp[_0x62f5('0x146', 'f!(g')]; i++) {
+            readuploadbodyArr['push'](sqxsapp[i]['read_upload_body']);
+            // console.log(sqxsapp[i]['read_upload_body']);
+            readuploadkeyArr[_0x62f5('0xde', '7ode')](sqxsapp[i][_0x62f5('0x115', 'QUR1')]);
+            boxtaskbodyArr['push'](sqxsapp[i]['task_box_url']);
+            boxtaskkeyArr[_0x62f5('0x1b4', '8N^y')](sqxsapp[i][_0x62f5('0x107', 'bpA&')]);
+            readlotteryheaderArr[_0x62f5('0xf3', 'QUR1')](sqxsapp[i][_0x62f5('0x26', '*VEb')]);
+            readlotterybodyArr[_0x62f5('0x24a', 'f!(g')](sqxsapp[i][_0x62f5('0x1d7', 'aClo')]);
         }
-        await getScriptAuth(_0x62f5('0x223', 'QUR1'), userId, activeCode);
-        $[_0x62f5('0x125', 'EWzS')](_0x62f5('0x24c', 'iGs%') + systemNotify);
-        $[_0x62f5('0x32', 'yv4y')](_0x62f5('0xc8', 'ERrA') + version + '，最新版本号:\x20' + newest_version);
-        if (version < newest_version) {
-            $[_0x62f5('0x28', 'QUR1')]('⚠️\x20当前脚本版本号低于服务器版本，请更新脚本吧！');
-            sendMsg(_0x62f5('0x86', 'd7$U'));
-            return;
+    } else {
+        for (let i = 0x0; i < sqxsapp[_0x62f5('0x14e', 'EWzS')]; i++) {
+            readuploadbodyArr[_0x62f5('0x191', 'u#]Z')](sqxsapp[i][_0x62f5('0x17a', 'yv4y')]);
+            readuploadkeyArr['push'](sqxsapp[i][_0x62f5('0x213', 'Yy08')]);
+            boxtaskbodyArr[_0x62f5('0xb4', 'qbVV')](sqxsapp[i][_0x62f5('0x16d', 'bpA&')]);
+            boxtaskkeyArr[_0x62f5('0x1c2', '(q1y')](sqxsapp[i][_0x62f5('0xbd', '(q1y')]);
+            readlotteryheaderArr[_0x62f5('0x233', 'o29w')](sqxsapp[i][_0x62f5('0x13c', '8N^y')]);
+            readlotterybodyArr[_0x62f5('0x1b', 'LFFH')](sqxsapp[i][_0x62f5('0x124', ']pQl')]);
         }
-        if (scriptAuth != !![]) {
-            $[_0x62f5('0x32', 'yv4y')](_0x62f5('0xd4', 'ecT5'));
-            return;
-        }
-        if (userAuth != !![]) {
-            $['log'](_0x62f5('0x145', 'QUR1'));
-            return;
-        }
-        if (isCharge == !![]) {
-            $[_0x62f5('0x4c', 'd7$U')](_0x62f5('0x17d', 'lhWE'));
-        }
-        if (vipAuth != !![]) {
-            $[_0x62f5('0x2', 'qbVV')](_0x62f5('0x1d6', '#dJX'));
+    }!(async () => {
+        cc = jsname + '任务执行通知🔔';
+        if (typeof $request !== _0x62f5('0x22', 'EOgf')) {
+            await sqxsck();
         } else {
+
+
+            $[_0x62f5('0x125', 'EWzS')](_0x62f5('0x24c', 'iGs%') + systemNotify);
+            $[_0x62f5('0x32', 'yv4y')](_0x62f5('0xc8', 'ERrA') + version + '，最新版本号:\x20' + newest_version);
+
             if (isCharge == !![]) {
-                $[_0x62f5('0xa', '(Nq2')]('尊敬的会员：您好，你是付费用户！🔐');
+                $[_0x62f5('0x4c', 'd7$U')](_0x62f5('0x17d', 'lhWE'));
+            }
+            if (vipAuth != !![]) {
+                $[_0x62f5('0x2', 'qbVV')](_0x62f5('0x1d6', '#dJX'));
+            } else {
+                if (isCharge == !![]) {
+                    $[_0x62f5('0xa', '(Nq2')]('尊敬的会员：您好，你是付费用户！🔐');
+                }
+            }
+            console['log'](_0x62f5('0x240', ')J1O'));
+            await $[_0x62f5('0x65', 'Ob4R')](0x3e8);
+            console[_0x62f5('0x188', 'tHb*')](_0x62f5('0x45', 'A9jJ') + readuploadbodyArr[_0x62f5('0x1ce', ')$jb')] + '个账号');
+            for (let _0x4ced49 = 0x0; _0x4ced49 < readuploadbodyArr[_0x62f5('0x1ec', 'EOgf')]; _0x4ced49++) {
+                readuploadbodyVal = readuploadbodyArr[_0x4ced49];
+                readuploadkeyVal = readuploadkeyArr[_0x4ced49];
+                boxtaskbodyVal = boxtaskbodyArr[_0x4ced49];
+                boxtaskkeyVal = boxtaskkeyArr[_0x4ced49];
+                readlotteryheaderVal = readlotteryheaderArr[_0x4ced49];
+                readlotterybodyVal = readlotterybodyArr[_0x4ced49];
+                console['log'](_0x62f5('0xc4', 'E5pg') + $['name'] + _0x62f5('0xc6', 'qbVV') + (_0x4ced49 + 0x1) + '】\x0a');
+                tz += _0x62f5('0x72', 'Ob4R') + (_0x4ced49 + 0x1) + _0x62f5('0x238', 'tHb*');
+                await $[_0x62f5('0xa6', 'vtvp')](0x3e8);
+                await shuqiapp();
+                await showmsg2();
             }
         }
-        if (runAuth != !![]) {
-            $['log'](_0x62f5('0x242', 'B1@y'));
-            return;
-        }
-        console['log'](_0x62f5('0x240', ')J1O'));
-        await $[_0x62f5('0x65', 'Ob4R')](0x3e8);
-        console[_0x62f5('0x188', 'tHb*')](_0x62f5('0x45', 'A9jJ') + readuploadbodyArr[_0x62f5('0x1ce', ')$jb')] + '个账号');
-        for (let _0x4ced49 = 0x0; _0x4ced49 < readuploadbodyArr[_0x62f5('0x1ec', 'EOgf')]; _0x4ced49++) {
-            readuploadbodyVal = readuploadbodyArr[_0x4ced49];
-            readuploadkeyVal = readuploadkeyArr[_0x4ced49];
-            boxtaskbodyVal = boxtaskbodyArr[_0x4ced49];
-            boxtaskkeyVal = boxtaskkeyArr[_0x4ced49];
-            readlotteryheaderVal = readlotteryheaderArr[_0x4ced49];
-            readlotterybodyVal = readlotterybodyArr[_0x4ced49];
-            console[_0x62f5('0x21f', '4V7*')](_0x62f5('0xc4', 'E5pg') + $['name'] + _0x62f5('0xc6', 'qbVV') + (_0x4ced49 + 0x1) + '】\x0a');
-            tz += _0x62f5('0x72', 'Ob4R') + (_0x4ced49 + 0x1) + _0x62f5('0x238', 'tHb*');
-            await $[_0x62f5('0xa6', 'vtvp')](0x3e8);
-            await shuqiapp();
-            await showmsg2();
-        }
-    }
-})()['catch'](_0x156b75 => $[_0x62f5('0x93', 'o29w')](_0x156b75))[_0x62f5('0x137', '^9B4')](() => $[_0x62f5('0x1dc', 'Yy08')]());
+    })()['catch'](_0x156b75 => $[_0x62f5('0x93', 'o29w')](_0x156b75))[_0x62f5('0x137', '^9B4')](() => $[_0x62f5('0x1dc', 'Yy08')]());
+}
+
 
 function showmsg1() {
     if (notifyInterval != 0x1) {
@@ -344,7 +335,9 @@ async function testupload() {
 }
 async function readupload() {
     decode_rdtime = decodeURIComponent(readuploadbodyVal);
-    rdsectime = decode_rdtime[_0x62f5('0x158', 'QUR1')]('{')[0x1][_0x62f5('0x218', 'Sg$n')]('}')[0x0][_0x62f5('0x161', 'A9jJ')](':')[0x4][_0x62f5('0x1f', 'tHb*')](',')[0x0];
+    // console.log(decode_rdtime);
+
+    rdsectime = decode_rdtime['split']('{')[0x1]['split']('}')[0x0]['split'](':')[0x4]['split'](',')[0x0];
     return new Promise(_0x512240 => {
         let _0x328c26 = {
             'url': _0x62f5('0x29', 'a0!a'),
@@ -359,7 +352,7 @@ async function readupload() {
                     $['logErr'](_0x89e6f1);
                 } else {
                     if (safeGet(_0x2cb1eb)) {
-                        $[_0x62f5('0x1b8', '23p[')](_0x62f5('0x10e', '^9B4') + rdsectime + _0x62f5('0x1e5', 'E5pg'));
+                        $[_0x62f5('0x1b8', '23p[')]('👧请求上传时长' + rdsectime + _0x62f5('0x1e5', 'E5pg'));
                         tz += _0x62f5('0x1a5', '0Hr&') + rdsectime + '秒:成功🎉\x0a';
                     }
                 }
@@ -484,10 +477,10 @@ async function sqxsck() {
     }
     if ($request && $request[_0x62f5('0x8f', 'Naei')] != 'OPTIONS' && $request[_0x62f5('0x48', 'l%A*')][_0x62f5('0x4b', 'B1@y')](/\/reading\/upload/)) {
         const _0x2d30c2 = JSON['stringify']($request[_0x62f5('0x153', 'Ob4R')]);
-        const _0xd9359f = $request[_0x62f5('0x1db', 'Axul')];
+        const _0xd9359f = $request['body'];
         let _0x3934db = sqxsuserck - 0x1;
         sqxsapp[_0x3934db][_0x62f5('0x232', 'mymy')] = _0x2d30c2;
-        sqxsapp[_0x3934db][_0x62f5('0x17a', 'yv4y')] = _0xd9359f;
+        sqxsapp[_0x3934db]['read_upload_body'] = _0xd9359f;
         $[_0x62f5('0x103', 'Yy08')](JSON['stringify'](sqxsapp, null, 0x2), _0x62f5('0x1de', '%K5m'));
         $[_0x62f5('0x18d', 'B1@y')](_0x62f5('0x184', 'mymy') + _0x2d30c2);
         $[_0x62f5('0xf1', 'u#]Z')](_0x62f5('0x22c', 'Yy08') + _0xd9359f);

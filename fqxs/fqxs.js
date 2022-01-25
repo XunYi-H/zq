@@ -236,7 +236,14 @@ async function task_list() {
                     let _0x5bc8bc = _0xcef597['completed'];
                     console['log'](_0x4135('0xb9', 'ff14') + _0xcef597[_0x4135('0x249', 'OqHd')]);
                     if (!_0x5bc8bc) await $[_0x4135('0x116', 'j4LA')](randomNum(0x88b8, 0xd6d8));
-                    await ad();
+                    for(let i;i<=10;i++){
+                        adstatus = await ad();
+                        if(!adstatus){
+                            break
+                        };
+                        await $[_0x4135('0x116', 'j4LA')](randomNum(0x88b8, 0xd6d8));
+                    };
+                    
                 }
             } catch (_0x19d7e9) {
                 $[_0x4135('0xb4', 'aXlg')](_0x19d7e9, _0x5de348);
@@ -365,11 +372,13 @@ async function ad() {
                     if (_0x131e04[_0x4135('0x18d', '4w@9')] == 0x0) {
                         console['log'](_0x4135('0x11d', 'k)Fl') + _0x131e04['err_tips'] + '获得' + _0x131e04[_0x4135('0x7b', 'ie@t')][_0x4135('0x23', 'sS8T')] + '🍅');
                         content += _0x4135('0x1bf', 'j4LA') + _0x131e04[_0x4135('0x27b', 'DR7@')] + '获得' + _0x131e04[_0x4135('0x99', 'x3EM')][_0x4135('0x175', 'Ygaa')] + '🍅';
+                        return true
                     } else {
                         console[_0x4135('0x1d3', 'K$4F')]('视频任务：' + _0x131e04[_0x4135('0x241', 'TepE')]);
                         content += '视频任务：' + _0x131e04[_0x4135('0x48', 'x(e!')] + '\x0a';
                         console[_0x4135('0x6b', 'w66p')](_0x4135('0x21', 'OH0)'));
                         note = _0x4135('0x1c4', 'Ygaa');
+                        return false
                     }
                 }
             } catch (_0x1d6b01) {
