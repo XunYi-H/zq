@@ -1,7 +1,7 @@
 
 
 /*
-不上传？
+不上传？ddd
 */
 
 
@@ -23,7 +23,8 @@ let qqydqlid = 0;
 
 async function getCk() {
     if ($request.url.indexOf("index/index") > -1) {
-        const ddtjtoken = JSON.stringify($request.body)
+        const ddtjtoken = $request.body
+
         let _0x15889c = fdxsuserck - 0x1;
         if (ddtjtoken) {
             if (fdxsapp[_0x15889c]) {
@@ -47,7 +48,7 @@ async function getCk() {
         
       }
     if ($request.url.indexOf("archery/index") > -1) {
-    const ddtjunionid = JSON.stringify($request.body)
+    const ddtjunionid = $request.body
     let _0x15889c = fdxsuserck - 0x1;
     if (ddtjunionid) {
         if (fdxsapp[_0x15889c]) {
