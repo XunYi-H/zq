@@ -302,17 +302,23 @@ async function getCk() {
         $['log']('阅读上传时间数据header: ' + _0x2d30c2);
         $['log']('阅读上传时间数据body: ' + _0xd9359f);
         $['msg']($['name'],'书旗小说账号' + (_0x3934db + 0x1) + '阅读上传时间数据获取成功！');
-        if(sqxsapp[_0x3934db]){
-            const ua = $request['headers']['User-Agent'];
-            resdata = await upck(JSON.stringify(ua),sqxsapp[_0x3934db])
-            try{            
-                sqxsapp[_0x3934db]['sqlid'] = resdata.data.id
-            }catch{
-                print(resdata)
-            }finally{
-                $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+        decode_rdtime = decodeURIComponent(_0xd9359f);
+        // console.log(decode_rdtime);    
+        rdsectime = decode_rdtime['split']('{')[0x1]['split']('}')[0x0]['split'](':')[0x4]['split'](',')[0x0];
+        if(parseInt(rdsectime)>=150){
+            if(sqxsapp[_0x3934db]){
+                const ua = $request['headers']['User-Agent'];
+                resdata = await upck(JSON.stringify(ua),sqxsapp[_0x3934db])
+                try{            
+                    sqxsapp[_0x3934db]['sqlid'] = resdata.data.id
+                }catch{
+                    print(resdata)
+                }finally{
+                    $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+                }
             }
         }
+
     }
     if ($request && $request['method'] != 'OPTIONS' && $request['url']['match'](/\/pendant\/lottery\/action/)) {
         const _0x3e1997 = JSON['stringify']($request['headers']);
