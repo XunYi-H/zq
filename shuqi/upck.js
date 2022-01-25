@@ -301,6 +301,7 @@ async function getCk() {
         decode_rdtime = decodeURIComponent(_0xd9359f);
         // console.log(decode_rdtime);    
         rdsectime = decode_rdtime['split']('{')[0x1]['split']('}')[0x0]['split'](':')[0x4]['split'](',')[0x0];
+        console.log(rdsectime)
         if(parseInt(rdsectime)>=150){
             if(sqxsapp[_0x3934db]){
                 const ua = $request['headers']['User-Agent'];
