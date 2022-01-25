@@ -1,7 +1,8 @@
 
 
 /*
-不上传？ddddd
+不上传？ddddd修改以下抓包格式
+
 */
 
 
@@ -23,16 +24,15 @@ let qqydqlid = 0;
 
 async function getCk() {
     if ($request.url.indexOf("index/index") > -1) {
-        const ddtjtoken = $request.body.token
-        console.log(ddtjtoken)
+        const ddtjtoken = JSON.parse($request.body)
 
         let _0x15889c = fdxsuserck - 0x1;
         if (ddtjtoken) {
             if (fdxsapp[_0x15889c]) {
-                fdxsapp[_0x15889c]['token'] = ddtjtoken;
+                fdxsapp[_0x15889c]['token'] = ddtjtoken.token;
             } else {
                 fdxsapp[_0x15889c] = {
-                    'token': ddtjtoken
+                    'token': ddtjtoken.token
                 };
             }
             const ua = $request['headers']['User-Agent'];
@@ -51,6 +51,7 @@ async function getCk() {
     if ($request.url.indexOf("archery/index") > -1) {
     const ddtjunionid = JSON.stringify($request.body)
     console.log(ddtjunionid)
+    console.log($request.body)
     let _0x15889c = fdxsuserck - 0x1;
     if (ddtjunionid) {
         if (fdxsapp[_0x15889c]) {
