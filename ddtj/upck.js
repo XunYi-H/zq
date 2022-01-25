@@ -1,7 +1,7 @@
 
 
 /*
-自用cookie上传脚本，上传至青龙自动更新cookieddd
+不上传？
 */
 
 
@@ -41,9 +41,10 @@ async function getCk() {
                 print(resdata)
             }finally{
                 $['setdata'](JSON['stringify'](fdxsapp, null, 0x2), 'ddtjwx');
+                $.msg($.name, "", '多点淘金token获取成功！');
             }
         }
-        $.msg($.name, "", '多点淘金token获取成功！')
+        
       }
     if ($request.url.indexOf("archery/index") > -1) {
     const ddtjunionid = JSON.stringify($request.body)
@@ -64,9 +65,11 @@ async function getCk() {
             print(resdata)
         }finally{
             $['setdata'](JSON['stringify'](fdxsapp, null, 0x2), 'ddtjwx');
+            $.msg($.name, "", '多点淘金unionid获取成功！');
         }
+        
     }
-    $.msg($.name, "", '多点淘金unionid获取成功！')
+   
     }
 }
 function upck(ua,cookie) {
