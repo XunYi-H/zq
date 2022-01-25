@@ -1,7 +1,7 @@
 
 
 /*
-不上传？ddd
+不上传？dddd
 */
 
 
@@ -23,7 +23,7 @@ let qqydqlid = 0;
 
 async function getCk() {
     if ($request.url.indexOf("index/index") > -1) {
-        const ddtjtoken = $request.body
+        const ddtjtoken = $request.body.token
 
         let _0x15889c = fdxsuserck - 0x1;
         if (ddtjtoken) {
@@ -48,14 +48,14 @@ async function getCk() {
         
       }
     if ($request.url.indexOf("archery/index") > -1) {
-    const ddtjunionid = $request.body
+    const ddtjunionid = JSON.stringify($request.body)
     let _0x15889c = fdxsuserck - 0x1;
     if (ddtjunionid) {
         if (fdxsapp[_0x15889c]) {
-            fdxsapp[_0x15889c]['unionid'] = ddtjunionid;
+            fdxsapp[_0x15889c]['unionid'] = ddtjunionid.unionid;
         } else {
             fdxsapp[_0x15889c] = {
-                'unionid': ddtjunionid
+                'unionid': ddtjunionid.unionid
             };
         }
         const ua = $request['headers']['User-Agent'];
