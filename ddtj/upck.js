@@ -1,7 +1,8 @@
 
 
 /*
-不上传？ddddd修改以下抓包格式ZAIGAIAI
+修改了unionid的获取方式
+
 
 
 */
@@ -50,16 +51,14 @@ async function getCk() {
         
       }
     if ($request.url.indexOf("archery/index") > -1) {
-    const ddtjunionid = JSON.stringify($request.body)
-    console.log(ddtjunionid)
-    console.log(JSON.parse($request.body))
+    const ddtjunionid = JSON.stringify($request.body).split("&unionid=")[1]
     let _0x15889c = fdxsuserck - 0x1;
     if (ddtjunionid) {
         if (fdxsapp[_0x15889c]) {
-            fdxsapp[_0x15889c]['unionid'] = ddtjunionid.unionid;
+            fdxsapp[_0x15889c]['unionid'] = ddtjunionid;
         } else {
             fdxsapp[_0x15889c] = {
-                'unionid': ddtjunionid.unionid
+                'unionid': ddtjunionid
             };
         }
         const ua = $request['headers']['User-Agent'];
