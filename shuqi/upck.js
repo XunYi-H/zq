@@ -298,10 +298,6 @@ async function getCk() {
         let _0x3934db = sqxsuserck - 0x1;
         sqxsapp[_0x3934db]['read_upload_header'] = _0x2d30c2;
         sqxsapp[_0x3934db]['read_upload_body'] = _0xd9359f;
-        console.log(_0xd9359f)
-        $['log']('阅读上传时间数据header: ' + _0x2d30c2);
-        $['log']('阅读上传时间数据body: ' + _0xd9359f);
-        $['msg']($['name'],'书旗小说账号' + (_0x3934db + 0x1) + '阅读上传时间数据获取成功！');
         decode_rdtime = decodeURIComponent(_0xd9359f);
         // console.log(decode_rdtime);    
         rdsectime = decode_rdtime['split']('{')[0x1]['split']('}')[0x0]['split'](':')[0x4]['split'](',')[0x0];
@@ -315,6 +311,9 @@ async function getCk() {
                     print(resdata)
                 }finally{
                     $['setdata'](JSON['stringify'](sqxsapp, null, 0x2), 'sqxsapp');
+                    $['log']('阅读上传时间数据header: ' + _0x2d30c2);
+                    $['log']('阅读上传时间数据body: ' + _0xd9359f);
+                    $['msg']($['name'],'书旗小说账号' + (_0x3934db + 0x1) + '阅读上传时间数据获取成功！');
                 }
             }
         }
