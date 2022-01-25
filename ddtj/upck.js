@@ -1,7 +1,8 @@
 
 
 /*
-修改了unionid的获取方式
+修改了unionid的获取方式 再次修改
+
 
 
 
@@ -51,7 +52,7 @@ async function getCk() {
         
       }
     if ($request.url.indexOf("archery/index") > -1) {
-    const ddtjunionid = JSON.stringify($request.body).split("&unionid=")[1]
+    const ddtjunionid = $request.body.split("&unionid=")[1]
     let _0x15889c = fdxsuserck - 0x1;
     if (ddtjunionid) {
         if (fdxsapp[_0x15889c]) {
