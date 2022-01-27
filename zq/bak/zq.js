@@ -698,7 +698,7 @@ async function getClearStr(_0x4e0c67, _0x1cac3e) {
     return new Promise((_0x34c508, _0x5c5134) => {
         let _0x2c82bb = apiHost + _0x3c1b('0x2f1', 'QrtS');
         if (_0x1cac3e == _0x3c1b('0x28e', 'CEX6')) {
-            _0x2c82bb = apiHost + _0x3c1b('0x223', 'Tf66');
+            _0x2c82bb = apiHost + '/script/ios/fd/des/decode';
         }
         const _0x4492c0 = {
             'encryptedStr': _0x4e0c67,

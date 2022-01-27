@@ -349,7 +349,9 @@ async function readupload() {
                 if (_0x89e6f1) {
                     console[_0x62f5('0xf1', 'u#]Z')](_0x62f5('0x226', ')J1O'));
                     console[_0x62f5('0x156', '*VEb')](JSON[_0x62f5('0x39', 'A9jJ')](_0x89e6f1));
+                    console.log(_0x2cb1eb);
                     $['logErr'](_0x89e6f1);
+
                 } else {
                     if (safeGet(_0x2cb1eb)) {
                         $[_0x62f5('0x1b8', '23p[')]('👧请求上传时长' + rdsectime + _0x62f5('0x1e5', 'E5pg'));
