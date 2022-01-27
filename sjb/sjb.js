@@ -108,6 +108,11 @@ let _0x21ab37 = 0x1;
 let _0x11fa2b = 0x1;
 let _0x249db8 = 0x1;
 let _0x2e2f0f = 0x1;
+let getck = require("./getck")
+
+getck.getCKS("25").then(function(data){
+        run(data);
+})
 function run(data){
     if (_0x235d92[_0x4ca2('0x1cf', 'R^IP')]()) {
         _0x3e2d89 = data;

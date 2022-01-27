@@ -6,10 +6,10 @@
 
 
 
-const $ = new Env('58同城'');
+const $ = new Env('58同城');
 let awyuserck = 1;
-let awyapp = $['getjson']('slapp', []);
-let appid = 11;
+let awyapp = $['getjson']('wbtcapp', []);
+let appid = 26;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
@@ -42,75 +42,11 @@ async function getCk() {
         }catch{
             print(resdata)
         }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'wbtcCookie');
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'wbtcapp');
         }
         $['msg']($['name'], '58同城' + (_0x23050f + 0x1) + '基础数据获取成功！🎉');
-        if (awyapp[_0x23050f]) {
-            if (_0xe9e361['indexOf']('UID=' + _0x29e2e4) == -1) {
-                _0xe9e361 = _0xe9e361 +  '@'+ _0xe511c6, $['setdata'](_0xe9e361, 'wbtcCookie'), ckList = _0xe9e361['split']('\x40'), $['msg']($['name']+ ' 获取第' + ckList['length'] + '个wbtcCookie成功: ' + _0xe511c6);
-            }else {
-                console['log']($['name'] + ' 找到重复的wbtcCookie，准备替换: ' + _0xe511c6), ckList = _0xe9e361['split']('@');
-                for (let _0xd5cbb1 = 0; _0xd5cbb1 < ckList['length']; _0xd5cbb1++) {
-                    if (ckList[_0xd5cbb1]['indexOf']('UID=' + _0x29e2e4) > -1) {
-                        ckList[_0xd5cbb1] = _0xe511c6;
-                        break;
-                    }
-                }
-                _0xe9e361 = ckList['join']('@'), $['setdata'](_0xe9e361, 'wbtcCookie');
-            }
-        } else $['setdata'](_0xe511c6, 'wbtcCookie'), $['msg']($['name'] + ' 获取第1个wbtcCookie成功: ' + _0xe511c6);
+
     }
-
-
-
-
-
-    if ($request['url']['match'](/\/homepage\/detail/)) {
-        const _0x3f6a59 = $request['url']['split']('?')[0x1];
-        let _0x23050f = awyuserck - 0x1;
-        if (awyapp[_0x23050f]) {
-            awyapp[_0x23050f]['common_url'] = _0x3f6a59;
-        } else {
-            awyapp[_0x23050f] = {
-                'common_url': _0x3f6a59
-            };
-        }
-        const ua = $request['headers']['User-Agent'];
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
-        try{            
-            awyapp[_0x23050f]['sqlid'] = resdata.data.id
-        }catch{
-            print(resdata)
-        }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'slapp');
-        }
-        $['msg']($['name'], '闪辆账号' + (_0x23050f + 0x1) + '基础数据获取成功！🎉');
-    }
-    if ($request['url']['match'](/\/switch\/get_user_switch_info/)) {
-        const _0xb5af50 = $request['headers']['Cookie'];
-        const _0x3958e9 = $request['headers']['User-Agent'];
-        let _0x1a7e67 = awyuserck - 0x1;
-        if (awyapp[_0x1a7e67]) {
-            awyapp[_0x1a7e67]['cookie'] = _0xb5af50;
-            awyapp[_0x1a7e67]['ua'] = _0x3958e9;
-        } else {
-            awyapp[_0x1a7e67] = {
-                'ua': _0x3958e9,
-                'cookie': _0xb5af50
-            };
-        }
-        const ua = $request['headers']['User-Agent'];
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x1a7e67])
-        try{            
-            awyapp[_0x1a7e67]['sqlid'] = resdata.data.id
-        }catch{
-            print(resdata)
-        }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'slapp');
-        }
-        $['msg']($['name'], '闪辆账号' + (_0x1a7e67 + 0x1) +'请求获取成功！🎉');
-    }
-
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {
