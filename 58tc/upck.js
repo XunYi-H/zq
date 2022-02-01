@@ -25,17 +25,20 @@ async function getCk() {
     if ($request['url']['indexOf']('getIndexSignInInfo') > -1) {
         let _0x23050f = awyuserck - 0x1;
         let _0x5746e0 = $request['headers']['ppu'] ? $request['headers']['ppu'] : $request['headers']['PPU'];
+        const ua = $request['headers']['User-Agent'];
         if (!_0x5746e0) return;
         let _0x29e2e4 = _0x5746e0['match'](/UID=(\w+)/)[1],
             _0xe511c6 = 'PPU=' + _0x5746e0;
         if (awyapp[_0x23050f]) {
             awyapp[_0x23050f]['ppu'] = _0xe511c6;
+            awyapp[_0x23050f]['ua'] = ua;
         } else {
             awyapp[_0x23050f] = {
-                'ppu': _0xe511c6
+                'ppu': _0xe511c6,
+                'ua': ua
             };
         }
-        const ua = $request['headers']['User-Agent'];
+        
         resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
         try{            
             awyapp[_0x23050f]['sqlid'] = resdata.data.id

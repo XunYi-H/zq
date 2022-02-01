@@ -19,6 +19,8 @@ const _0x3c1b = function (_0x4f696e, _0x5f2352) {
             try {
                 const _0x533d84 = Function('return\x20(function()\x20' + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');');
                 _0x5dbc34 = _0x533d84();
+
+
             } catch (_0x40d034) {
                 _0x5dbc34 = window;
             }
@@ -30,6 +32,7 @@ const _0x3c1b = function (_0x4f696e, _0x5f2352) {
                     _0x46ebd7 = _0x1738a4['indexOf'](_0x46ebd7);
                 }
                 return _0x4911b9;
+           
             });
         }());
         const _0x815b1 = function (_0x1710a9, _0x4dbd4e) {
