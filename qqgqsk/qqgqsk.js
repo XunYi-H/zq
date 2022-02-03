@@ -56,44 +56,52 @@ let rndtime = "" //毫秒
 
 ///////////////////////////////////////////////////////////////////
 
-!(async () => {
 
-    if(typeof $request !== "undefined")
-    {
-        await getRewrite()
-    }
-    else
-    {
-        //检查环境变量
-        if(!(await checkEnv())){
-            return
-        }
-        
-        console.log('\n提现需要关注微信公众号，在公众号里申请提现')
-        
-        for(userIdx=0; userIdx<blackArr.length; userIdx++) {
-            console.log(`\n===== 开始用户${userIdx+1} =====`)
-            await querySignStatus()
-            await listUserTask()
-            //await listRedPacket()
-            //收取存钱罐看视频需要前置条件
-            //await queryPiggyInfo()
-            //翻卡看视频需要前置条件
-            //await getUserFlopRecord()
-            await userFruitDetail()
-            await waterTaskList()
-            await nutrientTaskList()
-            await userFertilizerDetail()
-            await getTreeCoupon()
-            await userInfo()
-        }
-        await showmsg()
-    }
-  
+let getck = require("./getck")
+getck.getCKS("27").then(function(data){
+    run(data);
+})
 
-})()
-.catch((e) => $.logErr(e))
-.finally(() => $.done())
+
+function run(data){
+    !(async () => {
+
+        if(typeof $request !== "undefined")
+        {
+            await getRewrite()
+        }
+        else
+        {
+            //检查环境变量
+            blackArr = data;
+            
+            console.log('\n提现需要关注微信公众号，在公众号里申请提现')
+            
+            for(userIdx=0; userIdx<blackArr.length; userIdx++) {
+                console.log(`\n===== 开始用户${userIdx+1} =====`)
+                await querySignStatus()
+                await listUserTask()
+                //await listRedPacket()
+                //收取存钱罐看视频需要前置条件
+                //await queryPiggyInfo()
+                //翻卡看视频需要前置条件
+                //await getUserFlopRecord()
+                await userFruitDetail()
+                await waterTaskList()
+                await nutrientTaskList()
+                await userFertilizerDetail()
+                await getTreeCoupon()
+                await userInfo()
+            }
+            await showmsg()
+        }
+      
+    
+    })()
+    .catch((e) => $.logErr(e))
+    .finally(() => $.done())   
+}
+
 
 //通知
 async function showmsg() {
