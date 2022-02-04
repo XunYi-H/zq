@@ -396,7 +396,7 @@ function _0x5a39b7(_0x27a14e) {
 async function _0x40bff5(data) {
     const _0x1f1174 = {};
     _0x1f1174[_0x57b79b(0x2da)] = '未找到kfxtoken';
-    if (data == ![]) {
+    if (data !== []) {
         for (let _0xdc4e5 of data) {
             if (_0xdc4e5) _0x31c570[_0x57b79b(0x303)](new _0x4c0bfa(_0xdc4e5.token));
         }

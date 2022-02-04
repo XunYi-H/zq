@@ -23,45 +23,32 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
+
     let _0x4156cd = awyuserck - 0x1;
-    const ua = $request['headers']['User-Agent'];
     if($request.url.indexOf('luckycat/lite/v1/task/page_data') > -1) {
+        let host = $request.headers.Host
         let userCK = $request.headers.Cookie
-        if (awyapp[_0x4156cd]) {
-            awyapp[_0x4156cd]['jrttjsbHeader'] = userCK;
+        const ua = $request['headers']['User-Agent'];
+        if(awyapp[_0x4156cd]) {
+                awyapp[_0x4156cd]["userck"] = userCK
+                awyapp[_0x4156cd]["ua"] = ua
+                awyapp[_0x4156cd].host = host
         } else {
             awyapp[_0x4156cd] = {
-                'jrttjsbHeader': userCK,
-            };
-        }
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x4156cd])
-        try{            
-          awyapp[_0x4156cd]['sqlid'] = resdata.data.id
-        }catch{
-            print(resdata)
-        }
-
-        
-        if(userHeader) {
-            if(userHeader.indexOf(userCK) == -1) {
-                userHeader = userHeader + '@' + userCK
-                if (awyapp[_0x4156cd]) {
-                    awyapp[_0x4156cd]['jrttjsbHeader'] = userCK;
-                } else {
-                    awyapp[_0x4156cd] = {
-                        'jrttjsbHeader': userCK,
-                    };
-                }
-                $.setdata(userHeader, 'jrttjsbHeader');
-                ckList = userHeader.split('@')
-                $.msg(jsname+` 获取第${ckList.length}个jrttjsbHeader成功: ${userCK}`)
+                "userck":userCK,
+                "ua" : ua,
+                "host" : host
             }
-
-        } else {
-            $.setdata(userCK, 'jrttjsbHeader');
-            $.msg(jsname+` 获取第1个jrttjsbHeader成功: ${userCK}`)
         }
-    }    
+        $.setdata(awyapp, 'jrttjsbapp');
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x4156cd])
+          try{            
+            awyapp[_0x4156cd]['sqlid'] = resdata.data.id
+          }catch{
+              print(resdata)
+          }
+          $['msg']($['name'], '今日头条极速版基础数据获取成功！🎉');
+    }
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {
