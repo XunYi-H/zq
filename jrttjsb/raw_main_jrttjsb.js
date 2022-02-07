@@ -56,29 +56,35 @@ let validList = []
 let adIdList = [26, 181, 186, 187, 188, 189, 190, 195, 210, 214, 216, 225, 308, 324, 327, 329]
         
 ///////////////////////////////////////////////////////////////////
+let getck = require("./getck")
+getck.getCKS("14").then(function(data){
+        run(data);
+})
+function run(data){
+    !(async () => {
 
-!(async () => {
-
-    if(typeof $request !== "undefined")
-    {
-        await GetRewrite()
-    }
-    else
-    {
-        await showUpdateMsg()
-        
-        if(!(await checkEnv())) {
-            return
+        if(typeof $request !== "undefined")
+        {
+            await GetRewrite()
         }
-        
-        await initAccountInfo()
-        await RunMultiUser()
-    }
-  
+        else
+        {
+            await showUpdateMsg()
+            
+            if(!(await checkEnv(data))) {
+                return
+            }
+            
+            await initAccountInfo()
+            await RunMultiUser()
+        }
+      
+    
+    })()
+    .catch((e) => $.logErr(e))
+    .finally(() => $.done())
+}
 
-})()
-.catch((e) => $.logErr(e))
-.finally(() => $.done())
 
 function showUpdateMsg() {
     console.log('\n2021.12.15 9:30 更新：增加推送奖励，修复一个UA的bug，更改默认UA为安卓\n')
@@ -261,7 +267,7 @@ async function ReadArticles() {
 async function ReadArtsReward() {
     let caller = printCaller()
     let rndGroupId = Math.floor(Math.random()*7000000000000000000)
-    let url = `${hostname}/luckycat/lite/v1/activity/done_whole_scene_task/?aid=35&update_version_code=85221&os_version=15.0&device_platform=iphone`
+    let url = `${hostname}/luckycat/lite/v1/activity/done_whole_scene_task/?aid=35&update_version_code=86421&os_version=14.1&device_platform=iphone`
     let body = `{"is_golden_egg":false,"scene_key":"article_detail","group_id":"${rndGroupId}"}`
     let urlObject = populatePostUrl(url,body)
     await httpPost(urlObject,caller)
