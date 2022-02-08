@@ -1,7 +1,7 @@
 /*
 微信阅读：云扫码
-二维码入口：https://raw.githubusercontent.com/leafxcy/JavaScript/main/ysm.jpg
-链接入口：http://api.qlight.site/yunonline/v1/auth/93c7add6c7b514fa95ec839b515e237f
+
+链接入口：http://api.qlight.site/yunonline/v1/auth/4daf61040224fff5496e0ab00c02fdda  复制到微信打开
 
 每轮阅读前需要重新捉包，CK很快失效
 需要电脑设置V2P代理，用电脑微信捉包
@@ -10,8 +10,7 @@
 没有定时，建议禁用定时任务，捉完包之后手动开始跑
 
 重写：
-yunonline/v1/   https://raw.githubusercontent.com/leafxcy/JavaScript/main/ysm.js
-https://open.weixin.qq.com/connect/oauth2/authorize  https://raw.githubusercontent.com/leafxcy/JavaScript/main/ysm.js
+在upck
 
 MITM:
 erd.heysida.top
