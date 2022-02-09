@@ -337,7 +337,7 @@ class UserInfo {
         }
     }
 }
-
+let getck = require("./getck")
 getck.getCKS("30").then(function(data){
         run(data);
 })
@@ -349,6 +349,7 @@ function run(data){
             if(!(await checkEnv(data))) return;
             for(let i=0; i<userlist.length; i++){
                 user = userlist[i]
+                console.log("正在运行第" + i + "个用户");
                 while(user.flag) {
                     await user.startRead(); 
                     await $.wait(200);
@@ -385,9 +386,13 @@ async function GetRewrite() {
 
 async function checkEnv(data) {
     if(data.length>0) {
-        user = new UserInfo(ysmReadSecret,ysmWxParam,ysmUnionid)
-        userlist.push(user)
+        for(let item of data){
+            if(item.ysmReadSecret && item.ysmWxParam && item.ysmUnionid)
+            userlist.push(new UserInfo(item.ysmReadSecret,item.ysmWxParam,item.ysmUnionid))
+        }
+        
         if(userlist.length>0){
+            console.log("共找到了" + userlist.length + "个用户" )
             return true
         }
     } else {
