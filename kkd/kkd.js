@@ -166,10 +166,9 @@ return new Promise((resolve, reject) => {
               'Content-Type': 'application/json',
               'Host': 'api.yuncheapp.cn',
               'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
-          },
-     body:'{}'
-}
+          }}
    $.get(signinurl,(error, response, data) =>{
+     console.log(data);
      const result = JSON.parse(data)
       if(logs) $.log(data)
       message += '📣签到\n'

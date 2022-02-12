@@ -8,59 +8,8 @@ const _0x1a39 = ['w7HCpsO7w5bDjMOtw4A6wqMawqPCmmJ3BSPCr0zDpcOcI0jChcKWw4HDi8OGeh
             _0x12d3a1['push'](_0x12d3a1['shift']());
         }
     };
-    const _0x544582 = function () {
-        const _0x21a325 = {
-            'data': {
-                'key': 'cookie',
-                'value': 'timeout'
-            },
-            'setCookie': function (_0x1fca69, _0x17a93d, _0x385d77, _0x44ff9f) {
-                _0x44ff9f = _0x44ff9f || {};
-                let _0x39f5c3 = _0x17a93d + '=' + _0x385d77;
-                let _0x4bfd3b = 0x0;
-                for (let _0xb69e93 = 0x0, _0x240bb5 = _0x1fca69['length']; _0xb69e93 < _0x240bb5; _0xb69e93++) {
-                    const _0x3b52a8 = _0x1fca69[_0xb69e93];
-                    _0x39f5c3 += ';\x20' + _0x3b52a8;
-                    const _0x44f832 = _0x1fca69[_0x3b52a8];
-                    _0x1fca69['push'](_0x44f832);
-                    _0x240bb5 = _0x1fca69['length'];
-                    if (_0x44f832 !== !![]) {
-                        _0x39f5c3 += '=' + _0x44f832;
-                    }
-                }
-                _0x44ff9f['cookie'] = _0x39f5c3;
-            },
-            'removeCookie': function () {
-                return 'dev';
-            },
-            'getCookie': function (_0x1a42ae, _0x164376) {
-                _0x1a42ae = _0x1a42ae || function (_0x5c0205) {
-                    return _0x5c0205;
-                };
-                const _0x2425af = _0x1a42ae(new RegExp('(?:^|;\x20)' + _0x164376['replace'](/([.$?*|{}()[]\/+^])/g, '$1') + '=([^;]*)'));
-                const _0x438ed7 = function (_0x46824d, _0x116990) {
-                    _0x46824d(++_0x116990);
-                };
-                _0x438ed7(_0x4b17fb, _0x1a39f4);
-                return _0x2425af ? decodeURIComponent(_0x2425af[0x1]) : undefined;
-            }
-        };
-        const _0x729ad = function () {
-            const _0x22cf0b = new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');
-            return _0x22cf0b['test'](_0x21a325['removeCookie']['toString']());
-        };
-        _0x21a325['updateCookie'] = _0x729ad;
-        let _0x49c903 = '';
-        const _0x4ee52d = _0x21a325['updateCookie']();
-        if (!_0x4ee52d) {
-            _0x21a325['setCookie'](['*'], 'counter', 0x1);
-        } else if (_0x4ee52d) {
-            _0x49c903 = _0x21a325['getCookie'](null, 'counter');
-        } else {
-            _0x21a325['removeCookie']();
-        }
-    };
-    _0x544582();
+    
+    _0x4b17fb(++_0x1a39f4);
 }(_0x1a39, 0xb3));
 const _0x4b17 = function (_0x12d3a1, _0x1a39f4) {
     _0x12d3a1 = _0x12d3a1 - 0x0;
