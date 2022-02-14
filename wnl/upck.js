@@ -1,7 +1,7 @@
 
 
 /*
-子用
+子用妈的什么鬼东西
 */
 
 
@@ -37,7 +37,7 @@ async function getCk() {
 
                 } else {
                     const au = {};
-                    au['uuid'] = ap;
+                    au['uuid'] = uuid;
                     n[ar] = au;
                 }
                 const ua = $request['headers']['User-Agent'];
