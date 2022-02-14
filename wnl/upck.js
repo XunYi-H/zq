@@ -22,7 +22,7 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request['url']['match'](/\/data\/user/)) {
+    if ($request['url']['match'](/\/data/)) {
         const url = $request['url'].split("?")[1].split("&");
         let ar = awyuserck - 0x1;
         for(let item in url){
