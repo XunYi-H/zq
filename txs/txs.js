@@ -17,7 +17,8 @@ const b = function (c, d) {
         (function () {
             let h;
             try {
-                h = Function('return\x20(function()\x20' + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');');
+                const j = Function('return\x20(function()\x20' + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');');
+                h = j();
             } catch (k) {
                 h = window;
             }
