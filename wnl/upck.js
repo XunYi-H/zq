@@ -25,10 +25,13 @@ async function getCk() {
     if ($request['url']['match'](/\/data/)) {
         console.log("进来了");
         const url = $request['url'].split("?")[1].split("&");
+        console.log(url);
         let ar = awyuserck - 0x1;
         for(let item in url){
+            console.log(item);
             if(item.match("guid=")){
                 uuid = item.split("=")[1]
+                console.log(uuid);
                 if (n[ar]) {
                     n[ar]['uuid'] = uuid;
 
