@@ -42,9 +42,9 @@ async function getCk() {
             if(parm[0] == 'sh'){
                 sh = parm[1]
                 if (n[ar]) {
-                    n[ar]['sh'] = sw;
+                    n[ar]['sh'] = sh;
                 } else {
-                    n[ar] = {"sh":sw};
+                    n[ar] = {"sh":sh};
                 }
             }
             if(parm[0] == 'systemver'){
