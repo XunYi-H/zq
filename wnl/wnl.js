@@ -20,13 +20,16 @@ let userCount = 0
 class UserInfo {
     constructor(str) {
         this.index = ++userIdx
-        this.cookie = str
+        this.cookie = str.uuid
+        this.systemver = str.systemver
+        this.sw = str.sw
+        this.sh = str.sh
         this.lkToken = ''
         this.save = ''
     }
 
     async adtasklist() {
-        let url = `http://coin.makingmoney.cn:8088/data/adtasklist/get?guid=${this.cookie}&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai`
+        let url = `http://coin.makingmoney.cn:8088/data/adtasklist/get?guid=${this.cookie}&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('post', urlObject)
@@ -53,7 +56,7 @@ class UserInfo {
     }
 
     async reportadtask(task_id, adtask_id) {
-        let url = `http://coin.makingmoney.cn:8088/report/adtask?guid=${this.cookie}&task_id=${task_id}&adtask_id=${adtask_id}&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=dccbb48d4ac08eebe78786d3f7eaee19`
+        let url = `http://coin.makingmoney.cn:8088/report/adtask?guid=${this.cookie}&task_id=${task_id}&adtask_id=${adtask_id}&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=dccbb48d4ac08eebe78786d3f7eaee19`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -70,7 +73,7 @@ class UserInfo {
     }
 
     async taskaward(task_id, adtask_id) {
-        let url = `http://coin.makingmoney.cn:8088/task/award?guid=${this.cookie}&task_id=${task_id}&adtask_id=${adtask_id}&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=dccbb48d4ac08eebe78786d3f7eaee19`
+        let url = `http://coin.makingmoney.cn:8088/task/award?guid=${this.cookie}&task_id=${task_id}&adtask_id=${adtask_id}&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=dccbb48d4ac08eebe78786d3f7eaee19`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -85,7 +88,7 @@ class UserInfo {
     }
 
     async fuli() {
-        let url = `http://coin.makingmoney.cn:8088/data/fuli?guid=${this.cookie}&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=cd56f844bd3ab26fca071f0243939f42`
+        let url = `http://coin.makingmoney.cn:8088/data/fuli?guid=${this.cookie}&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=cd56f844bd3ab26fca071f0243939f42`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -115,7 +118,7 @@ class UserInfo {
 
 
     async adtask(task_id, name) {
-        let url = `http://coin.makingmoney.cn:8088/task/report?guid=${this.cookie}&task_id=${task_id}&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=6f0258b09c8508d519cea0f5e1f19a37`
+        let url = `http://coin.makingmoney.cn:8088/task/report?guid=${this.cookie}&task_id=${task_id}&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=6f0258b09c8508d519cea0f5e1f19a37`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -132,7 +135,7 @@ class UserInfo {
     }
 
     async award(task_id, name) {
-        let url = `http://coin.makingmoney.cn:8088/task/award?guid=${this.cookie}&task_id=${task_id}&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=6f0258b09c8508d519cea0f5e1f19a37`
+        let url = `http://coin.makingmoney.cn:8088/task/award?guid=${this.cookie}&task_id=${task_id}&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=6f0258b09c8508d519cea0f5e1f19a37`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -147,7 +150,7 @@ class UserInfo {
         }
     }
     async invite() {
-        let url = `http://coin.makingmoney.cn:8088/invite/code/enter?guid=${this.cookie}&code=3FDC31274556&ver=1.1.1&systemver=13.4&bid=com.calendar.jishi.app&mt=1&sw=375&sh=667&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-MO&locale=MO&zone=Asia%2FShanghai&sign=f313da9cd07df74f955b87ca4e648eed`
+        let url = `http://coin.makingmoney.cn:8088/invite/code/enter?guid=${this.cookie}&code=3FDC31274556&ver=1.1.1&systemver=13.4&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-MO&locale=MO&zone=Asia%2FShanghai&sign=f313da9cd07df74f955b87ca4e648eed`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -156,7 +159,7 @@ class UserInfo {
     }
 
     async user() {
-        let url = `http://coin.makingmoney.cn:8088/data/user?guid=${this.cookie}&first=1&ver=1.1.1&systemver=14.2&bid=com.calendar.jishi.app&mt=1&sw=414&sh=896&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=4049c6ae53b64b6fa4962179fc189020`
+        let url = `http://coin.makingmoney.cn:8088/data/user?guid=${this.cookie}&first=1&ver=1.1.1&systemver=${this.systemver}&bid=com.calendar.jishi.app&mt=1&sw=${this.sw}&sh=${this.sh}&device=iPhone&idiom=0&chl=AppStore&language=zh-Hans-US&locale=US&zone=Asia%2FShanghai&sign=4049c6ae53b64b6fa4962179fc189020`
         let body = ``
         let urlObject = populateUrlObject(url, body)
         await httpRequest('get', urlObject)
@@ -203,7 +206,7 @@ function run(data){
 async function checkEnv(data) {
     if (data) {
         for (let userCookies of data) {
-            if (userCookies.uuid) userList.push(new UserInfo(data.uuid))
+            if (userCookies) userList.push(new UserInfo(userCookies))
         }
         userCount = userList.length
     } else {

@@ -29,17 +29,43 @@ async function getCk() {
         let ar = awyuserck - 0x1;
         for(let item in url){
             console.log(url[item]);
-            if(url[item].match("guid=")){
-                uuid = url[item].split("=")[1]
+            parm = url[item].split("=")
+            
+            if(parm[0] == 'sw'){
+                sw = parm[1]
+                if (n[ar]) {
+                    n[ar]['sw'] = sw;
+                } else {
+                    n[ar] = {"sw":sw};
+                }
+            }
+            if(parm[0] == 'sh'){
+                sh = parm[1]
+                if (n[ar]) {
+                    n[ar]['sh'] = sw;
+                } else {
+                    n[ar] = {"sh":sw};
+                }
+            }
+            if(parm[0] == 'systemver'){
+                systemver = parm[1]
+                if (n[ar]) {
+                    n[ar]['systemver'] = systemver;
+                } else {
+                    n[ar] = {"systemver":systemver};
+                }
+            }
+
+            if(parm[0] == 'guid'){
+                uuid = parm[1]
                 console.log(uuid);
                 if (n[ar]) {
                     n[ar]['uuid'] = uuid;
-
                 } else {
-                    const au = {};
-                    au['uuid'] = uuid;
-                    n[ar] = au;
+                    n[ar]= {"uuid":uuid};
                 }
+            }
+            if(n[ar]['uuid'] && n[ar]['systemver'] && n[ar]['sw'] && n[ar]['sh']){
                 const ua = $request['headers']['User-Agent'];
                 resdata = await upck(JSON.stringify(ua),n[ar])
                 try{            
@@ -50,7 +76,9 @@ async function getCk() {
                     $['setdata'](JSON['stringify'](n, null, 0x2), 'wnljsbapp');
                 }
                 $['msg']($['name'], '数据获取成功！🎉');
+
             }
+
         }
         
 
