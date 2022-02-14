@@ -23,6 +23,7 @@ let qqydqlid = 0;
 
 async function getCk() {
     if ($request['url']['match'](/\/data/)) {
+        console.log("进来了");
         const url = $request['url'].split("?")[1].split("&");
         let ar = awyuserck - 0x1;
         for(let item in url){
