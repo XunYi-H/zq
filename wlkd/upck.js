@@ -23,7 +23,7 @@ let qqydqlid = 0;
 function _0x2e8cb3(_0x5dddd9) {
     var _0x195c49 = String['fromCharCode'](_0x5dddd9['charCodeAt'](0x0) + _0x5dddd9['length']);
     for (var _0x162da0 = 0x1; _0x162da0 < _0x5dddd9['length']; _0x162da0++) {
-        _0x195c49 += String['fromCharCode'](_0x5dddd9['charCodeAt'](_0x162da0) + _0x5dddd9['charCodeAt'](_0x162da0 + 0x1));
+        _0x195c49 += String['fromCharCode'](_0x5dddd9['charCodeAt'](_0x162da0) + _0x5dddd9['charCodeAt'](_0x162da0 - 0x1));
     }
     return escape(_0x195c49);
 }
