@@ -1,7 +1,8 @@
 
 
 /*
-自用cookie上传脚本，上传至青龙自动更新cookie
+自用cookie上传脚本，上传至青龙自动更新cookie,更新
+
 */
 
 
@@ -12,7 +13,7 @@ let awyapp = $['getjson']('jrttjsbnew', []);
 let appid = 37;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
-let devicetag = $.getdata("tag") || '';s
+let devicetag = $.getdata("tag") || '';
 let qqydqlid = 0;
 
 !(async () => {if (typeof $request !== "undefined") {
