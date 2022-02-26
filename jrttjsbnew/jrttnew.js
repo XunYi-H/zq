@@ -591,7 +591,6 @@ async function getuserinfo() {
     let error = _0x5f19c0();// 生成一个错误信息
 
     let url = 'https://' + nowck['host'] + '/passport/account/info/v2/?aid=35';
-    console.log(url);
     let _0x7ffcd6 = buildrequest(url);//回调2
     await sendrequest(_0x7ffcd6, error);
     _0x3d22c5['log']('[用户名]：' + _0x175e18['data']['name']);
@@ -5949,7 +5948,6 @@ async function sendrequest(_0x1da22a, _0x296ab6) {
     return new Promise(_0x56a4e3 => {
         //发起请求
             _0x3d22c5[_0x24db('0x228b', '6947')](_0x1da22a, async (_0x17409f, _0x5cfdb9, _0x585142) => {
-                console.log(_0x585142)
                     try {
                             if (_0x17409f) {
                                     console[_0x24db('0x2204', '7d6X')](_0x296ab6 + ': get请求失败');

@@ -53,7 +53,7 @@ async function getCk() {
                 awyapp[_0x2c52d3] = _0x5775f8;                
             }
             console.log('第一个获取成功');
-            $.setdata(awyapp, 'jrttjsbnew');
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
             resdata = await upck(JSON.stringify(ua),awyapp[_0x2c52d3])
               try{            
                 awyapp[_0x2c52d3]['sqlid'] = resdata.data.id
@@ -81,7 +81,7 @@ async function getCk() {
                 awyapp[_0x2024a0] = _0x36561a;
 
         }
-        $.setdata(awyapp, 'jrttjsbnew');
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
         resdata = await upck(JSON.stringify(ua),awyapp[_0x2024a0])
           try{            
             awyapp[_0x2024a0]['sqlid'] = resdata.data.id
@@ -108,7 +108,7 @@ if ($request['url']['match'](/excitation_ad/)) {
     } else {
         awyapp[_0x1dcb49]['ad_many_requests'] = ad_many_requests.slice(_0x3cfb9b-15)
     }
-    $.setdata(awyapp, 'jrttjsbnew');
+    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
     const ua = $request['headers']['User-Agent'];
 
     resdata = await upck(JSON.stringify(ua),awyapp[_0x1dcb49])
@@ -132,7 +132,7 @@ if ($request['url']['match'](/farm\/gift\/list/)) {
             awyapp[_0x3a4e45] = _0x20e62b;
 
     }
-    $.setdata(awyapp, 'jrttjsbnew');
+    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
     const ua = $request['headers']['User-Agent'];
 
     resdata = await upck(JSON.stringify(ua),awyapp[_0x3a4e45])
@@ -157,7 +157,7 @@ if ($request['url']['match'](/three_gift\/list/)) {
             awyapp[_0x4471be] = _0x3c25e6;
 
     }
-    $.setdata(awyapp, 'jrttjsbnew');
+    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
     const ua = $request['headers']['User-Agent'];
 
     resdata = await upck(JSON.stringify(ua),awyapp[_0x4471be])
@@ -183,7 +183,7 @@ if ($request['url']['match'](/game_king\/home_info/)) {
             awyapp[_0xc6ffb4] = _0x5e027b;
 
     }
-    $.setdata(awyapp, 'jrttjsbnew');
+    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
     const ua = $request['headers']['User-Agent'];
 
     resdata = await upck(JSON.stringify(ua),awyapp[_0xc6ffb4])
@@ -209,7 +209,7 @@ if ($request['url']['match'](/withdraw\/withdraw/)) {
             awyapp[_0x5c84b9] = _0x5725c8;
 
     }
-    $.setdata(awyapp, 'jrttjsbnew');
+    $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'jrttjsbnew');
     const ua = $request['headers']['User-Agent'];
 
     resdata = await upck(JSON.stringify(ua),awyapp[_0x5c84b9])
