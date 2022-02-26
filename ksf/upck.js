@@ -1,15 +1,15 @@
 
 
 /*
-自用cookie上传脚本，上传至青龙自动更新cookie
+子用
 */
 
 
 
-const $ = new Env('58同城');
+const $ = new Env('康师傅小程序');
 let awyuserck = 1;
-let awyapp = $['getjson']('wbtcapp', []);
-let appid = 26;
+let _0x421742 = $['getjson']('ksfxcx', []);
+let appid = 36;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
 let devicetag = $.getdata("tag") || '';
@@ -20,40 +20,35 @@ let qqydqlid = 0;
 }})()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())
-
+function _0x2e8cb3(_0x5dddd9) {
+    var _0x195c49 = String['fromCharCode'](_0x5dddd9['charCodeAt'](0x0) + _0x5dddd9['length']);
+    for (var _0x162da0 = 0x1; _0x162da0 < _0x5dddd9['length']; _0x162da0++) {
+        _0x195c49 += String['fromCharCode'](_0x5dddd9['charCodeAt'](_0x162da0) + _0x5dddd9['charCodeAt'](_0x162da0 - 0x1));
+    }
+    return escape(_0x195c49);
+}
 async function getCk() {
-    if ($request['url']['indexOf']('getIndexSignInInfo') > -1) {
-        let _0x23050f = awyuserck - 0x1;
-        let _0x5746e0 = $request['headers']['ppu'] ? $request['headers']['ppu'] : $request['headers']['PPU'];
-        let xxwxtokenp = $request['headers']['xxwxtokenp']
-        let xxzl_deviceid = $request['headers']['xxzl_deviceid']
+    if ($request['url']['match'](/\/signIn\/integralSignIn/)) {
+        let token = $request['headers']['token'];
         const ua = $request['headers']['User-Agent'];
-        if (!_0x5746e0) return;
-        let _0x29e2e4 = _0x5746e0['match'](/UID=(\w+)/)[1],
-            _0xe511c6 = 'PPU=' + _0x5746e0;
-        if (awyapp[_0x23050f]) {
-            awyapp[_0x23050f]['ppu'] = _0xe511c6;
-            awyapp[_0x23050f]['xxwxtokenp'] = xxwxtokenp;
-            awyapp[_0x23050f]['xxzl_deviceid'] = xxzl_deviceid;
-            awyapp[_0x23050f]['ua'] = ua;
+        let _0x19bc5e = awyuserck - 0x1;
+        if (_0x421742[_0x19bc5e]) {
+            _0x421742[_0x19bc5e]['token'] = token;
+            _0x421742[_0x19bc5e]['ua'] = ua;
         } else {
-            awyapp[_0x23050f] = {
-                'ppu': _0xe511c6,
-                'ua': ua,
-                'xxwxtokenp':xxwxtokenp,
-                'xxzl_deviceid':xxzl_deviceid
-            };
+            _0x421742[_0x19bc5e] = {"token":token,"ua":ua};
         }
-        
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
-        try{            
-            awyapp[_0x23050f]['sqlid'] = resdata.data.id
-        }catch{
-            print(resdata)
-        }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'wbtcapp');
+        if(_0x421742[_0x19bc5e]){
+            resdata = await upck(JSON.stringify(ua),_0x421742[_0x19bc5e])
+            try{            
+                _0x421742[_0x19bc5e]['sqlid'] = resdata.data.id
+            }catch{
+                print(resdata)
+            }finally{
+                $['setdata'](JSON['stringify'](_0x421742, null, 0x2), 'ksfapp');
+            }
+            $['msg']($['name'], '数据获取成功！🎉');
         }
-        $['msg']($['name'], '58同城' + (_0x23050f + 0x1) + '基础数据获取成功！🎉');
 
     }
 }

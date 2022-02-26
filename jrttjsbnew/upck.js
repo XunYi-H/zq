@@ -6,60 +6,228 @@
 
 
 
-const $ = new Env('58同城');
+const $ = new Env('今日头条极速版newapp');
 let awyuserck = 1;
-let awyapp = $['getjson']('wbtcapp', []);
-let appid = 26;
+let awyapp = $['getjson']('jrttjsbnew', []);
+let appid = 37;
 let updatetoken = $.getdata("updatetoken") || '';
 let updateurl = $.getdata("updateurl") || '';
-let devicetag = $.getdata("tag") || '';
+let devicetag = $.getdata("tag") || '';s
 let qqydqlid = 0;
 
 !(async () => {if (typeof $request !== "undefined") {
+    console.log('测试抓取ck上传')
     await getCk();
 }})()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request['url']['indexOf']('getIndexSignInInfo') > -1) {
-        let _0x23050f = awyuserck - 0x1;
-        let _0x5746e0 = $request['headers']['ppu'] ? $request['headers']['ppu'] : $request['headers']['PPU'];
-        let xxwxtokenp = $request['headers']['xxwxtokenp']
-        let xxzl_deviceid = $request['headers']['xxzl_deviceid']
-        const ua = $request['headers']['User-Agent'];
-        if (!_0x5746e0) return;
-        let _0x29e2e4 = _0x5746e0['match'](/UID=(\w+)/)[1],
-            _0xe511c6 = 'PPU=' + _0x5746e0;
-        if (awyapp[_0x23050f]) {
-            awyapp[_0x23050f]['ppu'] = _0xe511c6;
-            awyapp[_0x23050f]['xxwxtokenp'] = xxwxtokenp;
-            awyapp[_0x23050f]['xxzl_deviceid'] = xxzl_deviceid;
-            awyapp[_0x23050f]['ua'] = ua;
-        } else {
-            awyapp[_0x23050f] = {
-                'ppu': _0xe511c6,
-                'ua': ua,
-                'xxwxtokenp':xxwxtokenp,
-                'xxzl_deviceid':xxzl_deviceid
-            };
-        }
+
+    
+//1
+    if ($request['url']['match'](/done_whole_scene_task/)) {
+            const common_url = $request['url']['split']('?')[0x1];
+            const cookie = $request['headers']['Cookie'];
+            const host = $request['headers' ]['Host'];
+            const ua = $request['headers']['User-Agent'];
+            let _0x2c52d3 = awyuserck-0x1;
+            if (awyapp[_0x2c52d3]) {
+
+                                awyapp[_0x2c52d3]['notify'] = 0x0;
+
+                                awyapp[_0x2c52d3]['host'] = host;
+
+                                awyapp[_0x2c52d3]['ua'] = ua;
+
+                                awyapp[_0x2c52d3]['cookie'] = cookie;
+
+                                awyapp[_0x2c52d3]['common_url'] = common_url;
+
+                    
+
+            } else {
+                    const _0x5775f8 = {};
+                    _0x5775f8['common_url'] = common_url;
+                    _0x5775f8['cookie'] = cookie;
+                    _0x5775f8['host'] = host;
+                    _0x5775f8['ua'] = ua;
+                    _0x5775f8['notify'] = 0x0;
+                    awyapp[_0x2c52d3] = _0x5775f8;                
+            }
+            $.setdata(awyapp, 'jrttjsbnew');
+            resdata = await upck(JSON.stringify(ua),awyapp[_0x2c52d3])
+              try{            
+                awyapp[_0x2c52d3]['sqlid'] = resdata.data.id
+              }catch{
+                  print(resdata)
+              }
+              $['msg']($['name'], '今日头条极速版done_whole_scene_task基础数据获取成功！🎉');
         
-        resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
-        try{            
-            awyapp[_0x23050f]['sqlid'] = resdata.data.id
-        }catch{
-            print(resdata)
-        }finally{
-            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'wbtcapp');
+    }
+
+    //2
+    if ($request['url']['match'](/open_treasure_box/)) {
+        const _0xd9a1dd = $request['url'];
+        const _0x72b3ef = JSON['stringify']($request['headers']);
+        const _0x3d2566 = $request['body'];
+        const box_request = _0xd9a1dd+'@'+_0x72b3ef+'@'+ _0x3d2566;
+        const ua = $request['headers']['User-Agent'];
+        let _0x2024a0 = awyuserck - 0x1;
+        if (awyapp[_0x2024a0]) {
+                awyapp[_0x2024a0]['box_request'] = box_request;
+
+        } else {
+                const _0x36561a = {};
+                _0x36561a[box_request] = box_request;
+                awyapp[_0x2024a0] = _0x36561a;
+
         }
-        $['msg']($['name'], '58同城' + (_0x23050f + 0x1) + '基础数据获取成功！🎉');
+        $.setdata(awyapp, 'jrttjsbnew');
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x2024a0])
+          try{            
+            awyapp[_0x2024a0]['sqlid'] = resdata.data.id
+          }catch{
+              print(resdata)
+          }
+          $['msg']($['name'], '今日头条极速版open_treasure_box基础数据获取成功！🎉');
+
+}
+//3
+if ($request['url']['match'](/excitation_ad/)) {
+    const _0x4ba171 = $request['url'];
+    const _0x45a70b = JSON['stringify']($request['headers']);
+    const _0x384455 = $request['body'];
+    let _0x1dcb49 = awyuserck - 0x1;
+    let ad_many_requests = awyapp[_0x1dcb49]['ad_many_requests'] || [];
+    let _0x3cfb9b = ad_many_requests['length'];
+    const _0x578072 = _0x4ba171 + '@' + _0x45a70b + '@' + _0x384455;
+    ad_many_requests['push'](_0x578072);
+    if (_0x3cfb9b <  15) {
+            
+            awyapp[_0x1dcb49]['ad_many_requests'] = ad_many_requests;
+
+    } else {
+        awyapp[_0x1dcb49]['ad_many_requests'] = ad_many_requests.slice(_0x3cfb9b-15)
+    }
+    $.setdata(awyapp, 'jrttjsbnew');
+    const ua = $request['headers']['User-Agent'];
+
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x1dcb49])
+      try{            
+        awyapp[_0x1dcb49]['sqlid'] = resdata.data.id
+      }catch{
+          print(resdata)
+      }
+      $['msg']($['name'], '今日头条极速版excitation_ad基础数据获取成功！🎉');
+
+}
+//4
+if ($request['url']['match'](/farm\/gift\/list/)) {
+    const farm_url = $request['url']['split']('?')[0x1];
+    let _0x3a4e45 = awyuserck - 0x1;
+    if (awyapp[_0x3a4e45]) {
+            awyapp[_0x3a4e45]['farm_url'] = farm_url;
+    } else {
+            const _0x20e62b = {};
+            _0x20e62b['farm_url'] = farm_url;
+            awyapp[_0x3a4e45] = _0x20e62b;
 
     }
+    $.setdata(awyapp, 'jrttjsbnew');
+    const ua = $request['headers']['User-Agent'];
+
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x3a4e45])
+      try{            
+        awyapp[_0x3a4e45]['sqlid'] = resdata.data.id
+      }catch{
+          print(resdata)
+      }
+      $['msg']($['name'], '今日头条极速版giftlist基础数据获取成功！🎉');
+
+}
+//5
+if ($request['url']['match'](/three_gift\/list/)) {
+    const tree_url = $request['url']['split']('?')[0x1];
+    let _0x4471be = awyuserck - 0x1;
+    if (awyapp[_0x4471be]) {
+
+            awyapp[_0x4471be]['tree_url'] = tree_url;
+    } else {
+            const _0x3c25e6 = {};
+            _0x3c25e6['tree_url'] = tree_url;
+            awyapp[_0x4471be] = _0x3c25e6;
+
+    }
+    $.setdata(awyapp, 'jrttjsbnew');
+    const ua = $request['headers']['User-Agent'];
+
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x4471be])
+      try{            
+        awyapp[_0x4471be]['sqlid'] = resdata.data.id
+      }catch{
+          print(resdata)
+      }
+      $['msg']($['name'], '今日头条极速版three_gift基础数据获取成功！🎉');
+
+
+}
+
+//    5
+if ($request['url']['match'](/game_king\/home_info/)) {
+    const king_url = $request['url']['split']('?')[0x1];
+    let _0xc6ffb4 = awyuserck-0x1;
+    if (awyapp[_0xc6ffb4]) {
+            awyapp[_0xc6ffb4]['king_url'] = king_url;
+    } else {
+            const _0x5e027b = {};
+            _0x5e027b['king_url'] = king_url;
+            awyapp[_0xc6ffb4] = _0x5e027b;
+
+    }
+    $.setdata(awyapp, 'jrttjsbnew');
+    const ua = $request['headers']['User-Agent'];
+
+    resdata = await upck(JSON.stringify(ua),awyapp[_0xc6ffb4])
+      try{            
+        awyapp[_0xc6ffb4]['sqlid'] = resdata.data.id
+      }catch{
+          print(resdata)
+      }
+      $['msg']($['name'], '今日头条极速版game_king基础数据获取成功！🎉');
+}
+if ($request['url']['match'](/withdraw\/withdraw/)) {
+    const tx_url = $request['url']['split']('?')[0x1];
+    const tx_body = $request['body'];
+    let _0x5c84b9 = awyuserck - 0x1;
+    if (awyapp[_0x5c84b9]) {
+            awyapp[_0x5c84b9]['tx_url'] = tx_url;
+            awyapp[_0x5c84b9]['tx_body'] = tx_body;
+
+    } else {
+            const _0x5725c8 = {};
+            _0x5725c8['tx_url'] = tx_url;
+            _0x5725c8['tx_body'] = tx_body;
+            awyapp[_0x5c84b9] = _0x5725c8;
+
+    }
+    $.setdata(awyapp, 'jrttjsbnew');
+    const ua = $request['headers']['User-Agent'];
+
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x5c84b9])
+      try{            
+        awyapp[_0x5c84b9]['sqlid'] = resdata.data.id
+      }catch{
+          print(resdata)
+      }
+      $['msg']($['name'], '今日头条极速版withdraw基础数据获取成功！🎉');
+
+}
 }
 function upck(ua,cookie) {
     return new Promise((resolve) => {
         const url = updateurl+'/admin/projects/'+updatetoken;
+        console.log(url)
         const tag = devicetag.toString()
         const coostr = JSON.stringify(cookie)
         console.log(qqydqlid)
@@ -71,7 +239,7 @@ function upck(ua,cookie) {
         const body = {
             url: url,
             headers: {'accept': 'application/json','Content-Type': 'application/json'},
-            body:JSON.stringify(datas),//这段到底提交啥
+            body:JSON.stringify(datas),
         };
         $.post(body, (err, resp, data) => {
             try {
