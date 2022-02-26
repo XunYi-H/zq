@@ -1,7 +1,7 @@
 
 
 /*
-自用cookie上传脚本，上传至青龙自动更新cookie,更新
+自用cookie上传脚本，上传至青龙自动更新cookie,修补bug
 
 */
 
@@ -73,7 +73,7 @@ async function getCk() {
 
         } else {
                 const _0x36561a = {};
-                _0x36561a[box_request] = box_request;
+                _0x36561a['box_request'] = box_request;
                 awyapp[_0x2024a0] = _0x36561a;
 
         }
