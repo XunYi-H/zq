@@ -33,7 +33,7 @@ async function getCk() {
             const host = $request['headers']['Host'];
             const ua = $request['headers']['User-Agent'];
             let _0x2c52d3 = awyuserck - 1;
-            console.log(awyapp[_0x2c52d3])
+            console.log(awyapp)
             if (awyapp[_0x2c52d3]) {
                 console.log("设置key")
                 awyapp[_0x2c52d3]['notify'] = 0;
