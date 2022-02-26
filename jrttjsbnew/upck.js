@@ -47,6 +47,7 @@ async function getCk() {
                 _0x5775f8['notify'] = 0;
                 awyapp[_0x2c52d3] = _0x5775f8;                
             }
+            console.log('第一个获取成功');
             $.setdata(awyapp, 'jrttjsbnew');
             resdata = await upck(JSON.stringify(ua),awyapp[_0x2c52d3])
               try{            
