@@ -32,14 +32,18 @@ async function getCk() {
             const cookie = $request['headers']['Cookie'];
             const host = $request['headers']['Host'];
             const ua = $request['headers']['User-Agent'];
-            let _0x2c52d3 = awyuserck-1;
+            let _0x2c52d3 = awyuserck - 1;
+            console.log(awyapp[_0x2c52d3])
             if (awyapp[_0x2c52d3]) {
+                console.log("设置key")
                 awyapp[_0x2c52d3]['notify'] = 0;
                 awyapp[_0x2c52d3]['host'] = host;
                 awyapp[_0x2c52d3]['ua'] = ua;
                 awyapp[_0x2c52d3]['cookie'] = cookie;
                 awyapp[_0x2c52d3]['common_url'] = common_url;
             } else {
+                console.log("keey不存在重置key")
+
                 const _0x5775f8 = {};
                 _0x5775f8['common_url'] = common_url;
                 _0x5775f8['cookie'] = cookie;
