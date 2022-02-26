@@ -27,33 +27,25 @@ async function getCk() {
     
 //1
     if ($request['url']['match'](/done_whole_scene_task/)) {
-            const common_url = $request['url']['split']('?')[0x1];
+            const common_url = $request['url']['split']('?')[1];
             const cookie = $request['headers']['Cookie'];
-            const host = $request['headers' ]['Host'];
+            const host = $request['headers']['Host'];
             const ua = $request['headers']['User-Agent'];
-            let _0x2c52d3 = awyuserck-0x1;
+            let _0x2c52d3 = awyuserck-1;
             if (awyapp[_0x2c52d3]) {
-
-                                awyapp[_0x2c52d3]['notify'] = 0x0;
-
-                                awyapp[_0x2c52d3]['host'] = host;
-
-                                awyapp[_0x2c52d3]['ua'] = ua;
-
-                                awyapp[_0x2c52d3]['cookie'] = cookie;
-
-                                awyapp[_0x2c52d3]['common_url'] = common_url;
-
-                    
-
+                awyapp[_0x2c52d3]['notify'] = 0;
+                awyapp[_0x2c52d3]['host'] = host;
+                awyapp[_0x2c52d3]['ua'] = ua;
+                awyapp[_0x2c52d3]['cookie'] = cookie;
+                awyapp[_0x2c52d3]['common_url'] = common_url;
             } else {
-                    const _0x5775f8 = {};
-                    _0x5775f8['common_url'] = common_url;
-                    _0x5775f8['cookie'] = cookie;
-                    _0x5775f8['host'] = host;
-                    _0x5775f8['ua'] = ua;
-                    _0x5775f8['notify'] = 0x0;
-                    awyapp[_0x2c52d3] = _0x5775f8;                
+                const _0x5775f8 = {};
+                _0x5775f8['common_url'] = common_url;
+                _0x5775f8['cookie'] = cookie;
+                _0x5775f8['host'] = host;
+                _0x5775f8['ua'] = ua;
+                _0x5775f8['notify'] = 0;
+                awyapp[_0x2c52d3] = _0x5775f8;                
             }
             $.setdata(awyapp, 'jrttjsbnew');
             resdata = await upck(JSON.stringify(ua),awyapp[_0x2c52d3])
@@ -63,7 +55,7 @@ async function getCk() {
                   print(resdata)
               }
               $['msg']($['name'], '今日头条极速版done_whole_scene_task基础数据获取成功！🎉');
-        
+              return  
     }
 
     //2
@@ -91,7 +83,7 @@ async function getCk() {
               print(resdata)
           }
           $['msg']($['name'], '今日头条极速版open_treasure_box基础数据获取成功！🎉');
-
+        return
 }
 //3
 if ($request['url']['match'](/excitation_ad/)) {
