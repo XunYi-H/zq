@@ -22,46 +22,127 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    let _0x23050f = awyuserck - 0x1;
-    if($request&&$request.url.indexOf("intervalAward")>=0) {
-        
-        const kkdheader = $request.url.split(`?`)[1]
-          if (kkdheader) {
-            if (awyapp[_0x23050f]) {
-                awyapp[_0x23050f]['kkdheader'] = kkdheader;
-            } else {
-                awyapp[_0x23050f] = {
-                    'kkdheader': kkdheader
-                };
-            }
-          }
-          $.log(`[${$.jsname}] 获取kkdheader请求: 成功,kkdheader: ${kkdheader}`)
-          $.msg(`获取kkdheader: 成功🎉`, ``)
-          
-        const kkdcookie = $request.headers['Cookie']
-          if (kkdcookie) {
-            if (awyapp[_0x23050f]) {
-                awyapp[_0x23050f]['kkdcookie'] = kkdcookie;
-            } else {
-                awyapp[_0x23050f] = {
-                    'kkdcookie': kkdcookie
-                };
-            }
-          }
-          $.log(`[${$.jsname}] 获取kkdcookie请求: 成功,kkdcookie: ${kkdcookie}`)
-          $.msg(`获取kkdcookie: 成功🎉`, ``)
-          const ua = $request['headers']['User-Agent'];
-            resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
-            try{            
-                awyapp[_0x23050f]['sqlid'] = resdata.data.id
-            }catch{
-                print(resdata)
-            }finally{
-                $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
-            }
+    if ($request['url']['match'](/\/intervalAward/)) {
+
+        const _0x413dc4 = $request['url']['split']('?')[1];
+        const _0x51740b = $request['headers']['Cookie'];
+        let _0x1247e8 = awyuserck - 1;
+        if (awyapp[_0x1247e8]) {
+            awyapp[_0x1247e8]['common_url'] = _0x413dc4;
+            awyapp[_0x1247e8]['header'] = _0x413dc4;
+            awyapp[_0x1247e8]['cookie'] = _0x51740b;
+            awyapp[_0x1247e8]['notify'] = 0;            
+        } else {
+            const _0x487d39 = {};
+            _0x487d39['common_url'] = _0x413dc4;
+            _0x487d39['cookie'] = _0x51740b;
+            _0x487d39['notify'] = 0;
+            awyapp[_0x1247e8] = _0x487d39;
+            awyapp[_0x1247e8]['header'] = _0x413dc4;            
+        } 
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x1247e8])
+        try{            
+            awyapp[_0x1247e8]['sqlid'] = resdata.data.id
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
+        }  
+        $['msg']($['name'], 'intervalAward基础数据获取成功！🎉');
+}
+if ($request['url']['match'](/\/signIn/)) {
+    const _0xa95de6 = $request['url']['split']('?')[1];
+    let _0x588f91 = awyuserck - 1;
+    if (awyapp[_0x588f91]) {
+        awyapp[_0x588f91]['sign_url'] = _0xa95de6;
+    } else {
+            const _0x36e389 = {};
+            _0x36e389['sign_url'] = _0xa95de6;
+            awyapp[_0x588f91] = _0x36e389;
+
     }
+    const ua = $request['headers']['User-Agent'];
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x588f91])
+    try{            
+        awyapp[_0x588f91]['sqlid'] = resdata.data.id
+    }catch{
+        print(resdata)
+    }finally{
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
+    }  
+    $['msg']($['name'], 'signIn基础数据获取成功！🎉');
+
+}
+if ($request['url']['match'](/\/drinkWater\/start/)) {
+    const _0x1c8710 = $request['url']['split']('?')[1];
+    let _0x338f7c = awyuserck - 1;
+    if (awyapp[_0x338f7c]) {
+        awyapp[_0x338f7c]['drink_water_url'] = _0x1c8710;
+    } else {
+            const _0x122b16 = {};
+            _0x122b16['drink_water_url'] = _0x1c8710;
+            awyapp[_0x338f7c] = _0x122b16;
+    }
+    const ua = $request['headers']['User-Agent'];
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x338f7c])
+    try{            
+        awyapp[_0x338f7c]['sqlid'] = resdata.data.id
+    }catch{
+        print(resdata)
+    }finally{
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
+    }  
+    $['msg']($['name'], 'drinkWater基础数据获取成功！🎉');
+}
+if ($request['url']['match'](/\/bank\/home/)) {
+        const _0x25f74e = $request['url']['split']('?')[1];
+        let _0x1d915c = awyuserck - 1;
+        if (awyapp[_0x1d915c]) {
+            awyapp[_0x1d915c]['bank_url'] = _0x25f74e;
+        } else {
+                const _0x314ea9 = {};
+                _0x314ea9['bank_url'] = _0x25f74e;
+                awyapp[_0x1d915c] = _0x314ea9;
+
+        }
+        const ua = $request['headers']['User-Agent'];
+        resdata = await upck(JSON.stringify(ua),awyapp[_0x1d915c])
+        try{            
+            awyapp[_0x1d915c]['sqlid'] = resdata.data.id
+        }catch{
+            print(resdata)
+        }finally{
+            $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
+        }  
+        $['msg']($['name'], 'bank基础数据获取成功！🎉');
+    
+}
+if ($request['url']['match'](/\/account\/exchange/)) {
+    const _0x56a91c = $request['body'];
+    let _0x23234e = awyuserck - 1;
+    if (awyapp[_0x23234e]) {
+        awyapp[_0x23234e]['exchange_body'] = _0x56a91c;
+    } else {
+            const _0x480e03 = {};
+            _0x480e03['exchange_body'] = _0x56a91c;
+            awyapp[_0x23234e] = _0x480e03;
+    }
+    const ua = $request['headers']['User-Agent'];
+    resdata = await upck(JSON.stringify(ua),awyapp[_0x23234e])
+    try{            
+        awyapp[_0x23234e]['sqlid'] = resdata.data.id
+    }catch{
+        print(resdata)
+    }finally{
+        $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
+    }  
+    $['msg']($['name'], 'exchange基础数据获取成功！🎉');
+
+}
     if($request&&$request.url.indexOf("finish")>=0) {
-        const kkdbody = $request.body
+        const kkdbody = $request.body;
+        const _0x23050f = awyuserck - 1;
           if (kkdbody) {
             if (awyapp[_0x23050f]) {
                 awyapp[_0x23050f]['kkdbody'] = kkdbody;
@@ -73,29 +154,6 @@ async function getCk() {
           }
           $.log(`[${$.jsname}] 获取kkdbody请求: 成功,kkdbody: ${kkdbody}`)
           $.msg(`获取kkdbody: 成功🎉`, ``)
-          const ua = $request['headers']['User-Agent'];
-          resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
-          try{            
-              awyapp[_0x23050f]['sqlid'] = resdata.data.id
-          }catch{
-              print(resdata)
-          }finally{
-              $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'kkdapp');
-          }
-    }
-      if($request&&$request.url.indexOf("signIn")>=0) {
-        const kkdsign = $request.url.split(`?`)[1]
-          if (kkdsign) {
-            if (awyapp[_0x23050f]) {
-                awyapp[_0x23050f]['kkdsign'] = kkdsign;
-            } else {
-                awyapp[_0x23050f] = {
-                    'kkdsign': kkdsign
-                };
-            }
-          }
-          $.log(`[${$.jsname}] 获取kkdsign请求: 成功,kkdsign: ${kkdsign}`)
-          $.msg(`获取kkdsign: 成功🎉`, ``)
           const ua = $request['headers']['User-Agent'];
           resdata = await upck(JSON.stringify(ua),awyapp[_0x23050f])
           try{            
