@@ -44,9 +44,9 @@ $.idx = ($.idx = ($.getval("kkdcount") || "1") - 1) > 0 ? `${$.idx + 1}` : ""; /
 const kkdheaderArr=[]
 const kkdcookieArr=[]
 const kkdsignArr=[]
-let kkdheader = $.getdata('kkdheader')
-let kkdcookie = $.getdata('kkdcookie')
-let kkdsign = $.getdata('kkdsign')
+let kkdheader = $.getdata('header')
+let kkdcookie = $.getdata('cookie')
+let kkdsign = $.getdata('sign_url')
 const logs = false //日志
 const invite = 0; //邀请码1为邀请
 let tz = ($.getval('tz') || '1');//通知
@@ -80,9 +80,9 @@ function run(data){
     for (let i = 0; i < data.length; i++) {
       if (data[i]) {
         other = ''
-        kkdheader = data[i]["kkdheader"];
-        kkdcookie = data[i]["kkdcookie"];
-        kkdsign = data[i]["kkdsign"];
+        kkdheader = data[i]["header"];
+        kkdcookie = data[i]["cookie"];
+        kkdsign = data[i]["sign_url"];
         $.index = i + 1;
         console.log(`\n开始【快看点${$.index}】`)
         await userinfo()
