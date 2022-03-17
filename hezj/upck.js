@@ -24,6 +24,7 @@ async function getCk() {
     if ($request['url']['indexOf']('v2/login') > -1) {
         const _0x428e18 = JSON['stringify']($request['headers']);
         const _0x1c55ad = JSON['stringify']($request['body']);
+        const ua = $request['headers']['User-Agent'];
         let _0x406326 = djxsuserck - 0x1;
         if (djxsapp[_0x406326]) {
             djxsapp[_0x406326]['haierhd'] = _0x428e18;
