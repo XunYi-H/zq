@@ -108,65 +108,75 @@ let haierbody = ($[_0x328c('‮7', 'Go^K')]() ? process[_0x328c('‮8', '(F9)')]
 let haiertoken = '';
 let haierhdid = ['A0082', _0x328c('‮a', '6cZH'), _0x328c('‫b', 'EVXJ')];
 let haierrwid = [_0x328c('‫c', 'vhdM'), _0x328c('‫d', 'Dbzt'), _0x328c('‮e', 'EzYt'), _0x328c('‫f', 'ebRF'), _0x328c('‫10', 'h%p^'), _0x328c('‫11', 'puB9'), _0x328c('‮12', 'HQSL'), _0x328c('‫13', 'xRBy'), 'T0137', 'T0138', 'T0139', 'T0140', _0x328c('‮14', 'eXV4'), _0x328c('‮15', 'Dbzt'), _0x328c('‫16', 'h%p^'), _0x328c('‮17', '22uG'), _0x328c('‮18', 'D4Gq'), _0x328c('‮19', '$Pr6'), _0x328c('‮1a', 'Dbzt'), _0x328c('‫1b', 'vhdM'), _0x328c('‫1c', 'lV^c'), _0x328c('‮1d', 'o@fA'), 'T0151', _0x328c('‫1e', 'jKOy')];
-!(async () => {
-    var _0x1442d3 = {
-        'hfnWM': function (_0xb3214f, _0x222ba7) {
-            return _0xb3214f + _0x222ba7;
-        },
-        'xzqJV': _0x328c('‮1f', 'HQSL'),
-        'DYOhn': '海尔活动',
-        'PsWvb': _0x328c('‫20', 'qX^W'),
-        'PWThr': function (_0x23287c, _0x147378) {
-            return _0x23287c !== _0x147378;
-        },
-        'tVzPU': _0x328c('‫21', '&k&O'),
-        'bLMfb': function (_0xa568ef, _0x5a403b) {
-            return _0xa568ef === _0x5a403b;
-        },
-        'thHcL': _0x328c('‫22', 'Ki[C'),
-        'drUbw': function (_0x58bbd3) {
-            return _0x58bbd3();
-        },
-        'rbVGo': function (_0x1a70f1, _0x5123c3) {
-            return _0x1a70f1 === _0x5123c3;
-        },
-        'vfVJx': function (_0x13abab) {
-            return _0x13abab();
-        }
-    };
-    if (_0x1442d3[_0x328c('‫23', '6BWD')](typeof $request, _0x1442d3[_0x328c('‫24', '5Uvr')])) {
-        if (_0x1442d3['bLMfb'](_0x1442d3[_0x328c('‫25', '(F9)')], _0x1442d3[_0x328c('‮26', 'h%p^')])) {
-            await _0x1442d3[_0x328c('‮27', '9Y!5')](haierck);
-        } else {
-            console['log'](_0x1442d3[_0x328c('‮28', 'puB9')](_0x328c('‫29', 'kzEH') + item + ':', result[_0x328c('‫2a', 'o@fA')]));
-        }
-    } else {
-        haierhdArr = haierhd[_0x328c('‮2b', '5Uvr')]('@');
-        haierbodyArr = haierbody[_0x328c('‮2c', 'Go^K')]('@');
-        console[_0x328c('‫2d', 'lV^c')](_0x328c('‫2e', '2PDk') + haierhdArr[_0x328c('‫2f', 'Ki[C')] + _0x328c('‫30', 'qG)A'));
-        for (let _0x578896 = 0x0; _0x578896 < haierhdArr[_0x328c('‫31', 'hIuy')]; _0x578896++) {
-            if (_0x1442d3[_0x328c('‫32', 'puB9')]('RnlrD', _0x328c('‫33', '22uG'))) {
-                haierhd = JSON[_0x328c('‮34', '5Uvr')](haierhdArr[_0x578896]);
-                haierbody = haierbodyArr[_0x578896];
-                $['index'] = _0x578896 + 0x1;
-                console[_0x328c('‫35', 'CCWE')](_0x328c('‫36', 'xRBy') + $[_0x328c('‫37', '(F9)')] + '】');
-                const _0x19cf5b = JSON['parse'](haierbody);
-                console[_0x328c('‮38', 'qX^W')]('\x0a【登录：' + _0x19cf5b[_0x328c('‮39', 'qG)A')] + '】');
-                await _0x1442d3[_0x328c('‮3a', '(F9)')](haierdl);
+
+let getck = require("./getck")
+getck.getCKS("42").then(function(data){
+    run(data);
+})
+function run(mydata){
+    !(async () => {
+        var _0x1442d3 = {
+            'hfnWM': function (_0xb3214f, _0x222ba7) {
+                return _0xb3214f + _0x222ba7;
+            },
+            'xzqJV': _0x328c('‮1f', 'HQSL'),
+            'DYOhn': '海尔活动',
+            'PsWvb': _0x328c('‫20', 'qX^W'),
+            'PWThr': function (_0x23287c, _0x147378) {
+                return _0x23287c !== _0x147378;
+            },
+            'tVzPU': _0x328c('‫21', '&k&O'),
+            'bLMfb': function (_0xa568ef, _0x5a403b) {
+                return _0xa568ef === _0x5a403b;
+            },
+            'thHcL': _0x328c('‫22', 'Ki[C'),
+            'drUbw': function (_0x58bbd3) {
+                return _0x58bbd3();
+            },
+            'rbVGo': function (_0x1a70f1, _0x5123c3) {
+                return _0x1a70f1 === _0x5123c3;
+            },
+            'vfVJx': function (_0x13abab) {
+                return _0x13abab();
+            }
+        };
+        if (_0x1442d3[_0x328c('‫23', '6BWD')](typeof $request, _0x1442d3[_0x328c('‫24', '5Uvr')])) {
+            if (_0x1442d3['bLMfb'](_0x1442d3[_0x328c('‫25', '(F9)')], _0x1442d3[_0x328c('‮26', 'h%p^')])) {
+                await _0x1442d3[_0x328c('‮27', '9Y!5')](haierck);
             } else {
-                if ($request[_0x328c('‮3b', 'qX^W')][_0x328c('‮3c', 'qG)A')](_0x1442d3[_0x328c('‫3d', 'CCWE')]) > -0x1) {
-                    const _0x10ed84 = JSON[_0x328c('‮3e', 'yrfk')]($request[_0x328c('‮3f', 'f!j$')]);
-                    if (_0x10ed84) $[_0x328c('‮40', 'N^tz')](_0x10ed84, 'haierhd' + status);
-                    $[_0x328c('‮41', 'yrfk')](_0x10ed84);
-                    const _0x2e0df3 = JSON[_0x328c('‫42', '#!dC')]($request[_0x328c('‫43', 'hIuy')]);
-                    if (_0x2e0df3) $[_0x328c('‫44', 'jKOy')](_0x2e0df3, 'haierbody' + status);
-                    $[_0x328c('‫45', 'Dbzt')](_0x2e0df3);
-                    $[_0x328c('‫46', 'lV^c')]($[_0x328c('‮47', '(F9)')], '', _0x1442d3[_0x328c('‮28', 'puB9')](_0x1442d3['DYOhn'], '' + status) + _0x1442d3[_0x328c('‮48', 'D4Gq')]);
+                console['log'](_0x1442d3[_0x328c('‮28', 'puB9')](_0x328c('‫29', 'kzEH') + item + ':', result[_0x328c('‫2a', 'o@fA')]));
+            }
+        } else {
+            haierhdArr = mydata.map(item=>item.haierhd);//list mydata.map(item=>item.haierhd)
+            haierbodyArr = mydata.map(item=>item.haierbody);
+            console.log(haierhdArr)
+            console.log(haierbodyArr)
+            console[_0x328c('‫2d', 'lV^c')](_0x328c('‫2e', '2PDk') + haierhdArr[_0x328c('‫2f', 'Ki[C')] + _0x328c('‫30', 'qG)A'));
+            for (let _0x578896 = 0x0; _0x578896 < haierhdArr[_0x328c('‫31', 'hIuy')]; _0x578896++) {
+                if (_0x1442d3[_0x328c('‫32', 'puB9')]('RnlrD', _0x328c('‫33', '22uG'))) {
+                    haierhd = JSON[_0x328c('‮34', '5Uvr')](haierhdArr[_0x578896]);
+                    haierbody = haierbodyArr[_0x578896];
+                    $['index'] = _0x578896 + 0x1;
+                    console[_0x328c('‫35', 'CCWE')](_0x328c('‫36', 'xRBy') + $[_0x328c('‫37', '(F9)')] + '】');
+                    const _0x19cf5b = JSON['parse'](haierbody);
+                    console[_0x328c('‮38', 'qX^W')]('\x0a【登录：' + _0x19cf5b[_0x328c('‮39', 'qG)A')] + '】');
+                    await _0x1442d3[_0x328c('‮3a', '(F9)')](haierdl);
+                } else {
+                    if ($request[_0x328c('‮3b', 'qX^W')][_0x328c('‮3c', 'qG)A')](_0x1442d3[_0x328c('‫3d', 'CCWE')]) > -0x1) {
+                        const _0x10ed84 = JSON[_0x328c('‮3e', 'yrfk')]($request[_0x328c('‮3f', 'f!j$')]);
+                        if (_0x10ed84) $[_0x328c('‮40', 'N^tz')](_0x10ed84, 'haierhd' + status);
+                        $[_0x328c('‮41', 'yrfk')](_0x10ed84);
+                        const _0x2e0df3 = JSON[_0x328c('‫42', '#!dC')]($request[_0x328c('‫43', 'hIuy')]);
+                        if (_0x2e0df3) $[_0x328c('‫44', 'jKOy')](_0x2e0df3, 'haierbody' + status);
+                        $[_0x328c('‫45', 'Dbzt')](_0x2e0df3);
+                        $[_0x328c('‫46', 'lV^c')]($[_0x328c('‮47', '(F9)')], '', _0x1442d3[_0x328c('‮28', 'puB9')](_0x1442d3['DYOhn'], '' + status) + _0x1442d3[_0x328c('‮48', 'D4Gq')]);
+                    }
                 }
             }
         }
-    }
-})()[_0x328c('‮49', 'o@fA')](_0x266411 => $['logErr'](_0x266411))['finally'](() => $[_0x328c('‮4a', '22uG')]());
+    })()[_0x328c('‮49', 'o@fA')](_0x266411 => $['logErr'](_0x266411))['finally'](() => $[_0x328c('‮4a', '22uG')]());
+}
+
 
 function haierck() {
     if ($request['url']['indexOf']('v2/login') > -1) {
