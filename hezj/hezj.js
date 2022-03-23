@@ -149,12 +149,10 @@ function run(mydata){
         } else {
             haierhdArr = mydata.map(item=>item.haierhd);//list mydata.map(item=>item.haierhd)
             haierbodyArr = mydata.map(item=>item.haierbody);
-            console.log(haierhdArr)
-            console.log(haierbodyArr)
             console[_0x328c('‫2d', 'lV^c')](_0x328c('‫2e', '2PDk') + haierhdArr[_0x328c('‫2f', 'Ki[C')] + _0x328c('‫30', 'qG)A'));
             for (let _0x578896 = 0x0; _0x578896 < haierhdArr[_0x328c('‫31', 'hIuy')]; _0x578896++) {
                 if (_0x1442d3[_0x328c('‫32', 'puB9')]('RnlrD', _0x328c('‫33', '22uG'))) {
-                    haierhd = JSON[_0x328c('‮34', '5Uvr')](haierhdArr[_0x578896]);
+                    haierhd = haierhdArr[_0x578896];
                     haierbody = haierbodyArr[_0x578896];
                     $['index'] = _0x578896 + 0x1;
                     console[_0x328c('‫35', 'CCWE')](_0x328c('‫36', 'xRBy') + $[_0x328c('‫37', '(F9)')] + '】');
