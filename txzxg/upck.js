@@ -23,10 +23,10 @@ let qqydqlid = 0;
 
 async function getCk() {
     if($request.url.indexOf(`cgi-bin/userinfo.fcgi`) > -1 && $request.headers.Cookie) {
-        let openid = $request.headers.Cookie.match(/zxg_(openid=[\w\-]+)/)[1]
+        let openid = $request.headers.Cookie.match(/zxg_openid=([\w\-]+)/)[1]
         if(openid == 'openid=anonymous') return;
-        let qlskey = $request.headers.Cookie.match(/(wzq_qlskey=[\w\-]+)/)[1]
-        let qluin = $request.headers.Cookie.match(/(wzq_qluin=[\w\-]+)/)[1]
+        let qlskey = $request.headers.Cookie.match(/wzq_qlskey=([\w\-]+)/)[1]
+        let qluin = $request.headers.Cookie.match(/wzq_qluin=([\w\-]+)/)[1]
         let _0x23050f = awyuserck - 0x1;            
         if (awyapp[_0x23050f]) {
             awyapp[_0x23050f]['openid'] = openid;
@@ -51,9 +51,9 @@ async function getCk() {
         return  
     }
     if($request.url.indexOf(`cgi-bin/activity_usercenter.fcgi`) > -1) {
-        let openid = $request.url.match(/(openid=[\w\-]*)/)[1]
+        let openid = $request.url.match(/openid=([\w\-]*)/)[1]
         if(openid == 'openid=anonymous') return;
-        let fskey = $request.url.match(/(fskey=[\w\-]*)/)[1]
+        let fskey = $request.url.match(/fskey=([\w\-]*)/)[1]
         let _0x23050f = awyuserck - 0x1;            
         if (awyapp[_0x23050f]) {
             awyapp[_0x23050f]['openid'] = openid;
