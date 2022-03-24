@@ -22,16 +22,16 @@ let qqydqlid = 0;
 .finally(() => $.done())
 
 async function getCk() {
-    if ($request.url.indexOf("doSignIn") > -1) {
+    if ($request.url.indexOf("doGetSignInList") > -1) {
         const token = $request.body.token
         const ua = $request['headers']['User-Agent'];
         let _0x107ec0 = awyuserck - 0x1;
         if (awyapp[_0x107ec0]) {
-            awyapp[_0x107ec0]['token'] = yml_bslyurl;
+            awyapp[_0x107ec0]['token'] = token;
             awyapp[_0x107ec0]['ua'] = ua;
         } else {
             awyapp[_0x107ec0] = {
-                'token': yml_bslyurl,
+                'token': token,
                 'ua':ua
             };
         }
