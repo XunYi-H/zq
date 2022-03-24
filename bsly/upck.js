@@ -23,7 +23,7 @@ let qqydqlid = 0;
 
 async function getCk() {
     if ($request.url.indexOf("doGetSignInList") > -1) {
-        const token = $request.body.token
+        const token = JSON.parse($request.body).token
         const ua = $request['headers']['User-Agent'];
         let _0x107ec0 = awyuserck - 0x1;
         if (awyapp[_0x107ec0]) {
