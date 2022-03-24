@@ -90,9 +90,16 @@ class UserInfo {
         let info = str2json(str)
         this.openid = info['openid'] || ''
         this.fskey = info['fskey'] || ''
-        this.wzq_qlskey = info['wzq_qlskey'] || ''
-        this.wzq_qluin = info['wzq_qluin'] || ''
-        this.task = info['task'] || 1
+        this.wzq_qlskey = info['qlskey'] || ''
+        this.wzq_qluin = info['qluin'] || ''
+        if(info['task']== undefined){
+            this.task = 1
+        }else{
+            this.task = info['task']
+        }
+        
+        console.log(info['task'])
+        console.log(this.task)
         this.cookie = `wzq_qlskey=${this.wzq_qlskey}; wzq_qluin=${this.wzq_qluin}; zxg_openid=${this.openid};`
         
         let checkParam = ['openid','fskey','wzq_qlskey','wzq_qluin']
@@ -921,155 +928,161 @@ class UserInfo {
         } finally {}
     }
 }
-
-!(async () => {
-    if (typeof $request !== "undefined") {
-        await GetRewrite()
-    }else {
-        console.log('\n变量填写格式，多账号用换行(\\n)或者@或者#隔开:\nopenid=xx&fskey=yy&wzq_qlskey=zz&wzq_qluin=aa\n')
-        if(!(await checkEnv())) return;
-        
-        console.log('\n=================== 用户信息 ===================')
-        for(let user of userList.filter(x => x.hasAllEnv)) {
-            await user.getUserName();
-            await $.wait(TASK_WAITTIME);
-            await user.getUserInfo(); 
-            await $.wait(TASK_WAITTIME);
-        }
-        
-        let validUserList = userList.filter(x => x.valid)
-        if(validUserList.length == 0) return;
-        let validUserCount = validUserList.length;
-        
-        console.log('\n=================== 互助设置 ===================')
-        let doHelp = false;
-        if(helpFlag) {
-            if(validUserCount < 2) {
-                console.log('有效用户少于2个，不做互助任务')
+let getck = require("./getck")
+getck.getCKS("43").then(function(data){
+    run(data);
+})
+function run(mydata){
+    !(async () => {
+        if (typeof $request !== "undefined") {
+            await GetRewrite()
+        }else {
+            console.log('\n变量填写格式，多账号用换行(\\n)或者@或者#隔开:\nopenid=xx&fskey=yy&wzq_qlskey=zz&wzq_qluin=aa\n')
+            if(!(await checkEnv(mydata))) return;
+            
+            console.log('\n=================== 用户信息 ===================')
+            for(let user of userList.filter(x => x.hasAllEnv)) {
+                await user.getUserName();
+                await $.wait(TASK_WAITTIME);
+                await user.getUserInfo(); 
+                await $.wait(TASK_WAITTIME);
+            }
+            
+            let validUserList = userList.filter(x => x.valid)
+            if(validUserList.length == 0) return;
+            let validUserCount = validUserList.length;
+            
+            console.log('\n=================== 互助设置 ===================')
+            let doHelp = false;
+            if(helpFlag) {
+                if(validUserCount < 2) {
+                    console.log('有效用户少于2个，不做互助任务')
+                } else {
+                    console.log('有效用户大于等于2个，且设置了互助开关，开启互助')
+                    doHelp = true;
+                }
             } else {
-                console.log('有效用户大于等于2个，且设置了互助开关，开启互助')
-                doHelp = true;
+                console.log('当前设置为不互助，要做互助任务请设置TxStockHelp为1')
             }
-        } else {
-            console.log('当前设置为不互助，要做互助任务请设置TxStockHelp为1')
-        }
-        
-        for(let user of validUserList) {
-            if(user.task == 1) {
-                console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
-                await user.signTask(2002,signType.task); 
-                await $.wait(TASK_WAITTIME);
-                await user.guessHome(); 
-                await $.wait(TASK_WAITTIME);
-                for(let id of taskList.app.daily) {
-                    let taskItem = {"taskName":"APP任务","activity":"task_daily","type":"routine","actid":id}
-                    await user.appGetTaskList(taskItem,'app'); 
-                    await $.wait(TASK_WAITTIME);
-                }
-                for(let id of taskList.wx.daily) {
-                    let taskItem = {"taskName":"微信任务","activity":"task_daily","type":"routine","actid":id}
-                    await user.wxGetTaskList(taskItem,'wx'); 
-                    await $.wait(TASK_WAITTIME);
-                }
-                if(doHelp) {
-                    for(let task of taskList.app.dailyShare) {
-                        await user.appGetShareCode(task); 
-                        await $.wait(TASK_WAITTIME);
-                    }
-                    for(let task of taskList.wx.dailyShare) {
-                        await user.wxGetShareCode(task); 
-                        await $.wait(TASK_WAITTIME);
-                    }
-                }
-            }
-        }
-        
-        console.log('\n=================== 新手任务 ===================')
-        if(newbieFlag) {
+            
             for(let user of validUserList) {
                 if(user.task == 1) {
                     console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
-                    for(let id of taskList.app.newbie) {
-                        let taskItem = {"taskName":"APP新手任务","activity":"task_continue","type":"app_new_user","actid":id}
+                    await user.signTask(2002,signType.task); 
+                    await $.wait(TASK_WAITTIME);
+                    await user.guessHome(); 
+                    await $.wait(TASK_WAITTIME);
+                    for(let id of taskList.app.daily) {
+                        let taskItem = {"taskName":"APP任务","activity":"task_daily","type":"routine","actid":id}
                         await user.appGetTaskList(taskItem,'app'); 
                         await $.wait(TASK_WAITTIME);
                     }
-                    for(let id of taskList.wx.newbie) {
-                        let taskItem = {"taskName":"微信新手任务","activity":"task_continue","type":"wzq_welfare_growth","actid":id}
+                    for(let id of taskList.wx.daily) {
+                        let taskItem = {"taskName":"微信任务","activity":"task_daily","type":"routine","actid":id}
                         await user.wxGetTaskList(taskItem,'wx'); 
                         await $.wait(TASK_WAITTIME);
                     }
-                }
-            }
-            
-            console.log('\n=================== 新手互助任务 ===================')
-            if(validUserCount > 1) {
-                for(let user of validUserList) {
-                    if(user.task == 1) {
-                        console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
-                        for(let task of taskList.wx.newbieShare) {
-                            await user.wxGetShareCode(task,'newbie'); 
+                    if(doHelp) {
+                        for(let task of taskList.app.dailyShare) {
+                            await user.appGetShareCode(task); 
+                            await $.wait(TASK_WAITTIME);
+                        }
+                        for(let task of taskList.wx.dailyShare) {
+                            await user.wxGetShareCode(task); 
                             await $.wait(TASK_WAITTIME);
                         }
                     }
                 }
+            }
+            
+            console.log('\n=================== 新手任务 ===================')
+            if(newbieFlag) {
+                for(let user of validUserList) {
+                    if(user.task == 1) {
+                        console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
+                        for(let id of taskList.app.newbie) {
+                            let taskItem = {"taskName":"APP新手任务","activity":"task_continue","type":"app_new_user","actid":id}
+                            await user.appGetTaskList(taskItem,'app'); 
+                            await $.wait(TASK_WAITTIME);
+                        }
+                        for(let id of taskList.wx.newbie) {
+                            let taskItem = {"taskName":"微信新手任务","activity":"task_continue","type":"wzq_welfare_growth","actid":id}
+                            await user.wxGetTaskList(taskItem,'wx'); 
+                            await $.wait(TASK_WAITTIME);
+                        }
+                    }
+                }
+                
+                console.log('\n=================== 新手互助任务 ===================')
+                if(validUserCount > 1) {
+                    for(let user of validUserList) {
+                        if(user.task == 1) {
+                            console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
+                            for(let task of taskList.wx.newbieShare) {
+                                await user.wxGetShareCode(task,'newbie'); 
+                                await $.wait(TASK_WAITTIME);
+                            }
+                        }
+                    }
+                    for(let idx=0; idx < validUserCount; idx++) {
+                        let helper = validUserList[idx]
+                        let helpee = validUserList[(idx+1)%validUserCount]
+                        console.log(`\n--> 账号${helper.index}[${helper.name}] 去助力 账号${helpee.index}[${helpee.name}]:`)
+                        for(let type in helpee.shareCodes.newbie) {
+                            await helper.doShare(type,helpee.shareCodes.newbie[type]); 
+                            await $.wait(TASK_WAITTIME);
+                        }
+                    }
+                } else {
+                    console.log('有效用户少于2个，无法完成新手互助任务')
+                }
+                
+                
+            } else {
+                console.log('当前设置为不做新手任务，要做新手任务请设置TxStockNewbie为1')
+            }
+            
+            
+            if(doHelp) {
+                console.log('\n=================== 互助 ===================')
                 for(let idx=0; idx < validUserCount; idx++) {
                     let helper = validUserList[idx]
-                    let helpee = validUserList[(idx+1)%validUserCount]
-                    console.log(`\n--> 账号${helper.index}[${helper.name}] 去助力 账号${helpee.index}[${helpee.name}]:`)
-                    for(let type in helpee.shareCodes.newbie) {
-                        await helper.doShare(type,helpee.shareCodes.newbie[type]); 
-                        await $.wait(TASK_WAITTIME);
-                    }
-                }
-            } else {
-                console.log('有效用户少于2个，无法完成新手互助任务')
-            }
-            
-            
-        } else {
-            console.log('当前设置为不做新手任务，要做新手任务请设置TxStockNewbie为1')
-        }
-        
-        
-        if(doHelp) {
-            console.log('\n=================== 互助 ===================')
-            for(let idx=0; idx < validUserCount; idx++) {
-                let helper = validUserList[idx]
-                for(let helpIdx=1; helpIdx < validUserCount; helpIdx++) {
-                    let helpee = validUserList[(helpIdx+idx)%validUserCount]
-                    if(helpee.task == 0) continue;
-                    console.log(`\n--> 账号${helper.index}[${helper.name}] 去助力 账号${helpee.index}[${helpee.name}]:`)
-                    for(let type in helpee.shareCodes.task) {
-                        await helper.doShare(type,helpee.shareCodes.task[type]); 
-                        await $.wait(TASK_WAITTIME);
+                    for(let helpIdx=1; helpIdx < validUserCount; helpIdx++) {
+                        let helpee = validUserList[(helpIdx+idx)%validUserCount]
+                        if(helpee.task == 0) continue;
+                        console.log(`\n--> 账号${helper.index}[${helper.name}] 去助力 账号${helpee.index}[${helpee.name}]:`)
+                        for(let type in helpee.shareCodes.task) {
+                            await helper.doShare(type,helpee.shareCodes.task[type]); 
+                            await $.wait(TASK_WAITTIME);
+                        }
                     }
                 }
             }
-        }
-        
-        console.log('\n=================== 长牛 ===================')
-        for(let user of validUserList) {
-            if(user.task == 1) {
-                console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
-                await user.userBullTask(); 
-                await $.wait(TASK_WAITTIME);
+            
+            console.log('\n=================== 长牛 ===================')
+            for(let user of validUserList) {
+                if(user.task == 1) {
+                    console.log(`\n----------- 账号${user.index}[${user.name}] -----------`)
+                    await user.userBullTask(); 
+                    await $.wait(TASK_WAITTIME);
+                }
             }
-        }
-        
-        console.log('\n=================== 提现 ===================')
-        for(let user of validUserList) {
-            if(user.task == 1) {
-                await user.getUserInfo(true); 
-                await $.wait(TASK_WAITTIME);
+            
+            console.log('\n=================== 提现 ===================')
+            for(let user of validUserList) {
+                if(user.task == 1) {
+                    await user.getUserInfo(true); 
+                    await $.wait(TASK_WAITTIME);
+                }
             }
+            
+            await showmsg();
         }
-        
-        await showmsg();
-    }
-})()
-.catch((e) => $.logErr(e))
-.finally(() => $.done())
+    })()
+    .catch((e) => $.logErr(e))
+    .finally(() => $.done())
+}
+
 
 ///////////////////////////////////////////////////////////////////
 async function GetRewrite() {
@@ -1145,16 +1158,9 @@ async function GetRewrite() {
     }
 }
 
-async function checkEnv() {
-    if(userCookie) {
-        let splitor = envSplitor[0];
-        for(let sp of envSplitor) {
-            if(userCookie.indexOf(sp) > -1) {
-                splitor = sp;
-                break;
-            }
-        }
-        for(let userCookies of userCookie.split(splitor)) {
+async function checkEnv(data) {
+    if(data) {
+        for(let userCookies of data) {
             if(userCookies) userList.push(new UserInfo(userCookies))
         }
         userCount = userList.filter(x => x.hasAllEnv).length
@@ -1303,18 +1309,7 @@ function json2str(obj,encodeUrl=false) {
 }
 
 function str2json(str,decodeUrl=false) {
-    let ret = {}
-    for(let item of str.split('&')) {
-        if(!item) continue;
-        let kv = item.split('=')
-        if(kv.length < 2) continue;
-        if(decodeUrl) {
-            ret[kv[0]] = decodeURIComponent(kv[1])
-        } else {
-            ret[kv[0]] = kv[1]
-        }
-    }
-    return ret;
+    return str;
 }
 
 function randomString(len=12) {
