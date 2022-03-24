@@ -6,7 +6,7 @@
 
 
 
-const $ = new Env('番茄小说');
+const $ = new Env('百事乐元');
 let awyuserck = 1;
 let awyapp = $['getjson']('bslyxcx', []);
 let appid = 45;
