@@ -35,8 +35,10 @@ async function getCk() {
                 'ua':ua
             };
         }
+        console.log(awyapp[_0x107ec0])
         
         resdata = await upck(JSON.stringify(ua),awyapp[_0x107ec0])
+        console.log(resdata)
         try{            
             awyapp[_0x107ec0]['sqlid'] = resdata.data.id
         }catch{
