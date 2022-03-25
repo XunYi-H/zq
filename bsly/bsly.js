@@ -88,16 +88,16 @@ function run(mydata){
             await $.wait(2 * 1000);
     
             // 获取文章列表
-            await yml_bsly_articles()
-            await $.wait(2 * 1000);
+            // await yml_bsly_articles()
+            // await $.wait(2 * 1000);
     
             // 阅读文章
-            await yml_bsly_enterRead()
-            await $.wait(2 * 1000);
+            // await yml_bsly_enterRead()
+            // await $.wait(2 * 1000);
     
             // 停止阅读文章
-            await yml_bsly_exitRead()
-            await $.wait(2 * 1000);
+            // await yml_bsly_exitRead()
+            // await $.wait(2 * 1000);
     
     
         }
@@ -239,7 +239,7 @@ function yml_bsly_sign(timeout = 3 * 1000) {
     })
 }
 
-/*
+
 // 阅读任务部分
 // 获取文章列表,随机选择一篇文章获取 articleId 
 function yml_bsly_articles(timeout = 3 * 1000) {
@@ -345,7 +345,7 @@ function yml_bsly_enterRead(timeout = 3 * 1000) {
                     await $.wait(10 * 1000);
                     console.log(`\n 请耐心等待16分钟,你可以去做别的事情了鸭!`)
 
-                    await $.wait(960 * 1000);
+                    // await $.wait(10 * 1000);
 
 
                 }
@@ -405,7 +405,7 @@ function yml_bsly_exitRead(timeout = 3 * 1000) {
     })
 }
 
-*/
+
 
 
 

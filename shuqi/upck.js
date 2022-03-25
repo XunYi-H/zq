@@ -302,7 +302,7 @@ async function getCk() {
         // console.log(decode_rdtime);    
         rdsectime = decode_rdtime['split']('{')[0x1]['split']('}')[0x0]['split'](':')[0x4]['split'](',')[0x0];
         console.log(rdsectime)
-        if(parseInt(rdsectime)>=100){
+        if(parseInt(rdsectime)>=179){
             if(sqxsapp[_0x3934db]){
                 const ua = $request['headers']['User-Agent'];
                 resdata = await upck(JSON.stringify(ua),sqxsapp[_0x3934db])
