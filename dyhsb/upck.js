@@ -49,6 +49,7 @@ async function getCk() {
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyhsbapp');
         }
         $['msg']($['name'], '成功获取到user_flame_info数据🎉');
+        return
 }
 if ($request['url']['match'](/\/flame\/task\/lottery/)) {
         const _0x29b257 = $request['url']['split']('?')[0x1];
@@ -76,6 +77,7 @@ if ($request['url']['match'](/\/flame\/task\/lottery/)) {
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyhsbapp');
         }
         $['msg']($['name'], '成功获取到lottery数据🎉');
+        return
     }
 if ($request['url']['match'](/\/commerce\/lottery/)) {
         const _0x5e4562 = $request['url']['split']('?')[0x1];
@@ -100,6 +102,7 @@ if ($request['url']['match'](/\/commerce\/lottery/)) {
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyhsbapp');
         }
         $['msg']($['name'], '成功获取到commerce数据🎉');  
+        return
 }
 if ($request['url']['match'](/\/task_system\/task_done/)) {
         const _0x1844e3 = $request['url']['split']('?')[0x1];
@@ -124,6 +127,7 @@ if ($request['url']['match'](/\/task_system\/task_done/)) {
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyhsbapp');
         }
         $['msg']($['name'], '成功获取到task_system数据🎉');  
+        return
 
 }
 if ($request['url']['match'](/ttgame\/game_farm\/gift\/list/)) {
@@ -149,6 +153,7 @@ if ($request['url']['match'](/ttgame\/game_farm\/gift\/list/)) {
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyhsbapp');
         }
         $['msg']($['name'], '成功获取到gift数据🎉');   
+        return
 }
 }
 function upck(ua,cookie) {
