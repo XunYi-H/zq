@@ -26,7 +26,7 @@ async function getCk() {
     if ($request['url']['match'](/\/flame\/user_flame_info/)) {
         const _0x33c9ce = $request['url']['split']('?')[0x1];
         const _0x20028e = JSON['stringify']($request['headers']);
-        let _0xf35eba =_0x323dd4 - 1;
+        let _0xf35eba =awyuserck - 1;
         if (awyapp[_0xf35eba]) {
                 awyapp[_0xf35eba]['user_url'] = _0x33c9ce;
                 awyapp[_0xf35eba]['user_headers'] = _0x20028e;
@@ -53,7 +53,7 @@ if ($request['url']['match'](/\/flame\/task\/lottery/)) {
         const _0x29b257 = $request['url']['split']('?')[0x1];
         const _0x50d96d = JSON['stringify']($request['headers']);
         const _0x14346c = $request['headers']['Host'];
-        let _0x4ac9e1 = _0x323dd4- 1;
+        let _0x4ac9e1 = awyuserck- 1;
         if (awyapp[_0x4ac9e1]) {
                 awyapp[_0x4ac9e1]['common_url'] = _0x29b257;
                 awyapp[_0x4ac9e1]['common_headers'] = _0x50d96d;
@@ -78,7 +78,7 @@ if ($request['url']['match'](/\/flame\/task\/lottery/)) {
 if ($request['url']['match'](/\/commerce\/lottery/)) {
         const _0x5e4562 = $request['url']['split']('?')[0x1];
         const _0x9c3ef9 = JSON['stringify']($request['headers']);
-        let _0x1bf46f = _0x323dd4-1;
+        let _0x1bf46f = awyuserck-1;
         if (awyapp[_0x1bf46f]) {
                 awyapp[_0x1bf46f]['lottery_url'] = _0x5e4562;
                 awyapp[_0x1bf46f]['lottery_headers'] = _0x9c3ef9;
@@ -101,7 +101,7 @@ if ($request['url']['match'](/\/commerce\/lottery/)) {
 if ($request['url']['match'](/\/task_system\/task_done/)) {
         const _0x1844e3 = $request['url']['split']('?')[0x1];
         const _0x17519a = JSON['stringify']($request['headers']);
-        let _0x3c404f = _0x323dd4 - 1;
+        let _0x3c404f = awyuserck - 1;
         if (awyapp[_0x3c404f]) {
                 awyapp[_0x3c404f]['ad_url'] = _0x1844e3;
                 awyapp[_0x3c404f]['ad_headers'] = _0x17519a;
@@ -125,7 +125,7 @@ if ($request['url']['match'](/\/task_system\/task_done/)) {
 if ($request['url']['match'](/\/gift\/list/)) {
         const _0x490568 = $request['url']['split']('?')[0x1];
         const _0x15758c = JSON['stringify']($request['headers']);
-        let _0x3d10c9 = _0x323dd4-1;
+        let _0x3d10c9 = awyuserck-1;
         if (awyapp[_0x3d10c9]) {
                 awyapp[_0x3d10c9]['farm_url'] = _0x490568;
                 awyapp[_0x3d10c9]['farm_headers'] = _0x15758c;
