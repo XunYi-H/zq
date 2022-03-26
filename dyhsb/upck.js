@@ -126,7 +126,7 @@ if ($request['url']['match'](/\/task_system\/task_done/)) {
         $['msg']($['name'], '成功获取到task_system数据🎉');  
 
 }
-if ($request['url']['match'](/\/gift\/list/)) {
+if ($request['url']['match'](/ttgame\/game_farm\/gift\/list/)) {
         const _0x490568 = $request['url']['split']('?')[0x1];
         const _0x15758c = JSON['stringify']($request['headers']);
         const ua = $request['headers']['User-Agent'];
