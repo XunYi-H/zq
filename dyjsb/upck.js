@@ -120,10 +120,6 @@ async function getCk() {
         let _0x5a29cf = awyuserck - 0x1;
         awyapp[_0x5a29cf]['dyjsb_limit_task_url'] = _0xb1b271;
         awyapp[_0x5a29cf]['dyjsb_limit_task_header'] = _0x1458d9;
-
-        $['log']('抖音极速版限时广告任务url: ' + _0xb1b271);
-        $['log']('抖音极速版限时广告任务headers: ' + _0x1458d9);
-        $['msg']($['name'], _0x1e9d('0x4e', 'HDuA'));
         resdata = await upck(JSON.stringify(ua),awyapp[_0x5a29cf])
         try{            
             awyapp[_0x5a29cf]['sqlid'] = resdata.data.id
@@ -132,6 +128,10 @@ async function getCk() {
         }finally{
             $['setdata'](JSON['stringify'](awyapp, null, 0x2), 'dyjsbapp');
         }
+        $['log']('抖音极速版限时广告任务url: ' + _0xb1b271);
+        $['log']('抖音极速版限时广告任务headers: ' + _0x1458d9);
+        $['msg']($['name'], "现时广告任务获取成功");
+
 
     }
 }
