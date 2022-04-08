@@ -110,8 +110,9 @@ async function getCk() {
         $['log']('抖音极速版开宝箱看广告任务url:\x20' + _0x5a884d);
         $['log']('抖音极速版开宝箱看广告任务headers:\x20' + _0x70899b);
         $['msg']($['name'], '成功获取到开宝箱看广告任务数据🎉');
+        return
     }
-    if ($request && $request['url']['indexOf']('aweme' && 'done/excitation_ad') >= 0x0 && $request['url']['indexOf']('treasure_box') < 0x0) {
+    if ($request && $request['url']['indexOf']('aweme' && 'done/excitation_ad') >= 0x0) {// && $request['url']['indexOf']('treasure_box') < 0x0
         const _0x1458d9 = JSON['stringify']($request['headers']);
         const _0xb1b271 = $request['url']['split']('?')[0x1];
         const ua = $request['headers']['User-Agent'];
